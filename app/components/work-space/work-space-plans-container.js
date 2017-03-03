@@ -43,7 +43,7 @@ export default Ember.Component.extend({
             subInfoContentActionName: "VISITE"
         }
     },
-    {
+    /*{
         headerContent: {
             headerContentTitle: "OPEN DESK",
             headerContentPrice: "A partir de R$ 865,00/MÊS",
@@ -81,7 +81,7 @@ export default Ember.Component.extend({
             subInfoContentDescription: "A partir de R$ 865,00/mês. Se quiser experimentar por apenas 1 mês, você paga a partir de R$ 995,00.",
             subInfoContentActionName: "VISITE"
         }
-    },
+    },*/
 
     {
         headerContent: {
