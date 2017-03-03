@@ -344,7 +344,7 @@ export default Ember.Component.extend({
 
         subInfoContentObject: {
             subInfoContentTitle: "Espaço de trabalho",
-            subInfoContentDescription: "É um espaço reservado para você chegar e produzir sem preocupações, e não precisa de agendamento. É só trazer o seu laptop, escolher uma mesa e começar a trabalhar. Você encontra as estações de trabalho nos três espaços - .work, .house e .store - e pode usá-las 24h por dia nos 7 dias na semana."
+            subInfoContentDescription: "Acesso a qualquer desk disponível na área comum do +55Lab.work. Esse plano inclui o membership do +55.community e 1 hora de meeting room por mês (a ser usada no +55Lab.work).É um espaço para você chegar e produzir sem preocupações, e não precisa de agendamento. É só trazer o seu laptop, escolher uma mesa e começar a trabalhar.Você pode usá-las no horário comercial (segunda a sexta, das 09h às 18h)."
         },
 
         subInfoContentObject2: {
