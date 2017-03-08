@@ -102,10 +102,12 @@
                 background-repeat: no-repeat;
                 overflow: auto;
                 position: relative;*/
+                outline: none;
 
                 &:hover {
                     transform:scale(1.1,1.1);
                     transition: transform 0.1s, width 0.1s ease-in;
+                    outline: none;
                 }
             
                  a {
@@ -130,10 +132,12 @@
                 background-repeat: no-repeat;
                 overflow: auto;
                 position: relative;*/
+                outline: none;
 
                 &:hover {
                     transform:scale(1.1,1.1);
                     transition: transform 0.1s, width 0.1s ease-in;
+                    outline: none;
                 }
             
                 a {

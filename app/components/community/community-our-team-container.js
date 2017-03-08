@@ -14,7 +14,7 @@ export default Ember.Component.extend({
 
     contentSecondObject:{
         title:"FRANQUEADO",
-        description:"Gostou do nosso projeto e gostaria de levar para sua cidade? Temos algumas opções de formato que se adequam às demandas da sua comunidade.",
+        description:"Gostou do nosso projeto e quer levar a +55Lab.co para sua cidade? Temos algumas possibilidades que podem ser adequadas para atender especificamente sua comunidade.",
         image:"/assets/images/icon_ franchisee.png"
     },
 
@@ -26,7 +26,7 @@ export default Ember.Component.extend({
 
     contentFourthObject:{
         title:"INVESTIDOR",
-        description:"Quer conhecer as empresas aceleradas, coworkers ativos e encontrar oportunidades de investimento em diversas áreas de atuação? Fique antenado no dia a dia do nosso ecossistema.",
+        description:"Quer conhecer as empresas aceleradas, coworkers ativos e encontrar oportunidades de investimento em diversos segmentos? Fique antenado no dia a dia do nosso ecossistema.",
         image:"/assets/images/icon_investor.png"
     }
 });
