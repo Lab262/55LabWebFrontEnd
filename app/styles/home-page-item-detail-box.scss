@@ -35,6 +35,7 @@
       margin-top: 2%;
       padding-top: 15%;
       padding-right: 1%;
+      outline: none;
 
       h1 {
           font-family: 'BebasNeue-Bold';
@@ -48,6 +49,7 @@
       &:hover {
           transform:scale(1.1,1.1);
           transition: transform 0.1s, width 0.1s ease-in;
+          outline: none;
         }
     }
   }
@@ -237,7 +239,7 @@
     overflow: hidden;
 
     .item-title {
-      font-size: 2.5vw;
+      font-size: 2.3vw;
       line-height: 2.7vw;
     }
 

@@ -21,11 +21,11 @@ export default Ember.Component.extend({
 
   leftDetailContentObject: {
     title: "Fazer e compartilhar juntos",
-    description: "Somos uma comunidade virtual e real, construída a partir da força do ecossistema empreendedor brasileiro. A Lab.Community permite + trocas de ideias entre as pessoas que juntas formam uma poderosa rede de negócios e podem desfrutar de benefícios e eventos exclusivos.",
+    description: "Somos uma comunidade virtual e real, construída a partir da força do ecossistema empreendedor brasileiro. A 55Lab.Community permite + trocas de ideias entre as pessoas que juntas formam uma poderosa rede de negócios e podem desfrutar de benefícios e eventos exclusivos.",
     subTitle: "SEJA MEMBRO",
-    subDescription: "Se você quer fazer parte do time, mas não sabe como, veja as quatro opções disponíveis:",
+    subDescription: "Se além de ser membro você quiser fazer parte do time +55Lab.co, veja as outras opções disponíveis:",
     options: ["Parceiro", "Franqueado", "Mentor", "INVESTIDOR"],
-    logosAndLink:["/assets/images/logo-55-community.png","/assets/images/button-be-member-home-community.png","sign-up-membership"],
+    logosAndLink:["/assets/images/logo-55-community.png","/assets/images/button-be-member-home-community.png","community"],
     itemActions: [{url: "/comunidade", title: "Faça Parte", image: "/assets/images/work_space_button_store.png"}]
   },
 

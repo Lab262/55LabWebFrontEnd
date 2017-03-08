@@ -5,7 +5,7 @@
     <div class="item-description"> {{contentObject.description}} 
       {{#if (object-have-property 'logosAndLink' object=contentObject) }}
         <img class="item-logo-image" src={{contentObject.logosAndLink.[0]}}>
-         {{#link-to contentObject.logosAndLink.[2] target="_blank"}}
+         {{#link-to contentObject.logosAndLink.[2] target="_parent"}}
         <button class="item-button" style="background:url({{contentObject.logosAndLink.[1]}}) no-repeat; background-size: 80%;" >
           <h1> {{contentObject.subTitle}}</h1>
         </button> 
