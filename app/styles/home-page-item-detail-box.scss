@@ -104,6 +104,7 @@
       position: relative;
       margin-top: 5%;
       padding-bottom: 85%;
+      outline: none;
 
       h1 {
           font-family: 'BebasNeue-Bold';
@@ -117,6 +118,7 @@
       &:hover{
         transform:scale(1.1,1.1);
         transition: transform 0.1s, width 0.1s ease-in;
+        outline: none;
       }
 
     }
@@ -207,11 +209,13 @@
         background-size: cover;
         margin-right: 25px;
         transition: transform 0.1s ease-out;
+        outline: none;
 
 
         &:hover {
           transform:scale(1.1,1.1);
           transition: transform 0.1s, width 0.1s ease-in;
+          outline: none;
         }
       }
       .facebook-button {

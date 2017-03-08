@@ -383,21 +383,23 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
               box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);      
               margin-left: 2.2vw;
               margin-top: 3.3vw;  
+              outline: none;
 
               h1{
                   text-align: center;
                   font-family: 'BebasNeue-Bold';
-                  font-size: 1.8vw;
+                  font-size: 1.6vw;
                   color: white;
-                  width: 100%;
-                  margin-top: -6%;
+                  width: 140%;
+                  margin-top: 3%;
+                  margin-left: -18%;
                   line-height: 1.8vw;  
               }
 
               .subscribe-button-background-borders {
               content: url('/assets/images/background-boarder-do-here.png');
               left: -4vw;
-              bottom: 6vw; 
+              bottom: 5vw; 
               width: 17vw;
               height: 8vw;
               position: relative;
@@ -407,6 +409,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             &:hover {
               transform:scale(1.1,1.1);
               transition: transform 0.1s, width 0.1s ease-in;
+              outline: none;
             }
           }
 
@@ -583,22 +586,24 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
               margin-left: 18%;
               margin-right: 20%;
               margin-top: 15vw;
-              margin-bottom: 20vw;  
+              margin-bottom: 20vw; 
+              outline: none; 
 
               h1{
                   text-align: center;
                   font-family: 'BebasNeue-Bold';
-                  font-size: 7vw;
+                  font-size: 6vw;
                   color: white;
-                  width: 100%;
-                  margin-top: -7%;
+                  width: 140%;
+                  margin-left: -20%;
+                  margin-top: 4%;
                   line-height: 7vw;  
               }
 
               .subscribe-button-background-borders {
                 content: url('/assets/images/background-boarder-do-here.png');
                 left: -18vw;
-                bottom: 22vw; 
+                bottom: 20vw; 
                 width: 68vw;
                 height: 32vw;
                 position: relative;
@@ -608,6 +613,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             &:hover {
               transform:scale(1.1,1.1);
               transition: transform 0.1s, width 0.1s ease-in;
+              outline: none;
             }
           }
 

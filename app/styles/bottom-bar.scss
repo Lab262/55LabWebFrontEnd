@@ -121,11 +121,13 @@
           margin-left: 2vw;
           margin-right: 1vw;
           transition: transform 0.1s ease-out;
+          outline: none;
 
 
           &:hover {
             transform:scale(1.1,1.1);
             transition: transform 0.1s, width 0.1s ease-in;
+            outline: none;
           }
         }
 
@@ -267,11 +269,13 @@
           margin-left: 2vw;
           margin-right: 1vw;
           transition: transform 0.1s ease-out;
+          outline: none;
 
 
           &:hover {
             transform:scale(1.1,1.1);
             transition: transform 0.1s, width 0.1s ease-in;
+            outline: none;
           }
         }
 /*
@@ -433,10 +437,12 @@
            margin-left: 25vw;
            margin-right: -18vw;
            transition: transform 0.1s ease-out;
+           outline: none;
 
           &:hover {
             transform:scale(1.1,1.1);
             transition: transform 0.1s, width 0.1s ease-in;
+            outline: none;
           }
         }
 

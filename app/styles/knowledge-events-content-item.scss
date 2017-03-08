@@ -293,10 +293,12 @@ $content-width: 28vw;
                         font-family: 'BebasNeue-Bold';  
                         position: absolute;
                         bottom: 2vw; 
+                        outline: none;
 
                         &:hover {
                             transform:scale(1.1,1.1);
                             transition: transform 0.1s, width 0.1s ease-in;
+                            outline: none;
                         }
                                              
                     }
@@ -317,10 +319,12 @@ $content-width: 28vw;
                         position: absolute;
                         bottom: 2vw; 
                         right: 2vw;
+                        outline: none;
                         
                         &:hover {
                             transform:scale(1.1,1.1);
                             transition: transform 0.1s, width 0.1s ease-in;
+                            outline: none;
                         }
                     }                                                        
                 }
@@ -395,10 +399,12 @@ $content-width: 28vw;
                         font-family: 'BebasNeue-Bold';  
                         position: absolute;
                         bottom: 2vw; 
+                        outline: none;
 
                         &:hover {
                             transform:scale(1.1,1.1);
                             transition: transform 0.1s, width 0.1s ease-in;
+                            outline: none;
                         }
                                              
                     }
@@ -419,10 +425,12 @@ $content-width: 28vw;
                         position: absolute;
                         bottom: 2vw; 
                         right: 6vw;
+                        outline: none;
                         
                         &:hover {
                             transform:scale(1.1,1.1);
                             transition: transform 0.1s, width 0.1s ease-in;
+                            outline: none;
                         }
                     }                                                        
                 }

@@ -258,11 +258,13 @@
                             height: 3.5vw;
                             width: 11.2vw;
                             vertical-align: center;
-                            padding: 0px;              
+                            padding: 0px;     
+                            outline: none;         
 
                             &:hover {
                                 transform:scale(1.1,1.1);
                                 transition: transform 0.1s, width 0.1s ease-in;
+                                outline: none;
                             }
 
                             a{
@@ -363,7 +365,8 @@
             z-index: 1;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
             width: 16%;
-            margin-bottom: 7vw;     
+            margin-bottom: 7vw;  
+            outline: none;   
 
             .image {
                 width: 2.7vw;
@@ -377,6 +380,7 @@
            &:hover {
             transform:scale(1.1,1.1);
              transition: transform 0.1s, width 0.1s ease-in;
+             outline: none;
            }
 
            a{
@@ -463,10 +467,12 @@
                             margin-top: 8%;     
                             //padding-top: 4%; 
                             bottom: 2vw;    
+                            outline: none;
 
                             &:hover {
                                 transform:scale(1.1,1.1);
                                 transition: transform 0.1s, width 0.1s ease-in;
+                                outline: none;
                             }
 
                             a{
@@ -567,7 +573,8 @@
             margin-bottom: 10vw;
             width:65vw;
             z-index:1;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);       
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4); 
+            outline: none;      
 
             .image {
                 width: 12vw;
@@ -580,6 +587,7 @@
            &:hover {
             transform:scale(1.1,1.1);
              transition: transform 0.1s, width 0.1s ease-in;
+             outline: none;
            }
 
            a{

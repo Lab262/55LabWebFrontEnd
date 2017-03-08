@@ -232,11 +232,13 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
           margin-left:20vw;
           padding-left: 3vw;
           z-index: 2;
+          outline: none;
            
 
           &:hover {
              transform:scale(1.1,1.1);
              transition: transform 0.1s, width 0.1s ease-in;
+             outline: none;
            }
 
            a{
@@ -548,10 +550,12 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
              
          margin-left:-29vw;
          z-index: 1;
+         outline: none;
 
         &:hover {
             transform:scale(1.1,1.1);
             transition: transform 0.1s, width 0.1s ease-in;
+            outline: none;
         }
         a{
           text-align: center;
@@ -921,10 +925,12 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
           margin-right: auto;
           padding-bottom: 10%;
           z-index: 1;
+          outline: none;
 
           &:hover {
              transform:scale(1.1,1.1);
              transition: transform 0.1s, width 0.1s ease-in;
+             outline: none;
            }
 
            a{
@@ -1205,11 +1211,13 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
         margin-left:23vw;
        // margin-bottom: 20vw;
         z-index: 1;
+        outline: none;
         
 
         &:hover {
             transform:scale(1.1,1.1);
              transition: transform 0.1s, width 0.1s ease-in;
+             outline: none;
         }
         a{
           margin-top: 4vw;

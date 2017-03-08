@@ -380,6 +380,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
               
               padding-top: 5px;
               padding-bottom: 2px;
+              outline: none;
 
               h1{
                 text-align: center;
@@ -408,6 +409,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             &:hover {
               transform:scale(1.1,1.1);
               transition: transform 0.1s, width 0.1s ease-in;
+              outline: none;
             }
           }
 
@@ -578,6 +580,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
               margin-right: 20%;
               margin-top: 15vw;
               margin-bottom: 20vw; 
+              outline: none;
 
               h1{
                 text-align: center;
@@ -604,6 +607,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             &:hover {
               transform:scale(1.1,1.1);
               transition: transform 0.1s, width 0.1s ease-in;
+              outline: none;
             }
           }
 
