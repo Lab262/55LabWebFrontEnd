@@ -5,7 +5,7 @@ export default Ember.Component.extend({
 
     housePlans: [{
         headerContent: {
-            headerContentTitle: "+55 LAB COMMUNITY",
+            headerContentTitle: "+55LAB COMMUNITY",
             headerContentPrice: "R$ 49,00/MÊS",
             headerContentWorkspacePlanButton: "FAÇA PARTE",
             headerDifferentLink:"sign-up-membership",
@@ -168,7 +168,7 @@ export default Ember.Component.extend({
 
     storePlans: [{
         headerContent: {
-            headerContentTitle: "+55 LAB COMMUNITY",
+            headerContentTitle: "+55LAB COMMUNITY",
             headerContentPrice: "R$ 49,00/MÊS",
             headerContentWorkspacePlanButton: "FAÇA PARTE",
             headerDifferentLink:"sign-up-membership",
@@ -291,7 +291,7 @@ export default Ember.Component.extend({
 
     workspacePlans: [{
         headerContent: {
-            headerContentTitle: "+55 LAB COMMUNITY",
+            headerContentTitle: "+55LAB COMMUNITY",
             headerContentPrice: "R$ 49,00/MÊS",
             headerContentWorkspacePlanButton: "FAÇA PARTE",
             headerDifferentLink:"sign-up-membership",
