@@ -15,26 +15,26 @@ export default Ember.Component.extend({
             headerColorBorderBackground: "#0A365C"
         },
 
-        descriptionContent: "Faça parte de uma comunidade diversificada que vai te inspirar, facilitar o desenvolvimento de seus negócios e te conectar com novos parceiros.",
+        descriptionContent: "Acesso a plataforma digital de uma comunidade diversificada, com mais de 500 membros, que vai te inspirar, facilitar o desenvolvimento de seus negócios e te conectar com novos parceiros.",
 
         subInfoContentObject: {
             subInfoContentTitle: "Espaço de trabalho",
-            subInfoContentDescription: "Acesso a plataforma digital e seus benefícios + um bônus mensal de 1 hora de meeting room ou de 1 hora de open desk em qualquer espaço. Caso não seja suficiente, existe a possibilidade de adquirir mais quando for necessário."
+            subInfoContentDescription: "1 hora de meeting room ou open desk que podem ser usadas em qualquer unidade +55Lab.co que tenha essas opções de espaço de trabalho, com a possibilidade de adquirir mais quando necessário."
         },
 
         subInfoContentObject2: {
-            subInfoContentTitle: "Bônus",
-            subInfoContentDescription: "1 hora de  meeting room ou 1 hora de open desk."
+            subInfoContentTitle: "Acesso",
+            subInfoContentDescription: "Mediante agendamento em horário comercial"
         },
 
         subInfoContentObject3: {
-            subInfoContentTitle: "Mais benefícios",
-            subInfoContentDescription: "Não está disponível"
+            subInfoContentTitle: "O que inclui",
+            subInfoContentDescription: "Acesso a plataforma digital com + de 500 membros. Acesso aos espaços +55Lab.co. Rede de benefícios exclusivos"
         },
 
         subInfoContentObject4: {
             subInfoContentTitle: "Adicionais disponíveis",
-            subInfoContentDescription: "Não está disponível"
+            subInfoContentDescription: "Salas de reunião. Salas de eventos. Salas de conferências. Endereço Fiscal. Diária em open desk (na .Store ou na .Work)"
         },
 
         subInfoContentObject5: {
@@ -94,26 +94,26 @@ export default Ember.Component.extend({
             headerColorBorderBackground: "#0A365C"
         },
 
-        descriptionContent: "Uma mesa pra chamar de sua em um espaço compartilhado. O plano está disponível para os espaços .work e .house e também inclui o membership do +55.community e 1 hora de meeting room por mês.",
+        descriptionContent: "Neste plano, você pode usufruir de todos os benefícios que trabalhar em um espaço compartilhado te proporciona sem abrir mão de ter uma estação de trabalho exclusiva.",
 
         subInfoContentObject: {
             subInfoContentTitle: "Espaço de trabalho",
-            subInfoContentDescription: "Neste plano, você pode usufruir de todos os benefícios que trabalhar em um espaço compartilhado te proporciona sem abrir mão de ter uma estação de trabalho exclusiva 24h por dia nos 7 dias da semana."
+            subInfoContentDescription: "Mesa e cadeira para chamar de suas em um espaço compartilhado.Você vai poder sentar no mesmo lugar todos os dias, deixar tudo montado com a sua cara e focar apenas na sua produção."
         },
 
         subInfoContentObject2: {
-            subInfoContentTitle: "Bônus",
-            subInfoContentDescription: "Por mês, você ganha 1h de meeting room."
+            subInfoContentTitle: "Acesso",
+            subInfoContentDescription: "24 horas / dia x 7 dias da semana"
         },
 
         subInfoContentObject3: {
-            subInfoContentTitle: "Mais benefícios",
-            subInfoContentDescription: "Serviço de impressão, atendimento telefônico e endereço comercial."
+            subInfoContentTitle: "O que inclui",
+            subInfoContentDescription: "Membership do +55Lab.Community. Atendimento telefônico personalizado (paga apenas o que consumir de telefonia). Endereço comercial. Serviço de caixa postal. Suporte administrativo . 1 hora de meeting room/mês (a ser usada na .House). Suporte administrativo"
         },
 
         subInfoContentObject4: {
             subInfoContentTitle: "Adicionais disponíveis",
-            subInfoContentDescription: "Sala de reunião: a partir de R$ 25,00/hora, Sala de conferência: a partir de R$ 55/hora, Sala de eventos: a partir de R$ 150,00/hora, Endereço fiscal: a partir de R$ 115,00/mês, Serviços de impressão: R$ 25,00 + tarifário do mês."
+            subInfoContentDescription: "Salas de reunião. Salas de eventos. Salas de conferências. Endereço Fiscal. Serviço de impressão. Suporte administrativo"
         },
 
         subInfoContentObject5: {
@@ -134,26 +134,26 @@ export default Ember.Component.extend({
             headerColorBorderBackground: "#0A365C"
         },
 
-        descriptionContent: "Para você que deseja uma sala exclusiva e quer criar a sua própria cultura, mas também deseja fazer parte da comunidade e garantir todos os benefícios, este é o plano ideal para impulsionar o crescimento do seu negócio.",
+        descriptionContent: "Para você que deseja uma sala exclusiva e quer criar a sua própria cultura, mas também deseja fazer parte da comunidade e garantir todos os benefícios.",
 
         subInfoContentObject: {
             subInfoContentTitle: "Espaço de trabalho",
-            subInfoContentDescription: "Salas exclusivas que podem se adaptar para 1 ou mais pessoas. Todas são equipadas e preparadas para receber você e o seu negócio, e todos os membros do seu time terão acesso 24h por dia nos 7 dias da semana."
+            subInfoContentDescription: "Salas exclusivas, mobiliadas e equipadas para receber executivos que buscam privacidade ou times com até mais de 20 pessoas. Um espaço privativo onde você pode imprimir características do seu negócio e ainda curtir os benefícios da comunidade."
         },
 
         subInfoContentObject2: {
-            subInfoContentTitle: "Bônus",
-            subInfoContentDescription: "Por mês, você ganha 1h de meeting room."
+            subInfoContentTitle: "Acesso",
+            subInfoContentDescription: "24 horas / dia x 7 dias da semana"
         },
 
         subInfoContentObject3: {
-            subInfoContentTitle: "Mais benefícios",
-            subInfoContentDescription: "Serviço de impressão, atendimento telefônico personalizado (você só paga o que consumir de telefonia) e endereço comercial."
+            subInfoContentTitle: "O que inclui",
+            subInfoContentDescription: "Membership do +55Lab.Community para cada integrante do time. Atendimento telefônico personalizado (paga apenas o que consumir de telefonia). Endereço comercial. Serviço de caixa postal. Suporte administrativo. 1 hora de meeting room/mês (a ser usada na .House)"
         },
 
         subInfoContentObject4: {
             subInfoContentTitle: "Adicionais disponíveis",
-            subInfoContentDescription: "Sala de reunião: a partir de R$ 25,00/hora, Sala de conferência: a partir de R$ 55,00/hora"
+            subInfoContentDescription: "Salas de reunião. Salas de eventos. Salas de conferências. Endereço Fiscal. Serviço de impressão. Suporte administrativo"
         },
 
         subInfoContentObject5: {
@@ -178,26 +178,26 @@ export default Ember.Component.extend({
             headerColorBorderBackground: "#AC0049"
         },
 
-        descriptionContent: "Faça parte de uma comunidade diversificada que vai te inspirar, facilitar o desenvolvimento de seus negócios e te conectar com novos parceiros.",
+        descriptionContent: "Acesso a plataforma digital de uma comunidade diversificada, com mais de 500 membros, que vai te inspirar, facilitar o desenvolvimento de seus negócios e te conectar com novos parceiros.",
 
         subInfoContentObject: {
             subInfoContentTitle: "Espaço de trabalho",
-            subInfoContentDescription: "Acesso a plataforma digital e seus benefícios + um bônus mensal de 1 hora de meeting room ou de 1 hora de open desk em qualquer espaço. Caso não seja suficiente, existe a possibilidade de adquirir mais quando for necessário."
+            subInfoContentDescription: "1 hora de meeting room ou open desk que podem ser usadas em qualquer unidade +55Lab.co que tenha essas opções de espaço de trabalho, com a possibilidade de adquirir mais quando necessário."
         },
 
         subInfoContentObject2: {
-            subInfoContentTitle: "Bônus",
-            subInfoContentDescription: "1 hora de  meeting room ou 1 hora de open desk."
+            subInfoContentTitle: "Acesso",
+            subInfoContentDescription: "Mediante agendamento em horário comercial"
         },
 
         subInfoContentObject3: {
-            subInfoContentTitle: "Mais benefícios",
-            subInfoContentDescription: "Não está disponível"
+            subInfoContentTitle: "O que inclui",
+            subInfoContentDescription: "Acesso a plataforma digital com + de 500 membros. Acesso aos espaços +55Lab.co. Rede de benefícios exclusivos"
         },
 
         subInfoContentObject4: {
             subInfoContentTitle: "Adicionais disponíveis",
-            subInfoContentDescription: "Não está disponível"
+            subInfoContentDescription: "Salas de reunião. Salas de eventos. Salas de conferências. Endereço Fiscal. Diária em open desk (na .Store ou na .Work)"
         },
 
         subInfoContentObject5: {
@@ -217,26 +217,26 @@ export default Ember.Component.extend({
             headerColorBorderBackground: "#AC0049"
         },
 
-        descriptionContent: "Acesso a qualquer desk disponível na área comum do +55Lab em três locais diferentes: .work, .house e .store. Esse plano inclui o membership do +55.community e 1 hora de meeting room por mês.",
+        descriptionContent: "Acesso a qualquer desk disponível na área comum do +55Lab.Store. É só chegar com as  suas coisas, escolher o lugar que mais lhe agrada e começar a trabalhar no gás!",
 
         subInfoContentObject: {
             subInfoContentTitle: "Espaço de trabalho",
-            subInfoContentDescription: "É um espaço reservado para você chegar e produzir sem preocupações, e não precisa de agendamento. É só trazer o seu laptop, escolher uma mesa e começar a trabalhar. Você encontra as estações de trabalho nos três espaços - .work, .house e .store - e pode usá-las 24h por dia nos 7 dias na semana."
+            subInfoContentDescription: "Espaço de trabalho para trabalhar nas áreas comuns mais descoladas da região. A cada dia, os primeiros a chegar são os primeiros a escolherem suas posições de trabalho preferidas."
         },
 
         subInfoContentObject2: {
-            subInfoContentTitle: "Bônus",
-            subInfoContentDescription: "Por mês, você ganha 1h de meeting room."
+            subInfoContentTitle: "Acesso",
+            subInfoContentDescription: "Segunda a sexta, das 09h às 18h, sem necessidade de agendamento."
         },
 
         subInfoContentObject3: {
-            subInfoContentTitle: "Mais benefícios",
-            subInfoContentDescription: "Não está disponível"
+            subInfoContentTitle: "O que inclui",
+            subInfoContentDescription: "Membership do +55Lab.Community. 1 hora de meeting room por mês (a ser usada na .work). Rede de benefícios exclusivos"
         },
 
         subInfoContentObject4: {
             subInfoContentTitle: "Adicionais disponíveis",
-            subInfoContentDescription: "Sala de eventos: a partir de R$150,00/hora, Endereço fiscal: a partir de R$115,00/mês, Serviços de caixa postal: R$ 50,00/mês."
+            subInfoContentDescription: "Salas de reunião. Salas de eventos. Salas de conferências. Endereço Fiscal. Diária em open desk (na .Store ou na .Work)"
         },
 
         subInfoContentObject5: {

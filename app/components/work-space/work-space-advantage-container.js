@@ -15,7 +15,7 @@ export default Ember.Component.extend({
 
         contentObjectWithoutTable: {
             image: "/assets/images/meeting-icon.png",
-            title: "Sala de Reunião",
+            title: "Salas de Reunião",
 
             firstSubsubtitle: "Sala de reunião para 2 pessoas",
             firstPriceFirstSubsubtitle: " R$15,00 hora",
@@ -27,7 +27,7 @@ export default Ember.Component.extend({
             firstTitlePriceSubsubtitle: "Membros:",
             secondTitlePriceSubsubtitle: "Não-Membros:",
 
-            description: "Uma reunião precisa ser produtiva, mesmo. E nossas salas de reuniões, que acomodam até 5 pessoas, são preparadas para isso. Elas são completamente equipadas com tudo o que você precisa em um local de  reunião: água, café, equipamentos audiovisuais e internet dedicada. Temos salas de reunião em dois espaços diferentes: .work e .house, com diferenças nos recursos disponíveis e nos preços.",
+            description: "Nossas salas são completamente equipadas com tudo o que você precisa para tornar sua reunião o mais produtiva possível: serviços de água e café, equipamentos audiovisuais e internet dedicada. Acomodando até 5 pessoas, temos salas disponíveis em dois espaços diferentes: .work e .house, com diferenças nos recursos disponibilizados e preços.",
             descriptionActionButton: "Se quiser alugar uma de nossas salas",
             titleActionButton: "Faça aqui"
 
@@ -35,7 +35,7 @@ export default Ember.Component.extend({
 
         contentSecondObjectWithoutTable: {
             image: "/assets/images/icon-conference.png",
-            title: "Sala de Conferência",
+            title: "Salas de Conferência",
 
             firstSubtitle: "Para até 6 pessoas",
             firstPriceFirstSubtitle: " R$55,00 hora",
@@ -44,7 +44,7 @@ export default Ember.Component.extend({
             firstTitlePriceSubtitle: "Membros:",
             secondTitlePriceSubtitle: "Não-Membros:",
 
-            description: "Entendemos as dificuldades que podem surgir quando precisamos reunir todo mundo. Por isso, também temos salas preparadas para a realização de videoconferências que acomodam até 10 pessoas disponíveis para locação em nossos espaços.",
+            description: "Entendemos as dificuldades que podem surgir quando precisamos nos reunir. Por isso, temos salas preparadas para a realização de videoconferências que acomodam até 10 pessoas na .Work e até 06 pessoas na .House.",
             descriptionActionButton: "Se quiser alugar uma de nossas salas",
             titleActionButton: "Faça aqui"
         }
