@@ -192,11 +192,15 @@
                   </h1>
             </div>
 
+           {{#link-to "visit-us" target="_blank"}}
             <button class="work-space-plans-description-content-button">
-                {{#link-to "visit-us" target="_blank"}}{{contentObject.subInfoContentObject5.subInfoContentActionName}}{{/link-to}}
+                <a>
+                {{contentObject.subInfoContentObject5.subInfoContentActionName}}
+                </a>
                   <div class="image" style="content: url('{{contentObject.headerContent.headerContentBacgroundButtonUrl}}')">
                   </div>
               </button>
+           {{/link-to}}
 
         </div>
 
