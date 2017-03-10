@@ -124,7 +124,8 @@ export default Ember.Component.extend({
                     beforeSend: function (xhr) { xhr.setRequestHeader('main-token', 'ZRCNAamAQ$yTv6&2VQ4eR*f?437w[FkF/gktDTg6#GunNQuE8@#]MC9B3NBTxifH'); },
                     success: function () {
                         alert('Formulário enviado com sucesso!');
-
+                        history.go(-1);
+                
                         self.set('name', '');
                         self.set('email', '');
                         self.set('telephone', '');

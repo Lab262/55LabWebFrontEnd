@@ -19,7 +19,7 @@
                     {{#if contentObject.headerContent.headerDifferentLink}}
                         {{#link-to contentObject.headerContent.headerDifferentLink target="_blank"}}{{contentObject.headerContent.headerContentWorkspacePlanButton}}{{/link-to}}
                     {{else}}
-                        {{#link-to "visit-us" target="_blank"}}{{contentObject.headerContent.headerContentWorkspacePlanButton}}{{/link-to}}
+                        {{#link-to "visit-us" }}{{contentObject.headerContent.headerContentWorkspacePlanButton}}{{/link-to}}
                     {{/if}}
                     
                     
@@ -115,7 +115,7 @@
             </div>
             
             <button class="work-space-plans-description-content-button">
-                {{#link-to "visit-us" target="_blank"}}{{contentObject.subInfoContentObject5.subInfoContentActionName}}{{/link-to}}
+                {{#link-to "visit-us" }}{{contentObject.subInfoContentObject5.subInfoContentActionName}}{{/link-to}}
                   <div class="image" style="content: url('{{contentObject.headerContent.headerContentBacgroundButtonUrl}}')">
                   </div>
               </button>
@@ -192,7 +192,7 @@
                   </h1>
             </div>
 
-           {{#link-to "visit-us" target="_blank"}}
+           {{#link-to "visit-us" }}
             <button class="work-space-plans-description-content-button">
                 <a>
                 {{contentObject.subInfoContentObject5.subInfoContentActionName}}

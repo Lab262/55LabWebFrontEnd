@@ -102,6 +102,7 @@ export default Ember.Component.extend({
                     success: function () {
 
                         alert('Registro enviado com sucesso!');
+                        history.go(-1);
 
                         self.set('name', '');
                         self.set('cpf', '');
