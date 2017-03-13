@@ -26,7 +26,7 @@ export default Ember.Component.extend({
     subDescription: "Se além de ser membro você quiser fazer parte do time +55Lab.co, veja as outras opções disponíveis:",
     options: ["Parceiro", "Franqueado", "Mentor", "INVESTIDOR"],
     logosAndLink:["/assets/images/logo-55-community.png","/assets/images/button-be-member-home-community.png","community"],
-    itemActions: [{url: "/comunidade", title: "Faça Parte", image: "/assets/images/work_space_button_store.png"}]
+    itemActions: [{url: "/comunidade?nossoTime=true", title: "Faça Parte", image: "/assets/images/work_space_button_store.png"}]
   },
 
   center0DetailContentObject: {
