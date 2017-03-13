@@ -389,7 +389,7 @@ export default Ember.Component.extend({
 
         subInfoContentObject2: {
             subInfoContentTitle: "Acesso",
-            subInfoContentDescription: "Por mês, você ganha 1h de meeting room."
+            subInfoContentDescription: "24 horas / dia x 7 dias da semana"
         },
 
         subInfoContentObject3: {
