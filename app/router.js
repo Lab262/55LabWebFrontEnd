@@ -12,7 +12,6 @@ Router.map(function() {
   this.route('work-space', { path: '/espaco-de-trabalho' });
   this.route('knowledge', { path: '/conhecimento' });
   this.route('sign-up-membership', { path: '/cadastro-membro' });
-  this.route('blog');
   this.route('visit-us', { path: '/nos-visite' });
 });
 
