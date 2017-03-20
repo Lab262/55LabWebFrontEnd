@@ -251,28 +251,6 @@
                       text-decoration: none;
                     }
                  }
-
-                 .developer-image-blank{
-                    position: absolute;
-                    width: 5.2vw;
-                    height: 3vw;
-                    background: url(/assets/images/55-email-sig-Jonathan.png);
-                    background-repeat: no-repeat;
-                    background-size: 100%;
-                    margin-left: 26.5%;
-                    margin-top: 3%;
-                    visibility: hidden;
-
-                    &:hover {
-                        transform:scale(1.1,1.1);
-                        transition: transform 0.1s, width 0.1s ease-in;
-                      }
-
-                      &:visited, &:link {
-                        color: white;
-                        text-decoration: none;
-                      }
-                   }
              }
 
         .social-media-container {
