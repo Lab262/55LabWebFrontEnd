@@ -17,39 +17,37 @@
 
       <div class="knowledge-events-container">
         {{#each model as |plan|}}
-
+        {{#if plan.[plan_items].[0] }}
         <div class="knowledge-events-content-item">
 
           <div class="knowledge-events-content-item-header-background-image" style="background-image: url({{eventObject.image}});">
             <div class="knowledge-events-content-item-header-background-filter" >
               <div class="knowledge-events-content-item-header">
                 <div class="title">
-                  <h1>{{plan.title}}</h1>
+                  <h1>{{plan.[plan_items].0.product.name}}</h1>
                 </div>
                 <div class="subtitle">
-                  <h1>{{plan.description}}</h1>
+                  <h1>R$:{{plan.[plan_items].0.product.pricing_schema.price}}</h1>
                 </div>
 
                 {{!--<div class="subtitle">
                 <h1>{{eventObject.startDate}}</h1>
               </div>--}}
-
+              {{!-- {{button  action="showUser"}} --}}
               <a class="knowledge-events-content-button" href={{eventObject.url}} target="_blank">
-                ASSINAR
-                <div class="button-plans-border-image"> </div>
-              </a>
-
-              <a class="knowledge-events-content-second-button" href={{eventObject.url}} target="_blank">
-                Contato
+                <button {{action "signinPlan" plan}}>ASSINAR</button>
 
                 <div class="button-plans-border-image"> </div>
               </a>
+
 
             </div>
           </div>
         </div>
 
       </div>
+        {{/if}}
+
 
       {{/each}}
     </div>

@@ -1,32 +1,72 @@
 import DS from 'ember-data';
-import Request from 'npm:request'
+
 var VindiAdapter = DS.JSONAPIAdapter.extend({
 
-  init: function(){
-    this._super();
-    debugger
-    // this.set( 'headers', {
-    //   'Authorization' : 'Basic SWNHWjBxc3dPOExUMGh3M1U5SnpWNU5PcEdrWnQ2cWY6KioqKiogSGlkZGVuIGNyZWRlbnRpYWxzICoqKioq'
-    // });
+  findAll: function(){
+    var adapter = this;
+    return  new Ember.RSVP.Promise( function( resolve, reject ) {
+
+      Ember.$.ajax({
+        url: "https://socialnetwork55lab.herokuapp.com/parse/functions/vindiManager",
+        type: "POST",
+        headers: {
+          "X-Parse-Application-Id": "lab262_55lab_social_network",
+          "Content-Type": "application/json; charset=utf-8",
+        },
+        contentType: "application/json",
+        data: JSON.stringify({
+          "pathPlusParams": "plans"
+        })
+      }).then(
+        function( json ) {
+          debugger
+          resolve(json.result.plans)
+        },
+        function( reason ) {
+          return reject(reason)
+        }
+      );
+    });
   },
 
-  find: function(id){
-    // return $.ajax({
-    //   type: "GET",
-    //   url: 'https://app.vindi.com.br/api/v1/plans'
-    // });
+  createRecord: function(data){
+    var adapter = this;
 
-    return Request.get('https://app.vindi.com.br/api/v1/plans').auth('IcGZ0qswO8LT0hw3U9JzV5NOpGkZt6qf', '', true);
+    return  new Ember.RSVP.Promise( function( resolve, reject ) {
 
-    // return Request.get('https://app.vindi.com.br/api/v1/plans', {
-    //   'auth': {
-    //     'user': 'IcGZ0qswO8LT0hw3U9JzV5NOpGkZt6qf',
-    //     'password': '',
-    //     'sendImmediately': false
-    //   }
-    // });
-
+      Ember.$.ajax({
+        url: "https://socialnetwork55lab.herokuapp.com/parse/functions/vindiManager",
+        type: "POST",
+        headers: {
+          "X-Parse-Application-Id": "lab262_55lab_social_network",
+          "Content-Type": "application/json; charset=utf-8",
+        },
+        contentType: "application/json",
+        data: JSON.stringify({
+          "requestBody": {
+            "customer_id": 2302252,
+            "payment_method_code": "credit_card",
+            "product_items": [
+              {
+                "product_id": data["plan_items"][0].id
+              }
+            ],
+            "plan_id": data.id
+          },
+          "pathPlusParams": "subscriptions",
+          "requestMethod": "POST"
+        })
+      }).then(
+        function( json ) {
+          debugger
+          resolve(json)
+        },
+        function( reason ) {
+          return reject(reason)
+        }
+      );
+    });
   }
-});
 
+});
 export default VindiAdapter;
