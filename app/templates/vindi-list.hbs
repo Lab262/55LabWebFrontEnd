@@ -1,0 +1,65 @@
+<div class="knowledge-container">
+  {{top-bar.nav-bar-control}}
+  <div class="knowledge-detail-content">
+    <div class="background-over-container"> </div>
+    <div class="knowledge-events-container">
+
+      <div class="divider">
+        <div class="divider-rect">
+        </div>
+      </div>
+
+      <div class="title">
+        <h1>
+          PLANOS CADASTRADOS NO VINDI
+        </h1>
+      </div>
+
+      <div class="knowledge-events-container">
+        {{#each model as |plan|}}
+
+        <div class="knowledge-events-content-item">
+
+          <div class="knowledge-events-content-item-header-background-image" style="background-image: url({{eventObject.image}});">
+            <div class="knowledge-events-content-item-header-background-filter" >
+              <div class="knowledge-events-content-item-header">
+                <div class="title">
+                  <h1>{{plan.title}}</h1>
+                </div>
+                <div class="subtitle">
+                  <h1>{{plan.description}}</h1>
+                </div>
+
+                {{!--<div class="subtitle">
+                <h1>{{eventObject.startDate}}</h1>
+              </div>--}}
+
+              <a class="knowledge-events-content-button" href={{eventObject.url}} target="_blank">
+                ASSINAR
+                <div class="button-plans-border-image"> </div>
+              </a>
+
+              <a class="knowledge-events-content-second-button" href={{eventObject.url}} target="_blank">
+                Contato
+
+                <div class="button-plans-border-image"> </div>
+              </a>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      {{/each}}
+    </div>
+  </div>
+
+
+  {{bottom-bar.bottom-bar backgroundColor="#AC0049"}}
+  <div class="background-over-container"> </div>
+
+</div>
+
+
+</div>
