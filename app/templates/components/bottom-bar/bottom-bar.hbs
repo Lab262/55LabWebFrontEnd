@@ -3,7 +3,7 @@
                          <img src="/assets/images/background-footer-left.png" class="background-footer-left">
                         <img src="/assets/images/background-footer-right.png" class="background-footer-right">
                          <div class = "container-background-information">
-                                 
+
                               <div class = "container-title-information">
                                  <h1> {{footerContentObjectFirst.title}} </h1>
                                  {{#each footerContentObjectFirst.options as |option| }}
@@ -13,35 +13,35 @@
 
                             <div class = "container-title-information">
                                   <h1> {{footerContentObjectSecond.title}} </h1>
-                                  
+
                                   {{#link-to footerContentObjectSecond.link (query-params spaceType=footerContentObjectSecond.links.[0]) target="_parent"}}<h2>{{footerContentObjectSecond.options.[0]}}</h2>{{/link-to}}
                                   {{#link-to footerContentObjectSecond.link (query-params spaceType=footerContentObjectSecond.links.[1]) target="_parent"}}<h2>{{footerContentObjectSecond.options.[1]}}</h2>{{/link-to}}
                                   {{#link-to footerContentObjectSecond.link (query-params spaceType=footerContentObjectSecond.links.[2]) target="_parent"}}<h2>{{footerContentObjectSecond.options.[2]}}</h2>{{/link-to}}
-                            </div>       
-                     
+                            </div>
+
                             <div class = "container-title-information">
                                   <h1> {{footerContentObjectThird.title}} </h1>
                                   {{#each footerContentObjectThird.options as |option| }}
                                     {{#link-to footerContentObjectThird.links.[0]}}<h2>{{option}}</h2>{{/link-to}}
                                  {{/each}}
-                            </div>          
+                            </div>
 
                               <div class = "container-title-information">
                                   <div class = "container-title-information">
                                      <h1> {{footerContentObjectFourth.title}} </h1>
                                      <a href= "mailto:hi@55lab.co"><h2> {{footerContentObjectFourth.options.[0]}}</h2></a>
                                      <a href="tel:+556132176800"><h2>{{footerContentObjectFourth.options.[1]}}</h2></a>
-                                  </div>  
-                                  
+                                  </div>
+
                                    <div class= "social-media-container">
                                      <a class="facebook-button" href="https://www.facebook.com/55lab.co/?fref=ts" target="_blank"> </a>
                                      <a class="instagram-button" href="https://www.instagram.com/55lab.co/" target="_blank"> </a>
                                   </div>
                                   <a class="developer-image" href="http://lab262.com/" target="_blank"> </a>
+                                  <a class="developer-image-blank"> </a>
                             </div>
 
-                            
+
                     </div>
         </div>
 </div>
-

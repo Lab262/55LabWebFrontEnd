@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
 
   scrollToTeamContainer: Ember.on('init', function() {
         Ember.run.scheduleOnce('afterRender', this, function() {
-          if (this.get('nossoTime')) {
+          if (this.get('nossoTime')==true) {
             var timeScroll = 1600;
 
             //Responsive Mode

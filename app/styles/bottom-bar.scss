@@ -1,4 +1,4 @@
-.bottom-opnion-container {       
+.bottom-opnion-container {
     //   display: block;
      //  z-index: 99;
 
@@ -27,10 +27,10 @@
            overflow: visible;
            position: absolute;
            bottom:0;*/
-        
+
           .container-background-information {
              /*height: 15vw;
-             
+
              width: 80vw;
              display: flex;
              flex-wrap: wrap;
@@ -40,22 +40,22 @@
              //bottom:0;
              //top: 25%;
              //background-color: blue;
-             
+
              .container-title-information {
 
               // margin-top: -1%;
                //background: yellow;
-               /*width: 16vw; 
+               /*width: 16vw;
                height: 40%;
                display: inline-block;*/
               // max-width: 50%;
                /*margin-bottom: 10vw;
                margin-left: 2.5vw;*/
-               
+
                h1 {
                  font-family: 'BebasNeue-Bold';
                  font-size: 2.3vw;
-                 color: white; 
+                 color: white;
                }
 
               h2 {
@@ -67,7 +67,7 @@
                  &:hover {
                    transform:scale(1.1,1.1);
                    transition: transform 0.1s, width 0.1s ease-in;
-                 } 
+                 }
 
                  &:visited, &:link {
                    color: white;
@@ -84,11 +84,11 @@
                }
 
                h4 {
-                 
+
                     width: 150%;
                     font-family: 'aleo-regular-webfont';
                     font-size: 1.2vw;
-                    color: white; 
+                    color: white;
                     margin-left: 88%;
                     padding-top: 20%;
                }
@@ -111,7 +111,7 @@
           -webkit-text-size-adjust: auto;
 
           %extended-social-media-button {
-          
+
           background-repeat: no-repeat;
           height:3vw;
           width:3vw;
@@ -135,18 +135,18 @@
         background-image: url("/assets/images/icon-facebook-footer.png");
         @extend %extended-social-media-button ;
       }
-      
+
       .instagram-button {
         background-image: url("/assets/images/icon-instagram-footer.png");
         @extend %extended-social-media-button ;
       }
      }
-    }       
-   }  
+    }
+   }
 }
 
 @media screen and (min-width: 600px) {
-  .bottom-opnion-container {       
+  .bottom-opnion-container {
        display: block;
        z-index: 99;
 
@@ -175,10 +175,10 @@
            overflow: visible;
            position: absolute;
            bottom:0;
-        
+
           .container-background-information {
              height: 15vw;
-             
+
              width: 80vw;
              display: flex;
              flex-wrap: wrap;
@@ -188,22 +188,22 @@
              //bottom:0;
              top: 25%;
              //background-color: blue;
-             
+
              .container-title-information {
 
                margin-top: -1%;
                //background: yellow;
-               width: 16vw; 
+               width: 16vw;
                height: 40%;
                display: inline-block;
               // max-width: 50%;
                margin-bottom: 10vw;
                margin-left: 2.5vw;
-               
+
                h1 {
                  font-family: 'BebasNeue-Bold';
                  font-size: 2.3vw;
-                 color: white; 
+                 color: white;
                }
 
               h2 {
@@ -215,7 +215,7 @@
                  &:hover {
                    transform:scale(1.1,1.1);
                    transition: transform 0.1s, width 0.1s ease-in;
-                 } 
+                 }
 
                  &:visited, &:link {
                    color: white;
@@ -244,13 +244,35 @@
                   &:hover {
                       transform:scale(1.1,1.1);
                       transition: transform 0.1s, width 0.1s ease-in;
-                    } 
+                    }
 
                     &:visited, &:link {
                       color: white;
                       text-decoration: none;
                     }
                  }
+
+                 .developer-image-blank{
+                    position: absolute;
+                    width: 5.2vw;
+                    height: 3vw;
+                    background: url(/assets/images/55-email-sig-Jonathan.png);
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    margin-left: 26.5%;
+                    margin-top: 3%;
+                    visibility: hidden;
+
+                    &:hover {
+                        transform:scale(1.1,1.1);
+                        transition: transform 0.1s, width 0.1s ease-in;
+                      }
+
+                      &:visited, &:link {
+                        color: white;
+                        text-decoration: none;
+                      }
+                   }
              }
 
         .social-media-container {
@@ -259,7 +281,7 @@
           -webkit-text-size-adjust: auto;
 
           %extended-social-media-button {
-          
+
           background-repeat: no-repeat;
           height:3vw;
           width:3vw;
@@ -283,27 +305,27 @@
         background-image: url("/assets/images/icon-facebook-footer.png");
         @extend %extended-social-media-button ;
       }
-      
+
       .instagram-button {
         background-image: url("/assets/images/icon-instagram-footer.png");
         @extend %extended-social-media-button ;
       }*/
      }
-    }       
-   }  
+    }
+   }
 }
 }
 
 @media screen and (max-width: 600px) {
 
-  .bottom-opnion-container {       
+  .bottom-opnion-container {
       // display: block;
        display: block;
-       
+
        z-index: 99;
        height: 200vw;
        background: #f7f7f7;
-       //margin-top:45%; 
+       //margin-top:45%;
 
        .background-footer-left{
               padding-top: 7vw;
@@ -324,7 +346,7 @@
          }
 
      .container-information-footer {
-           
+
            width: 100%;
            height: 200vw;
            overflow: visible;
@@ -334,11 +356,11 @@
            position: absolute;
            bottom:0;
 
-           
-        
+
+
           .container-background-information {
-            
-             
+
+
              width: 80vw;
              display: flex;
              //flex-wrap: wrap;
@@ -350,23 +372,23 @@
 
              top: 5%;
              //background-color: blue;
-             
+
              .container-title-information {
 
                margin-top: -1%;
                //background: yellow;
-               width: 100%; 
+               width: 100%;
                height: 100%;
                text-align: center;
               // display: inline-block;
               // max-width: 50%;
                margin-bottom: 10vw;
                //margin-left: 2.5vw;
-               
+
                h1 {
                  font-family: 'BebasNeue-Bold';
                  font-size: 10.3vw;
-                 color: white; 
+                 color: white;
                }
 
               h2 {
@@ -378,7 +400,7 @@
                  &:hover {
                    transform:scale(1.1,1.1);
                    transition: transform 0.1s, width 0.1s ease-in;
-                 } 
+                 }
 
                  &:visited, &:link {
                    color: white;
@@ -393,7 +415,7 @@
                  //background: red;
                  width: 100%;
                }
-               
+
                .developer-image{
                   position: absolute;
                   width: 17vw;
@@ -408,7 +430,7 @@
                   &:hover {
                       transform:scale(1.1,1.1);
                       transition: transform 0.1s, width 0.1s ease-in;
-                    } 
+                    }
 
                     &:visited, &:link {
                       color: white;
@@ -419,18 +441,18 @@
 
         .social-media-container {
            display: flex;
-           
+
           -webkit-text-size-adjust: auto;
 
           %extended-social-media-button {
-          
+
            background-repeat: no-repeat;
            height:10vw;
            width:10vw;
            background-size: cover;
            align-items: center;
            align-content: center;
-          
+
            margin-top: -4vw;
            //margin-left: 10vw;
            //margin-right: 10vw;
@@ -450,13 +472,13 @@
         background-image: url("/assets/images/icon-facebook-footer.png");
         @extend %extended-social-media-button ;
       }
-      
+
       .instagram-button {
         background-image: url("/assets/images/icon-instagram-footer.png");
         @extend %extended-social-media-button ;
       }*/
      }
-    }       
-   }   
+    }
+   }
   }
 }
