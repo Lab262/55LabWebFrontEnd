@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import ParseHelpers from '55-lab-web-front-end/helpers/parse-helpers';
+import VindiAdapter from '55-lab-web-front-end/adapters/vindi';
 
 export default Ember.Component.extend({
 
@@ -459,10 +460,28 @@ export default Ember.Component.extend({
         this._super(...arguments);
         this.get('changeInfoDelegate').send('setWorkspacePlansChild', this);
         this.selectPlanBasedOnUrl();
+        this.setMembershipPriceFromVindi();
+    },
+
+    setMembershipPriceFromVindi() {
+      var vindiAdapter = VindiAdapter.create()
+      var self = this
+      vindiAdapter.requestVindiManager('plans', 'GET', null, 'query= status=active code=membership').then(function(result){
+        var products = result.result.plans[0].plan_items
+        products.sort(function compare(current, next) {
+            return current.product.pricing_schema.price - next.product.pricing_schema.price
+        })
+        var cheaperProductPrice = products[0].product.pricing_schema.price
+        var membersshipPriceString = "A PARTIR DE R$ " + cheaperProductPrice + "/MÊS"
+        self.housePlans[0].headerContent.headerContentPrice = membersshipPriceString
+        self.storePlans[0].headerContent.headerContentPrice = membersshipPriceString
+        self.workspacePlans[0].headerContent.headerContentPrice = membersshipPriceString
+      }).catch(function(error){
+        //empty
+      })
     },
 
     selectPlanBasedOnUrl() {
-
         let spaceType = ParseHelpers.urlParamWithName("spaceType", window.location.href);
         let isAValidatedType = (spaceType === "house" || spaceType === "store" || spaceType === "work");
         if (spaceType !== undefined && isAValidatedType) {
