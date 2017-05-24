@@ -6,7 +6,7 @@
                 {{else}}
                     <h1> {{this.memberType}} </h1>
                 {{/if}}
-                
+
             </div>
 
             <div class="header-description">
@@ -67,13 +67,19 @@
                     {{paper-input label="Telefone*" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
                 </div>
 
-                <button class="subscribe-button" {{action 'registerUser'}}> 
+                <div class="form-field-medium">
+                    {{paper-input label="Plano***" value=typePlan onChange=(action (mut typePlan)) customValidations=clearFieldValidation }}
+                </div>
+
+                <button class="subscribe-button" {{action 'registerUser'}}>
                     <h1> {{contentTitleButton}}  {{memberType}}  ! </h1>
                     <div class="subscribe-button-background-borders">
                     </div>
                 </button>
-           
 
+                <div class="type-plan-description">
+                    *** Valores dos planos: Anual (R$ 49,00/MÊS) e Mensal (R$ 60,00/MÊS)
+                </div>
             </div>
 
             <div class="right-content">
