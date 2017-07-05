@@ -6,7 +6,7 @@
                 {{else}}
                     <h1> {{this.memberType}} </h1>
                 {{/if}}
-                
+
             </div>
 
             <div class="header-description">
@@ -52,11 +52,15 @@
                 </div>
 
                 <div class="form-field-medium">
+                    {{paper-input label="Cidade" value=city onChange=(action (mut city))}}
+                </div>
+
+                <div class="form-field-medium">
                     {{paper-input label="Estado" value=state onChange=(action (mut state))}}
                 </div>
 
                 <div class="form-field-medium">
-                    {{paper-input label="País" value=country onChange=(action (mut country))}}
+                  {{paper-input label="País (único)" type="text" value="Brasil" disabled=true onChange=(action (mut foo))}}
                 </div>
 
                 <div class="form-field-medium">
@@ -67,12 +71,12 @@
                     {{paper-input label="Telefone*" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
                 </div>
 
-                <button class="subscribe-button" {{action 'registerUser'}}> 
+                <button class="subscribe-button" {{action 'registerUser'}}>
                     <h1> {{contentTitleButton}}  {{memberType}}  ! </h1>
                     <div class="subscribe-button-background-borders">
                     </div>
                 </button>
-           
+
 
             </div>
 

@@ -4,7 +4,7 @@ import ParseHelpers from '55-lab-web-front-end/helpers/parse-helpers';
 export default Ember.Component.extend({
 
     haveImage:false,
-    
+
     memberType: Ember.computed(function () {
         let membershipType = ParseHelpers.urlParamWithName("memberType", window.location.href);
         let isAValidatedType = (membershipType === "PARCEIRO" || membershipType === "MENTOR" || membershipType === "INVESTIDOR" || membershipType === "FRANQUEADO");
@@ -28,8 +28,9 @@ export default Ember.Component.extend({
     number: "",
     complement: "",
     neighbor: "",
+    city: "",
     state: "",
-    country: "",
+    country: "Brasil",
     email: "",
     telephone: "",
 
@@ -72,8 +73,8 @@ export default Ember.Component.extend({
         registerUser() {
 
 
-            var formIsValid = (this.clearFieldValidation[0].validate(this.name) 
-            && this.phoneNumberValidation[0].validate(this.telephone) 
+            var formIsValid = (this.clearFieldValidation[0].validate(this.name)
+            && this.phoneNumberValidation[0].validate(this.telephone)
             && this.emailValidation[0].validate(this.email));
 
             if (formIsValid === true) {
