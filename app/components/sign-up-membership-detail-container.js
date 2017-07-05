@@ -21,9 +21,6 @@ export default Ember.Component.extend({
     contentMemberDescription: "Faça seu cadastro inicial para fazer parte da nossa comunidade e aproveitar todos os benefícios e eventos exclusivos:",
     contentSecondDescription: "+55Lab.co: conexão, compartilhamento e networking como em nenhum outro lugar!",
     contentTitleButton:"Quero ser ",
-    nextButtonTitle:"Próximo",
-    subscribeButtonTitle:"Me tornar membro",
-
     name: "",
     cpf: "",
     rg: "",
@@ -31,16 +28,10 @@ export default Ember.Component.extend({
     number: "",
     complement: "",
     neighbor: "",
-    city: "",
     state: "",
-    country: "Brasil",
+    country: "",
     email: "",
     telephone: "",
-    creditCardNumber: "",
-    creditCardExpirationDate: "",
-    creditCardCVV: "",
-
-    isFormPersonalData: true,
 
     emailValidation: [{
         message: 'Entre com um email válido',
@@ -78,27 +69,9 @@ export default Ember.Component.extend({
 
     actions: {
 
-        showNextData() {
-          var formIsValid = (this.clearFieldValidation[0].validate(this.name)
-          && this.phoneNumberValidation[0].validate(this.telephone)
-          && this.emailValidation[0].validate(this.email));
-
-          if (formIsValid === true) {
-            this.set('isFormPersonalData', false);
-          } else {
-              if (!this.clearFieldValidation[0].validate(this.name)) {
-                  alert('Campo *Nome* é obrigatório');
-              } else if (!this.phoneNumberValidation[0].validate(this.telephone)) {
-                  alert('Campo *Telefone* não contém um número de telefone válido');
-              } else if (!this.emailValidation[0].validate(this.email)) {
-                  alert('Campo *Email* não contém um email válido');
-              }
-
-          }
-
-        },
-
         registerUser() {
+
+
             var formIsValid = (this.clearFieldValidation[0].validate(this.name)
             && this.phoneNumberValidation[0].validate(this.telephone)
             && this.emailValidation[0].validate(this.email));
