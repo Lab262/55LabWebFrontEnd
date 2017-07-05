@@ -79,16 +79,24 @@
 
               {{else}}
 
-                  <div class="form-field-medium">
-                    {{paper-input label="OI (único)" type="text" value="Brasil" disabled=true onChange=(action (mut foo))}}
+                  <div class="form-field-big">
+                    {{paper-input label="Número do Cartão de Crédito" type="text" value=creditCardNumber  onChange=(action (mut creditCardNumber))}}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="TEST*" value=email onChange=(action (mut email)) type="email" customValidations=emailValidation }}
+                      {{paper-input label="mm/aa" value=creditCardExpirationDate onChange=(action (mut creditCardExpirationDate)) type="email"  }}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="FOI*" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
+                      {{paper-input label="cvv" value=creditCardCVV onChange=(action (mut creditCardCVV)) }}
+                  </div>
+
+                  <div class="form-field-medium">
+                      {{paper-input label="Código captcha" value="AZF2F" onChange=(action (mut foo)) }}
+                  </div>
+
+                  <div class="form-field-medium">
+                      {{paper-input label="Aceito termos de serviço" value="yes" onChange=(action (mut foo))  }}
                   </div>
 
                   <button class="subscribe-button" {{action 'registerUser'}}>

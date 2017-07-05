@@ -35,7 +35,10 @@ export default Ember.Component.extend({
     country: "Brasil",
     email: "",
     telephone: "",
-
+    creditCardNumber: "",
+    creditCardExpirationDate: "",
+    creditCardCVV: "",
+    
     isFormPersonalData: true,
 
     emailValidation: [{
@@ -76,7 +79,7 @@ export default Ember.Component.extend({
 
         showNextData() {
           this.set('isFormPersonalData', false);
-          
+
         },
 
         registerUser() {
