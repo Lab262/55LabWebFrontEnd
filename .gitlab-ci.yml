@@ -23,7 +23,7 @@ production:
   - git push -f https://thiagobernardes:waldemir@gitlab.com/LAB262/55lab-webinstitutional-deploy.git HEAD:master
   only:
   - master
-
+ 
 staging:
   type: deploy
   script:
