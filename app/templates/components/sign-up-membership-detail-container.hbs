@@ -21,61 +21,85 @@
 
         <div class="page-detail">
             <div class="left-content">
+              {{#if isFormPersonalData}}
+                  <div class="form-field-big">
+                      {{paper-input label="Nome*" value=name onChange=(action (mut name)) customValidations=clearFieldValidation }}
+                  </div>
 
-                <div class="form-field-big">
-                    {{paper-input label="Nome*" value=name onChange=(action (mut name)) customValidations=clearFieldValidation }}
-                </div>
+                  <div class="form-field-medium">
+                      {{paper-input label="CPF" value=cpf onChange=(action (mut cpf))}} {{!--{{input-mask mask="999.999.999-99" placeholder="CPF"}}--}}
+                  </div>
 
-                <div class="form-field-medium">
-                    {{paper-input label="CPF" value=cpf onChange=(action (mut cpf))}} {{!--{{input-mask mask="999.999.999-99" placeholder="CPF"}}--}}
-                </div>
+                  <div class="form-field-medium">
+                   {{paper-input label="RG" value=rg onChange=(action (mut rg))}}
 
-                <div class="form-field-medium">
-                 {{paper-input label="RG" value=rg onChange=(action (mut rg))}}
+                  </div>
 
-                </div>
+                  <div class="form-field-big">
+                      {{paper-input label="Endereço" value=address onChange=(action (mut address))}}
+                  </div>
 
-                <div class="form-field-big">
-                    {{paper-input label="Endereço" value=address onChange=(action (mut address))}}
-                </div>
+                  <div class="form-field-medium">
+                      {{paper-input label="Número" value=number onChange=(action (mut number)) }}
+                  </div>
 
-                <div class="form-field-medium">
-                    {{paper-input label="Número" value=number onChange=(action (mut number)) }}
-                </div>
+                  <div class="form-field-medium">
+                      {{paper-input label="Complemento" value=complement onChange=(action (mut complement))}}
+                  </div>
 
-                <div class="form-field-medium">
-                    {{paper-input label="Complemento" value=complement onChange=(action (mut complement))}}
-                </div>
+                  <div class="form-field-medium">
+                      {{paper-input label="Bairro" value=neighbor onChange=(action (mut neighbor))}}
+                  </div>
 
-                <div class="form-field-medium">
-                    {{paper-input label="Bairro" value=neighbor onChange=(action (mut neighbor))}}
-                </div>
+                  <div class="form-field-medium">
+                      {{paper-input label="Cidade" value=city onChange=(action (mut city))}}
+                  </div>
 
-                <div class="form-field-medium">
-                    {{paper-input label="Cidade" value=city onChange=(action (mut city))}}
-                </div>
+                  <div class="form-field-medium">
+                      {{paper-input label="Estado" value=state onChange=(action (mut state))}}
+                  </div>
 
-                <div class="form-field-medium">
-                    {{paper-input label="Estado" value=state onChange=(action (mut state))}}
-                </div>
+                  <div class="form-field-medium">
+                    {{paper-input label="País (único)" type="text" value="Brasil" disabled=true onChange=(action (mut foo))}}
+                  </div>
 
-                <div class="form-field-medium">
-                  {{paper-input label="País (único)" type="text" value="Brasil" disabled=true onChange=(action (mut foo))}}
-                </div>
+                  <div class="form-field-medium">
+                      {{paper-input label="Email*" value=email onChange=(action (mut email)) type="email" customValidations=emailValidation }}
+                  </div>
 
-                <div class="form-field-medium">
-                    {{paper-input label="Email*" value=email onChange=(action (mut email)) type="email" customValidations=emailValidation }}
-                </div>
+                  <div class="form-field-medium">
+                      {{paper-input label="Telefone*" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
+                  </div>
 
-                <div class="form-field-medium">
-                    {{paper-input label="Telefone*" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
-                </div>
+                  <button class="subscribe-button" {{action 'showNextData'}}>
+                      <h1> {{nextButtonTitle}} </h1>
+                      <div class="subscribe-button-background-borders">
+                      </div>
+                  </button>
 
-                <button class="subscribe-button" {{action 'registerUser'}}>
-                    <h1> {{contentTitleButton}}  {{memberType}}  ! </h1>
-                    <div class="subscribe-button-background-borders">
-                    </div>
-                </button>
+              {{else}}
+
+                  <div class="form-field-medium">
+                    {{paper-input label="OI (único)" type="text" value="Brasil" disabled=true onChange=(action (mut foo))}}
+                  </div>
+
+                  <div class="form-field-medium">
+                      {{paper-input label="TEST*" value=email onChange=(action (mut email)) type="email" customValidations=emailValidation }}
+                  </div>
+
+                  <div class="form-field-medium">
+                      {{paper-input label="FOI*" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
+                  </div>
+
+                  <button class="subscribe-button" {{action 'registerUser'}}>
+                      <h1> {{contentTitleButton}}  {{memberType}}  ! </h1>
+                      <div class="subscribe-button-background-borders">
+                      </div>
+                  </button>
+              {{/if}}
+
+
+
 
 
             </div>

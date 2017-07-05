@@ -21,6 +21,8 @@ export default Ember.Component.extend({
     contentMemberDescription: "Faça seu cadastro inicial para fazer parte da nossa comunidade e aproveitar todos os benefícios e eventos exclusivos:",
     contentSecondDescription: "+55Lab.co: conexão, compartilhamento e networking como em nenhum outro lugar!",
     contentTitleButton:"Quero ser ",
+    nextButtonTitle:"Próximo",
+
     name: "",
     cpf: "",
     rg: "",
@@ -33,6 +35,8 @@ export default Ember.Component.extend({
     country: "Brasil",
     email: "",
     telephone: "",
+
+    isFormPersonalData: true,
 
     emailValidation: [{
         message: 'Entre com um email válido',
@@ -70,9 +74,12 @@ export default Ember.Component.extend({
 
     actions: {
 
+        showNextData() {
+          this.set('isFormPersonalData', false);
+          
+        },
+
         registerUser() {
-
-
             var formIsValid = (this.clearFieldValidation[0].validate(this.name)
             && this.phoneNumberValidation[0].validate(this.telephone)
             && this.emailValidation[0].validate(this.email));
