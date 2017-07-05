@@ -22,7 +22,7 @@
         <div class="page-detail">
             <div class="left-content">
               {{#if isFormPersonalData}}
-                  <div class="form-field-big">
+                  <div class="form-field-big" style="margin-top:40px;">
                       {{paper-input label="Nome*" value=name onChange=(action (mut name)) customValidations=clearFieldValidation }}
                   </div>
 
@@ -79,7 +79,7 @@
 
               {{else}}
 
-                  <div class="form-field-big">
+                  <div class="form-field-big" style="margin-top:40px;">
                     {{paper-input label="Número do Cartão de Crédito" type="text" value=creditCardNumber  onChange=(action (mut creditCardNumber))}}
                   </div>
 
@@ -100,7 +100,7 @@
                   </div>
 
                   <button class="subscribe-button" {{action 'registerUser'}}>
-                      <h1> {{contentTitleButton}}  {{memberType}}  ! </h1>
+                      <h1> {{subscribeButtonTitle}} </h1>
                       <div class="subscribe-button-background-borders">
                       </div>
                   </button>

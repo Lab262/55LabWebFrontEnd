@@ -22,6 +22,7 @@ export default Ember.Component.extend({
     contentSecondDescription: "+55Lab.co: conexão, compartilhamento e networking como em nenhum outro lugar!",
     contentTitleButton:"Quero ser ",
     nextButtonTitle:"Próximo",
+    subscribeButtonTitle:"Me tornar membro",
 
     name: "",
     cpf: "",
@@ -38,7 +39,7 @@ export default Ember.Component.extend({
     creditCardNumber: "",
     creditCardExpirationDate: "",
     creditCardCVV: "",
-    
+
     isFormPersonalData: true,
 
     emailValidation: [{
@@ -78,7 +79,22 @@ export default Ember.Component.extend({
     actions: {
 
         showNextData() {
-          this.set('isFormPersonalData', false);
+          var formIsValid = (this.clearFieldValidation[0].validate(this.name)
+          && this.phoneNumberValidation[0].validate(this.telephone)
+          && this.emailValidation[0].validate(this.email));
+
+          if (formIsValid === true) {
+            this.set('isFormPersonalData', false);
+          } else {
+              if (!this.clearFieldValidation[0].validate(this.name)) {
+                  alert('Campo *Nome* é obrigatório');
+              } else if (!this.phoneNumberValidation[0].validate(this.telephone)) {
+                  alert('Campo *Telefone* não contém um número de telefone válido');
+              } else if (!this.emailValidation[0].validate(this.email)) {
+                  alert('Campo *Email* não contém um email válido');
+              }
+
+          }
 
         },
 
