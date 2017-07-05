@@ -20,7 +20,7 @@ production:
   script:
   - sh ./build-app.sh
   - sh ./deploy-app.sh
-  - git push -f https://thiagobernardes:waldemir@gitlab.com:LAB262/55lab-webinstitutional-deploy.git HEAD:master
+  - git push -f https://thiagobernardes:waldemir@gitlab.com/LAB262/55lab-webinstitutional-deploy.git HEAD:master
   only:
   - master
 
@@ -29,7 +29,7 @@ staging:
   script:
   - sh ./build-app.sh
   - sh ./deploy-app.sh
-  - git push -f https://thiagobernardes:waldemir@gitlab.com:LAB262/55lab-webinstitutional-deploy.git HEAD:test
+  - git push -f https://thiagobernardes:waldemir@gitlab.com/LAB262/55lab-webinstitutional-deploy.git HEAD:test
 
   only:
   - test
@@ -39,7 +39,7 @@ dev:
   script:
   - sh ./build-app.sh
   - sh ./deploy-app.sh
-  - git push -f https://thiagobernardes:waldemir@gitlab.com:LAB262/55lab-webinstitutional-deploy.git HEAD:dev
+  - git push -f https://thiagobernardes:waldemir@gitlab.com/LAB262/55lab-webinstitutional-deploy.git HEAD:dev
 
   only:
   - dev
