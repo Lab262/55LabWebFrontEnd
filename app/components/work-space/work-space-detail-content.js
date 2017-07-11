@@ -6,7 +6,7 @@ export default Ember.Component.extend({
         selectPlanAction(selectedPlan) {
             this.get('workspacePlansChild').send("selectPlan", selectedPlan);
             this.get('advantagePlansChild').send("selectPlan", selectedPlan);
-
+            this.get('opinionContainerChild').send("selectPlan", selectedPlan);
         },
 
         setWorkspacePlansChild(workspacePlansChild) {
@@ -15,6 +15,10 @@ export default Ember.Component.extend({
 
         setAdvantagePlansChild(advantagePlansChild) {
             this.set("advantagePlansChild",advantagePlansChild);
+        },
+
+        setOpinionContainerChild(opinionContainerChild) {
+            this.set("opinionContainerChild",opinionContainerChild);
         }
     }
 

@@ -36,9 +36,9 @@ export default Ember.Component.extend({
      country: "",
      email: "",
      telephone: "",
-      nextButtonTitle:"Próximo",
-      subscribeButtonTitle:"Me tornar membro",
-      isFormPersonalData: true,
+     nextButtonTitle:"Próximo",
+     subscribeButtonTitle:"Me tornar membro",
+     isFormPersonalData: true,
 
 
 
@@ -98,8 +98,9 @@ export default Ember.Component.extend({
       },
 
       registerUser() {
-          var formIsValid = (this.clearFieldValidation[0].validate(this.name)
-          && this.emailValidation[0].validate(this.email));
+        var formIsValid = (this.clearFieldValidation[0].validate(this.name)
+        && this.phoneNumberValidation[0].validate(this.telephone)
+        && this.emailValidation[0].validate(this.email));
 
           if (formIsValid === true) {
 
@@ -115,7 +116,7 @@ export default Ember.Component.extend({
                   adress_country: this.country,
                   email: this.email,
                   telephone: this.telephone,
-                  memberType: this.get('memberType')
+                  memberType: this.get('memberType'),
               };
 
               var self = this;
@@ -140,6 +141,7 @@ export default Ember.Component.extend({
                       self.set('country', '');
                       self.set('email', '');
                       self.set('telephone', '');
+                      self.set('typePlan', '');
                   },
                   error: function (jqXHR, exception) { alert("Erro:" + jqXHR.responseText); console.log(jqXHR); console.log(exception); }
               });

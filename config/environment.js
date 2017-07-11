@@ -61,6 +61,10 @@ module.exports = function(environment) {
 
   };
 
+  // ENV['ember-cli-gtm'] = {
+  //   appId: 'GTM-M584M2R',
+  //   enabled: true
+
     ENV['ember-cli-gtm'] = {
       appId: 'GTM-P62ZBH4'
   };
