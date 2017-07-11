@@ -26,7 +26,7 @@ export default Ember.Component.extend({
     subDescription: "Se além de ser membro você quiser fazer parte do time +55Lab.co, veja as outras opções disponíveis:",
     options: ["Parceiro", "Franqueado", "Mentor", "INVESTIDOR"],
     logosAndLink:["./assets/images/logo-55-community.png","./assets/images/button-be-member-home-community.png","community"],
-    itemActions: [{url: "/comunidade?nossoTime=true", title: "Faça Parte", image: "./assets/images/work_space_button_store.png"}]
+    itemActions: [{url: "community", title: "Faça Parte", image: "./assets/images/work_space_button_store.png"}]
   },
 
   center0DetailContentObject: {
@@ -37,7 +37,7 @@ export default Ember.Component.extend({
     options: [],
     imagesAndLinks:[["./assets/images/button-home-workspace-house.png","house"],["./assets/images/button-home-workspace-store.png","store"],["./assets/images/button-home-workspace-work.png","work"]],
     link:"work-space",
-    itemActions: [{url: "espaco-de-trabalho", title: "Saiba Mais", image: "./assets/images/home_page_button_work_space.png"}]
+    itemActions: [{url: "work-space", title: "Saiba Mais", image: "./assets/images/home_page_button_work_space.png"}]
   },
 
   center1DetailContentObject: {
@@ -47,7 +47,7 @@ export default Ember.Component.extend({
     subDescription: "Conheça os eventos e cursos da nossa parceira em geração de conhecimento para você compartilhar, trocar, ou adquirir novas ideias empreendedoras.",
     options: [],
     logo:"./assets/images/home-page-logo-acelere-me.png",
-    itemActions: [{url:"/conhecimento", title: "Saiba o que está rolando", image: "./assets/images/work_space_button_work.png"}]
+    itemActions: [{url:"knowledge", title: "Saiba o que está rolando", image: "./assets/images/work_space_button_work.png"}]
   },
 
   rightDetailContentObject: {
