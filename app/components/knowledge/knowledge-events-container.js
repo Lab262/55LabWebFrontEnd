@@ -3,16 +3,25 @@ import Eventick from "npm:eventick";
 
 export default Ember.Component.extend({
     eventsImages: [
-        "/assets/images/image-curse1.jpg",
-        "/assets/images/image-curse2.jpg",
-        "/assets/images/image-curse3.jpg",
-        "/assets/images/image-curse-tapa-cara.png",
-        "/assets/images/image-curse4.jpg",
-        "/assets/images/image-curse-peteleco.png",
+        "./assets/images/image-curse1.jpg",
+        "./assets/images/image-curse2.jpg",
+        "./assets/images/image-curse3.jpg",
+        "./assets/images/image-curse-tapa-cara.png",
+        "./assets/images/image-curse4.jpg",
+        "./assets/images/image-curse-peteleco.png",
 
     ],
     events: [
         {
+              // title: "Peteleco",
+              // local: "55Lab.Store",
+              // image: "./assets/images/image-curse-peteleco.png",
+              // description: "Peteleco é o evento do Acelere.me que vai te dar aquele toque esperto pra você perceber que empreender é muito mais do que ter uma empresa ou um CNPJ.",
+              // descriptionOrganizer: "Acelere.me",
+              // descriptionSupporter: "55Lab.Store",
+              // descriptionDate: "16 de fevereiro e 16 de março",
+              // descriptionAmount: "indefinida",
+              // descriptionMoreInformation: "O Peteleco é o evento de conteúdo e experiência do Acelere.me que estimula a percepção que empreender é muito mais do que ter uma empresa ou um CNPJ. Empreender é um estilo de vida, um estado de espírito. Já em sua terceira edição, o evento impactou mais de 400 empreendedores ao longo de 2016."
         }
     ],
 

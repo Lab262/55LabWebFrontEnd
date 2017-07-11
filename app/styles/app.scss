@@ -2,8 +2,8 @@
 @mixin font-face($name) {
   @font-face {
     font-family: $name;
-    src:  url("/fonts/#{$name}/#{$name}.eot?") format("eot"),
-	  url("/fonts/#{$name}/#{$name}.woff") format("woff");
+    src:  url("./fonts/#{$name}/#{$name}.eot?") format("eot"),
+	  url("./fonts/#{$name}/#{$name}.woff") format("woff");
   }
 }
 @include font-face('FjordOne-Regular');
@@ -64,5 +64,3 @@ margin: 0;
 padding: 0;
 vertical-align: baseline;
 }
-
-

@@ -1,6 +1,8 @@
+/* eslint-env node */
+'use strict';
+
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var mergeTrees = require('broccoli-merge-trees');
-var pickFiles = require('broccoli-static-compiler');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
@@ -8,7 +10,13 @@ module.exports = function(defaults) {
       includePaths: [
         'bower_components/foundation/scss'
       ]
+    },
+    SRI: {
+      enabled: false,
     }
   });
-  return mergeTrees([app.toTree()]);
+  return mergeTrees([app.toTree()],{
+    overwrite: true
+
+  });
 };

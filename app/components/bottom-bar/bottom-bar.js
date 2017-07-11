@@ -3,6 +3,12 @@ import Ember from 'ember';
 export default Ember.Component.extend({
     backgroundColor: "#000000",
 
+  //   computedBackgroundColor: Ember.computed( function() {
+  //   /* Note: You must implement #escapeCSS. */
+  //   var color = escapeCSS(this.get('backgroundColor'));
+  //   return Ember.String.htmlSafe("background-color: " + color);
+  // }),
+
      footerContentObjectFirst: {
        title: "Comunidade",
        options: ["+55 LAB COMMUNITY"],

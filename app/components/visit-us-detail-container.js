@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ParseHelpers from '55-lab-web-front-end/helpers/parse-helpers';
+import ParseHelpers from 'a55-lab-institutional-web/helpers/parse-helpers';
 
 export default Ember.Component.extend({
  

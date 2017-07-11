@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ResetScrollMixin from '55-lab-web-front-end/mixins/reset-scroll';
+import ResetScrollMixin from 'a55-lab-institutional-web/mixins/reset-scroll';
 import { module, test } from 'qunit';
 
 module('Unit | Mixin | reset scroll');

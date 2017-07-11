@@ -1,0 +1,36 @@
+image: node:6.5.0
+cache:
+  paths:
+  - node_modules/
+
+image: node:6.5.0
+cache:
+  paths:
+  - node_modules/
+
+before_script:
+  - apt-get update -qy
+  - echo "Y" |apt-get install libssl-dev
+  - apt-get install -y rubygems
+  - gem install dpl
+
+production:
+  type: deploy
+  script:
+  - dpl --provider=heroku --app=a55labwebfrontend-production  --api-key=$HEROKU_PRODUCTION_API_KEY
+  only:
+  - master
+
+staging:
+  type: deploy
+  script:
+  - dpl --provider=heroku --app=a55labwebfrontend-staging  --api-key=$HEROKU_PRODUCTION_API_KEY
+  only:
+  - test
+
+dev:
+  type: deploy
+  script:
+  - dpl --provider=heroku --app=a55lab-webinstitutional-dev  --api-key=$HEROKU_PRODUCTION_API_KEY
+  only:
+  - dev

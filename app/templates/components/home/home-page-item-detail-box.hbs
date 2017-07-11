@@ -45,7 +45,9 @@
 
   <div class="item-actions" >
     {{#each contentObject.itemActions as |itemAction| }}
-    <a class="action-option" href="{{itemAction.url}}"> <img src="{{itemAction.image}}"> <a> {{itemAction.title}} </a> </a>
+    {{#link-to itemAction.url (query-params nossoTime=true)}}  <a class="action-option">   <img src="{{itemAction.image}}"> <a> {{itemAction.title}} </a> </a>  {{/link-to}}
+
+
     {{/each}}
 
   </div>
