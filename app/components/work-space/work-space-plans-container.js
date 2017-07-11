@@ -10,8 +10,8 @@ export default Ember.Component.extend({
             headerContentPrice: "R$ 49,00/MÊS",
             headerContentWorkspacePlanButton: "FAÇA PARTE",
             headerDifferentLink:"sign-up-membership",
-            headerContentBackgroundUrl: "/assets/images/work-space-membership-house-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-house.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-membership-house-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-house.png",
             headerColorBackground: "#85BF47",
             headerColorBorderBackground: "#0A365C"
         },
@@ -49,8 +49,8 @@ export default Ember.Component.extend({
             headerContentTitle: "OPEN DESK",
             headerContentPrice: "A partir de R$ 865,00/MÊS",
             headerContentWorkspacePlanButton: "VISITE",
-            headerContentBackgroundUrl: "/assets/images/work-space-opendesk-house-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-house.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-opendesk-house-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-house.png",
             headerColorBackground: "#85BF47",
             headerColorBorderBackground: "#0A365C"
         },
@@ -89,8 +89,8 @@ export default Ember.Component.extend({
             headerContentTitle: "FIXED DESK",
             headerContentPrice: "A partir de R$ 985,00/MÊS",
             headerContentWorkspacePlanButton: "VISITE",
-            headerContentBackgroundUrl: "/assets/images/work-space-fixeddesk-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-house.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-fixeddesk-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-house.png",
             headerColorBackground: "#85BF47",
             headerColorBorderBackground: "#0A365C"
         },
@@ -129,8 +129,8 @@ export default Ember.Component.extend({
             headerContentTitle: "PRIVATE ROOM",
             headerContentPrice: "A partir de R$ 5.200,00/MÊS",
             headerContentWorkspacePlanButton: "VISITE",
-            headerContentBackgroundUrl: "/assets/images/work-space-privateroom-house-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-house.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-privateroom-house-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-house.png",
             headerColorBackground: "#85BF47",
             headerColorBorderBackground: "#0A365C"
         },
@@ -173,8 +173,8 @@ export default Ember.Component.extend({
             headerContentPrice: "R$ 49,00/MÊS",
             headerContentWorkspacePlanButton: "FAÇA PARTE",
             headerDifferentLink:"sign-up-membership",
-            headerContentBackgroundUrl: "/assets/images/work-space-membership-store-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-store.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-membership-store-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-store.png",
             headerColorBackground: "#D8AD09",
             headerColorBorderBackground: "#AC0049"
         },
@@ -212,8 +212,8 @@ export default Ember.Component.extend({
             headerContentTitle: "OPEN DESK",
             headerContentPrice: "A partir de R$ 320,00/MÊS",
             headerContentWorkspacePlanButton: "VISITE",
-            headerContentBackgroundUrl: "/assets/images/work-space-opendesk-store-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-store.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-opendesk-store-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-store.png",
             headerColorBackground: "#D8AD09",
             headerColorBorderBackground: "#AC0049"
         },
@@ -252,8 +252,8 @@ export default Ember.Component.extend({
             headerContentTitle: "SHOWROOM",
             headerContentPrice: "A partir de R$ 175,00/MÊS",
             headerContentWorkspacePlanButton: "VISITE",
-            headerContentBackgroundUrl: "/assets/images/work-space-showroom-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-store.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-showroom-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-store.png",
             headerColorBackground: "#D8AD09",
             headerColorBorderBackground: "#AC0049"
         },
@@ -296,8 +296,8 @@ export default Ember.Component.extend({
             headerContentPrice: "R$ 49,00/MÊS",
             headerContentWorkspacePlanButton: "FAÇA PARTE",
             headerDifferentLink:"sign-up-membership",
-            headerContentBackgroundUrl: "/assets/images/work-space-membership-work-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-work.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-membership-work-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-work.png",
             headerColorBackground: "#AC0049",
             headerColorBorderBackground: "#D8AD09"
         },
@@ -335,8 +335,8 @@ export default Ember.Component.extend({
             headerContentTitle: "OPEN DESK",
             headerContentPrice: "A partir de R$ 575,00/MÊS",
             headerContentWorkspacePlanButton: "VISITE",
-            headerContentBackgroundUrl: "/assets/images/work-space-opendesk-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-work.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-opendesk-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-work.png",
             headerColorBackground: "#AC0049",
             headerColorBorderBackground: "#D8AD09"
         },
@@ -375,8 +375,8 @@ export default Ember.Component.extend({
             headerContentTitle: "FIXED DESK",
             headerContentPrice: "A partir de R$ 820,00/MÊS",
             headerContentWorkspacePlanButton: "VISITE",
-            headerContentBackgroundUrl: "/assets/images/work-space-fixeddesk-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-work.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-fixeddesk-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-work.png",
             headerColorBackground: "#AC0049",
             headerColorBorderBackground: "#D8AD09"
         },
@@ -415,8 +415,8 @@ export default Ember.Component.extend({
             headerContentTitle: "PRIVATE ROOM",
             headerContentPrice: "A partir de R$ 1.800,00/MÊS",
             headerContentWorkspacePlanButton: "VISITE",
-            headerContentBackgroundUrl: "/assets/images/work-space-privateroom-background.jpg",
-            headerContentBacgroundButtonUrl: "/assets/images/workspace-anuity-button-image-work.png",
+            headerContentBackgroundUrl: "./assets/images/work-space-privateroom-background.jpg",
+            headerContentBacgroundButtonUrl: "./assets/images/workspace-anuity-button-image-work.png",
             headerColorBackground: "#AC0049",
             headerColorBorderBackground: "#D8AD09"
         },
@@ -460,7 +460,7 @@ export default Ember.Component.extend({
         this._super(...arguments);
         this.get('changeInfoDelegate').send('setWorkspacePlansChild', this);
         this.selectPlanBasedOnUrl();
-        this.setMembershipPriceFromVindi();
+        // this.setMembershipPriceFromVindi();
     },
 
     setMembershipPriceFromVindi() {

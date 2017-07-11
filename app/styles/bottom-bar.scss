@@ -97,7 +97,7 @@
                   position: absolute;
                   width: 6vw;
                   height: 3vw;
-                  background: url(/assets/images/logo-lab262-white.png);
+                  background: url(../assets/images/logo-lab262-white.png);
                   background-repeat: no-repeat;
                   background-size: 55%;
                   margin-left: 31%;
@@ -132,12 +132,12 @@
         }
 
       .facebook-button {
-        background-image: url("/assets/images/icon-facebook-footer.png");
+        background-image: url("../assets/images/icon-facebook-footer.png");
         @extend %extended-social-media-button ;
       }
 
       .instagram-button {
-        background-image: url("/assets/images/icon-instagram-footer.png");
+        background-image: url("../assets/images/icon-instagram-footer.png");
         @extend %extended-social-media-button ;
       }
      }
@@ -235,7 +235,7 @@
                   position: absolute;
                   width: 5.2vw;
                   height: 3vw;
-                  background: url(/assets/images/signed-lab262.png);
+                  background: url(../assets/images/signed-lab262.png);
                   background-repeat: no-repeat;
                   background-size: 100%;
                   margin-left: 26.5%;
@@ -280,12 +280,12 @@
         }
 /*
       .facebook-button {
-        background-image: url("/assets/images/icon-facebook-footer.png");
+        background-image: url("../assets/images/icon-facebook-footer.png");
         @extend %extended-social-media-button ;
       }
 
       .instagram-button {
-        background-image: url("/assets/images/icon-instagram-footer.png");
+        background-image: url("../assets/images/icon-instagram-footer.png");
         @extend %extended-social-media-button ;
       }*/
      }
@@ -398,7 +398,7 @@
                   position: absolute;
                   width: 17vw;
                   height: 10vw;
-                  background: url(/assets/images/signed-lab262.png);
+                  background: url(../assets/images/signed-lab262.png);
                   background-repeat: no-repeat;
                   background-size: 100%;
                   margin-left: -10vw;
@@ -447,12 +447,12 @@
         }
 
       /*.facebook-button {
-        background-image: url("/assets/images/icon-facebook-footer.png");
+        background-image: url("../assets/images/icon-facebook-footer.png");
         @extend %extended-social-media-button ;
       }
 
       .instagram-button {
-        background-image: url("/assets/images/icon-instagram-footer.png");
+        background-image: url("../assets/images/icon-instagram-footer.png");
         @extend %extended-social-media-button ;
       }*/
      }

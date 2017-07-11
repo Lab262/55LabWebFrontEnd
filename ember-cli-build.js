@@ -10,7 +10,13 @@ module.exports = function(defaults) {
       includePaths: [
         'bower_components/foundation/scss'
       ]
+    },
+    SRI: {
+      enabled: false,
     }
   });
-  return mergeTrees([app.toTree()]);
+  return mergeTrees([app.toTree()],{
+    overwrite: true
+
+  });
 };

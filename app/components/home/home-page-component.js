@@ -12,11 +12,11 @@ export default Ember.Component.extend({
     actionCenter0Title: "ESPAÇO DE TRABALHO",
     actionCenter1Title: "CONHECIMENTO",
     actionRightTitle: "CONTATOS",
-    backgroundImage: "/assets/images/home-background-image.jpg",
-    imageLeft: "/assets/images/home-page-image-community.png",
-    imageCenter0: "/assets/images/home-page-image-work-station.png",
-    imageCenter1: "/assets/images/home-page-image-knowledge.png",
-    imageRight: "/assets/images/home-page-image-contact.png"
+    backgroundImage: "./assets/images/home-background-image.jpg",
+    imageLeft: "./assets/images/home-page-image-community.png",
+    imageCenter0: "./assets/images/home-page-image-work-station.png",
+    imageCenter1: "./assets/images/home-page-image-knowledge.png",
+    imageRight: "./assets/images/home-page-image-contact.png"
   },
 
   leftDetailContentObject: {
@@ -25,8 +25,8 @@ export default Ember.Component.extend({
     subTitle: "SEJA MEMBRO",
     subDescription: "Se além de ser membro você quiser fazer parte do time +55Lab.co, veja as outras opções disponíveis:",
     options: ["Parceiro", "Franqueado", "Mentor", "INVESTIDOR"],
-    logosAndLink:["/assets/images/logo-55-community.png","/assets/images/button-be-member-home-community.png","community"],
-    itemActions: [{url: "/comunidade?nossoTime=true", title: "Faça Parte", image: "/assets/images/work_space_button_store.png"}]
+    logosAndLink:["./assets/images/logo-55-community.png","./assets/images/button-be-member-home-community.png","community"],
+    itemActions: [{url: "/comunidade?nossoTime=true", title: "Faça Parte", image: "./assets/images/work_space_button_store.png"}]
   },
 
   center0DetailContentObject: {
@@ -35,9 +35,9 @@ export default Ember.Component.extend({
     subTitle: "Planos",
     subDescription: "Nem todos os negócios são iguais e do mesmo tamanho. Por isso, nossa estrutura é dividida em três segmentos que, com certeza, atendem às suas necessidades. Compare e agende sua visita:",
     options: [],
-    imagesAndLinks:[["/assets/images/button-home-workspace-house.png","house"],["/assets/images/button-home-workspace-store.png","store"],["/assets/images/button-home-workspace-work.png","work"]],
+    imagesAndLinks:[["./assets/images/button-home-workspace-house.png","house"],["./assets/images/button-home-workspace-store.png","store"],["./assets/images/button-home-workspace-work.png","work"]],
     link:"work-space",
-    itemActions: [{url: "/espaco-de-trabalho", title: "Saiba Mais", image: "/assets/images/home_page_button_work_space.png"}]
+    itemActions: [{url: "espaco-de-trabalho", title: "Saiba Mais", image: "./assets/images/home_page_button_work_space.png"}]
   },
 
   center1DetailContentObject: {
@@ -46,8 +46,8 @@ export default Ember.Component.extend({
     subTitle: "Acelere.me",
     subDescription: "Conheça os eventos e cursos da nossa parceira em geração de conhecimento para você compartilhar, trocar, ou adquirir novas ideias empreendedoras.",
     options: [],
-    logo:"/assets/images/home-page-logo-acelere-me.png",
-    itemActions: [{url:"/conhecimento", title: "Saiba o que está rolando", image: "/assets/images/work_space_button_work.png"}]
+    logo:"./assets/images/home-page-logo-acelere-me.png",
+    itemActions: [{url:"/conhecimento", title: "Saiba o que está rolando", image: "./assets/images/work_space_button_work.png"}]
   },
 
   rightDetailContentObject: {

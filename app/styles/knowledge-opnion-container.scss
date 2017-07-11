@@ -29,7 +29,7 @@
            z-index:5;
            overflow: visible;
            position: absolute;
-           background-image:url(/assets/images/knowledge_background_opinion_left.png);
+           background-image:url(../assets/images/knowledge_background_opinion_left.png);
            background-size: 100%;
            background-repeat: no-repeat;*/
            
@@ -78,7 +78,7 @@
            z-index:99;
            margin-right: -29%;
            margin-top: -3.6%;
-           content:url(/assets/images/rectangle_knowledge_left.png);*/
+           content:url(../assets/images/rectangle_knowledge_left.png);*/
        }
      }
 
@@ -103,7 +103,7 @@
            z-index:-1;
            overflow: visible;
            position: absolute;
-           background-image:url(/assets/images/knowledge_background_opinion_right.png);
+           background-image:url(../assets/images/knowledge_background_opinion_right.png);
            background-size: 100%;
            background-repeat: no-repeat;*/
 
@@ -154,7 +154,7 @@
            z-index:99;
            margin-left: -24.9%;
            margin-top: -11.5%;
-           content:url(/assets/images/rectangle_knowledge_right.png);*/
+           content:url(../assets/images/rectangle_knowledge_right.png);*/
         } 
       }
 }
@@ -191,7 +191,7 @@
             z-index:5;
             overflow: visible;
             position: absolute;
-            background-image:url(/assets/images/knowledge_background_opinion_left.png);
+            background-image:url(../assets/images/knowledge_background_opinion_left.png);
             background-size: 100%;
             background-repeat: no-repeat;
             
@@ -240,7 +240,7 @@
             z-index:99;
             margin-right: -29%;
             margin-top: -3.6%;
-            content:url(/assets/images/rectangle_knowledge_left.png);
+            content:url(../assets/images/rectangle_knowledge_left.png);
         }
       }
 
@@ -265,7 +265,7 @@
             z-index:1;
             overflow: visible;
             position: absolute;
-            background-image:url(/assets/images/knowledge_background_opinion_right.png);
+            background-image:url(../assets/images/knowledge_background_opinion_right.png);
             background-size: 100%;
             background-repeat: no-repeat;
 
@@ -316,7 +316,7 @@
             z-index:99;
             margin-left: -24.9%;
             margin-top: -11.5%;
-            content:url(/assets/images/rectangle_knowledge_right.png);
+            content:url(../assets/images/rectangle_knowledge_right.png);
           } 
         }
   }
@@ -356,7 +356,7 @@
             z-index:5;
             overflow: visible;
             position: absolute;
-            background-image:url(/assets/images/knowledge_background_opinion_left_responsive.png);
+            background-image:url(../assets/images/knowledge_background_opinion_left_responsive.png);
             background-size: 100%;
             background-repeat: no-repeat;
             
@@ -408,7 +408,7 @@
             position: absolute;
             left: 5%;
             top: -13%;
-            content:url(/assets/images/rectangle_knowledge_left.png);
+            content:url(../assets/images/rectangle_knowledge_left.png);
         }
       }
 
@@ -436,7 +436,7 @@
 
             overflow: visible;
             position: absolute;
-            background-image:url(/assets/images/knowledge_background_opinion_right_responsive.png);
+            background-image:url(../assets/images/knowledge_background_opinion_right_responsive.png);
             background-size: 100%;
             background-repeat: no-repeat;
 
@@ -490,7 +490,7 @@
             position: absolute;
             right: 5%;
             top: 44%;
-            content:url(/assets/images/rectangle_knowledge_right.png);
+            content:url(../assets/images/rectangle_knowledge_right.png);
           } 
         }
   }
