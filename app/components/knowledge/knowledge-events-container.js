@@ -28,10 +28,10 @@ export default Ember.Component.extend({
     didInsertElement() {
         this._super(...arguments);
         this.set('events', [{
-          title: "MARATONA IGNITION",
-          image: this.eventsImages[3],
-          description: "03/06/2017",
-          url: "https://www.sympla.com.br/maratona-ignition__117622",
+          title: "CO-KITCHEN LAB - HEMPY HOUR",
+          image: "./assets/images/image-curse-co-kitchen.png",
+          description: "13/07/2017",
+          url: "https://www.sympla.com.br/co-kitchen-lab---hempy-hour__164251",
         }]);
 
         //this.loadEventickData();
