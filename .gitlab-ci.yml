@@ -41,7 +41,7 @@ dev:
   script:
   - sh ./build-app.sh
   - sh ./deploy-app.sh
-  - cd ./dist
+  ``- cd ./dist
   - git push -f https://thiagobernardes:waldemir@gitlab.com/LAB262/55lab-webinstitutional-deploy.git HEAD:dev
 
   only:
