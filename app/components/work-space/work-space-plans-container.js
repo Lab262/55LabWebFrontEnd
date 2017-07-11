@@ -1,6 +1,6 @@
 import Ember from 'ember';
-import ParseHelpers from '55-lab-web-front-end/helpers/parse-helpers';
-import VindiAdapter from '55-lab-web-front-end/adapters/vindi';
+import ParseHelpers from 'a55-lab-institutional-web/helpers/parse-helpers';
+import VindiAdapter from 'a55-lab-institutional-web/adapters/vindi';
 
 export default Ember.Component.extend({
 

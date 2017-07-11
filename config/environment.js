@@ -1,8 +1,9 @@
-/* jshint node: true */
+/* eslint-env node */
+'use strict';
 
 module.exports = function(environment) {
-  var ENV = {
-    modulePrefix: '55-lab-web-front-end',
+  let ENV = {
+    modulePrefix: 'a55-lab-institutional-web',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
@@ -10,10 +11,14 @@ module.exports = function(environment) {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
+      },
+      EXTEND_PROTOTYPES: {
+        // Prevent Ember Data from overriding Date.parse.
+        Date: false
       }
     },
 
-     pace: {
+    pace: {
 
     // addon-specific options to configure theme
     theme: 'corner-indicator',
@@ -54,9 +59,6 @@ module.exports = function(environment) {
     }
   };
 
-  ENV['ember-cli-gtm'] = {
-  appId: 'GTM-P62ZBH4'
-  };
 
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
