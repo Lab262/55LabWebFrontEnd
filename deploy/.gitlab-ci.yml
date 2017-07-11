@@ -26,11 +26,11 @@ staging:
   script:
   - dpl --provider=heroku --app=a55labwebfrontend-staging  --api-key=$HEROKU_PRODUCTION_API_KEY
   only:
-  - master
+  - test
 
 dev:
   type: deploy
   script:
   - dpl --provider=heroku --app=a55lab-webinstitutional-dev  --api-key=$HEROKU_PRODUCTION_API_KEY
   only:
-  - master
+  - dev
