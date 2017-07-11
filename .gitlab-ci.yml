@@ -32,7 +32,6 @@ staging:
   - sh ./deploy-app.sh
   - cd ./dist
   - git push -f https://thiagobernardes:waldemir@gitlab.com/LAB262/55lab-webinstitutional-deploy.git HEAD:test
-
   only:
   - test
 
@@ -43,6 +42,5 @@ dev:
   - sh ./deploy-app.sh
   - cd ./dist
   - git push -f https://thiagobernardes:waldemir@gitlab.com/LAB262/55lab-webinstitutional-deploy.git HEAD:dev
-
   only:
   - dev
