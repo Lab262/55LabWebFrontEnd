@@ -1,18 +1,22 @@
 import Ember from 'ember';
-import ParseHelpers from '55-lab-web-front-end/helpers/parse-helpers';
+import ParseHelpers from 'a55-lab-institutional-web/helpers/parse-helpers';
 
 export default Ember.Component.extend({
 
-    haveImage:false,
+    haveImage: Ember.computed(function () {
+      if (this.get('memberType') === "MEMBRO") {
+        return false
+      } else {
+        return true
+      }
+    }),
 
     memberType: Ember.computed(function () {
         let membershipType = ParseHelpers.urlParamWithName("memberType", window.location.href);
         let isAValidatedType = (membershipType === "PARCEIRO" || membershipType === "MENTOR" || membershipType === "INVESTIDOR" || membershipType === "FRANQUEADO");
         if (membershipType !== undefined && isAValidatedType) {
-            this.set('haveImage',false);
             return membershipType;
         } else {
-            this.set('haveImage',true);
             return "MEMBRO";
         }
     }),
@@ -68,6 +72,11 @@ export default Ember.Component.extend({
 
 
     actions: {
+
+        showNextData() {
+          this.set('isFormPersonalData', false);
+
+        },
 
         registerUser() {
 

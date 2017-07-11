@@ -64,10 +64,10 @@
       padding-left: -9%;
       margin-bottom: 0%;
       margin-top: -80%;
-      
+
   }
 
-  
+
 
   .item-subdescription{
     font-family: 'FjordOne-Regular';
@@ -114,7 +114,7 @@
           margin-left: -20%;
           width: 100%;
       }
-      
+
       &:hover{
         transform:scale(1.1,1.1);
         transition: transform 0.1s, width 0.1s ease-in;
@@ -132,7 +132,7 @@
     justify-content: flex-start;
     color: rgba(74,74,74,1);
     margin-bottom: 1vw;
-    
+
 
     .action-option {
       a {
@@ -169,16 +169,16 @@
           margin-left: 7%;
         }
     }
- 
+
     .email-title {
       margin-top: -6%;
       @extend %extended-contact-title ;
-      
+
     }
     .email-content {
       @extend %extended-contact-content ;
       margin-top: -3%;
-    
+
 
       // margin-bottom: 25px;
     }
@@ -219,11 +219,11 @@
         }
       }
       .facebook-button {
-        background-image: url("/assets/images/facebook-button.png");
+        background-image: url("../assets/images/facebook-button.png");
         @extend %extended-social-media-button ;
       }
       .instagram-button {
-        background-image: url("/assets/images/instagram-button.png");
+        background-image: url("../assets/images/instagram-button.png");
         @extend %extended-social-media-button ;
       }
     }
@@ -335,7 +335,7 @@
       padding-left: -9%;
       margin-bottom: 5%;
       margin-top: -80%;
-      
+
   }
 
     .item-options {

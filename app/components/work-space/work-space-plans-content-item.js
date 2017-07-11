@@ -7,7 +7,7 @@ export default Ember.Component.extend({
             headerContentTitle: "MEMBERSHIP",
             headerContentPrice: "R$ 49,00/MÊS",
             headerContentWorkspacePlanButton: "FAÇA PARTE",
-            headerContentBackgroundUrl: "/assets/images/background-image.png"
+            headerContentBackgroundUrl: "./assets/images/background-image.png"
         }, 
 
         descriptionContent: "Acesso a qualquer espaço de trabalho dispomível na área comum do +55lab. O plano inclui o +55 Membership e 1 crédito na \"meeting room\".",

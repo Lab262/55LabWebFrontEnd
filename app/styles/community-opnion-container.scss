@@ -32,7 +32,7 @@
            z-index:5;
            overflow: visible;
            position: absolute;
-           background-image:url(/assets/images/community_description_opinion_container.png);
+           background-image:url(../assets/images/community_description_opinion_container.png);
            background-size: 100%;
            background-repeat: no-repeat;*/
            
@@ -72,7 +72,7 @@
            overflow: visible;
            margin-right: 45%;
            z-index:2;
-           content:url(/assets/images/knowledge-picture.png);*/
+           content:url(../assets/images/knowledge-picture.png);*/
        }
 
        .membership-detail-main-picture {
@@ -82,7 +82,7 @@
            z-index:99;
            margin-right: -29%;
            margin-top: -3.6%;
-           content:url(/assets/images/rectangle-opinion-left.png);*/
+           content:url(../assets/images/rectangle-opinion-left.png);*/
        }
      }
 
@@ -107,7 +107,7 @@
            z-index:-1;
            overflow: visible;
            position: absolute;
-           background-image:url(/assets/images/community_description_second_opinion_container.png);
+           background-image:url(../assets/images/community_description_second_opinion_container.png);
            background-size: 100%;
            background-repeat: no-repeat;*/
 
@@ -149,7 +149,7 @@
            margin-left: 50%;
            z-index:-1;
            margin-top: -8%;
-           content:url(/assets/images/knowledge-picture.png);*/
+           content:url(../assets/images/knowledge-picture.png);*/
        }
 
        .community-opinion-second-detail-main-picture {
@@ -159,7 +159,7 @@
            z-index:99;
            margin-left: -24.9%;
            margin-top: -11.5%;
-           content:url(/assets/images/rectangle-opinion-right.png);*/
+           content:url(../assets/images/rectangle-opinion-right.png);*/
         } 
       }
 }
@@ -200,7 +200,7 @@
            z-index:5;
            overflow: visible;
            position: absolute;
-           background-image:url(/assets/images/community_description_opinion_container.png);
+           background-image:url(../assets/images/community_description_opinion_container.png);
            background-size: 100%;
            background-repeat: no-repeat;
            
@@ -249,7 +249,7 @@
            z-index:99;
            margin-right: -29%;
            margin-top: -3.6%;
-           content:url(/assets/images/rectangle-opinion-left.png);
+           content:url(../assets/images/rectangle-opinion-left.png);
        }
      }
 
@@ -274,7 +274,7 @@
            z-index:1;
            overflow: visible;
            position: absolute;
-           background-image:url(/assets/images/community_description_second_opinion_container.png);
+           background-image:url(../assets/images/community_description_second_opinion_container.png);
            background-size: 100%;
            background-repeat: no-repeat;
 
@@ -325,7 +325,7 @@
            z-index:99;
            margin-left: -24.9%;
            margin-top: -11.5%;
-           content:url(/assets/images/rectangle-opinion-right.png);
+           content:url(../assets/images/rectangle-opinion-right.png);
         } 
       }
 }
@@ -367,7 +367,7 @@
            z-index:5;
            overflow: visible;
            position: absolute;
-           background-image:url(/assets/images/community_description_opinion_container_responsive.png);
+           background-image:url(../assets/images/community_description_opinion_container_responsive.png);
            background-size: 100%;
            background-repeat: no-repeat;
            
@@ -416,7 +416,7 @@
            width: 20vw;
            overflow: visible;
            z-index:99;
-           content:url(/assets/images/rectangle-opinion-left.png);
+           content:url(../assets/images/rectangle-opinion-left.png);
            position: absolute;
            left: 5%;
            top: -13%;
@@ -449,7 +449,7 @@
 
            overflow: visible;
            position: absolute;
-           background-image:url(/assets/images/community_description_second_opinion_container_responsive.png);
+           background-image:url(../assets/images/community_description_second_opinion_container_responsive.png);
            background-size: 100%;
            background-repeat: no-repeat;
 
@@ -503,7 +503,7 @@
            position: absolute;
            right: 5%;
            top: 44%;
-           content:url(/assets/images/rectangle-opinion-right.png);
+           content:url(../assets/images/rectangle-opinion-right.png);
         } 
       }
 }

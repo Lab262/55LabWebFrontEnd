@@ -1,10 +1,10 @@
- {{#if responsiveMode}} 
-       
+ {{#if responsiveMode}}
 
-        {{top-bar.top-bar closeMenuAction=(action "closeMenuAction") style=(if isMenuOpen "transform: translateX(0); " "")}}  
-        {{top-bar.navbar-responsive-mobile openMenuAction=(action "openMenuAction") style=(unless isMenuOpen "transform: translateY(0);" "" )}}
+
+        {{top-bar/top-bar closeMenuAction=(action "closeMenuAction") style=(if isMenuOpen "transform: translateX(0); " "")}}
+        {{top-bar/navbar-responsive-mobile openMenuAction=(action "openMenuAction") style=(unless isMenuOpen "transform: translateY(0);" "" )}}
 
 {{else}}
-        {{top-bar.top-bar closeMenuAction=(action "closeMenuAction") showLeftMenu=this.showLeftMenu}}  
-        
-{{/if}}  
+        {{top-bar/top-bar closeMenuAction=(action "closeMenuAction") showLeftMenu=this.showLeftMenu}}  
+
+{{/if}}

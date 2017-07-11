@@ -2,13 +2,13 @@
 
   <div class="item-main" >
     <div class="item-title"> {{contentObject.title}} </div>
-    <div class="item-description"> {{contentObject.description}} 
+    <div class="item-description"> {{contentObject.description}}
       {{#if (object-have-property 'logosAndLink' object=contentObject) }}
         <img class="item-logo-image" src={{contentObject.logosAndLink.[0]}}>
          {{#link-to contentObject.logosAndLink.[2] target="_parent"}}
         <button class="item-button" style="background:url({{contentObject.logosAndLink.[1]}}) no-repeat; background-size: 80%;" >
           <h1> {{contentObject.subTitle}}</h1>
-        </button> 
+        </button>
         {{/link-to}}
       {{/if}}
     </div>
@@ -17,15 +17,15 @@
   <div class="item-buttons">
     {{#if (object-have-property 'imagesAndLinks' object=contentObject)  }}
     {{#each contentObject.imagesAndLinks as |object| }}
-       {{#link-to contentObject.link (query-params spaceType=object.[1]) target="_parent"}} 
-          <button class="button" style="background:url({{object.[0]}}) no-repeat; background-size: 60%;" > </button> 
+       {{#link-to contentObject.link (query-params spaceType=object.[1]) target="_parent"}}
+          <button class="button" style="background:url({{object.[0]}}) no-repeat; background-size: 60%;" > </button>
        {{/link-to}}
     {{/each}}
     {{/if}}
   </div>
 
 <div class="item-sub">
-  
+
   {{#unless (object-have-property 'imagesAndLinks' object=contentObject)}}
     {{#if (object-have-property 'logo' object=contentObject)  }}
         <img class="item-image" src={{contentObject.logo}}>
@@ -35,7 +35,7 @@
   <div class="item-subdescription"> {{contentObject.subDescription}} </div>
 
  </div>
-  
+
 
   <div class="item-options">
     {{#each contentObject.options as |option| }}
@@ -45,9 +45,11 @@
 
   <div class="item-actions" >
     {{#each contentObject.itemActions as |itemAction| }}
-    <a class="action-option" href="{{itemAction.url}}"> <img src="{{itemAction.image}}"> <a> {{itemAction.title}} </a> </a>
+    {{#link-to itemAction.url (query-params nossoTime=true)}}  <a class="action-option">   <img src="{{itemAction.image}}"> <a> {{itemAction.title}} </a> </a>  {{/link-to}}
+
+
     {{/each}}
-    
+
   </div>
 
   {{#if (object-have-property 'email' object=contentObject)  }}

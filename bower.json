@@ -1,12 +1,11 @@
 {
-  "name": "55-lab-web-front-end",
+  "name": "a55-lab-institutional-web",
   "dependencies": {
-    "ember": "~2.8.0",
-    "ember-cli-shims": "0.1.1",
-    "foundation": "^5.5.3",
-    "hammer.js": "^2.0.8",
+    "ember": "2.14.0",
+    "foundation": "5.5.3",
+    "hammer.js": "2.0.8",
     "matchMedia": "0.2.0",
-    "pace": "^1.0.2"
+    "pace": "1.0.2"
   },
   "authors": [
     "Huallyd <huallyd@gmail.com>"

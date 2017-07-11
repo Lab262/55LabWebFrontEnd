@@ -3,19 +3,19 @@ import Eventick from "npm:eventick";
 
 export default Ember.Component.extend({
     eventsImages: [
-        "/assets/images/image-curse1.jpg",
-        "/assets/images/image-curse2.jpg",
-        "/assets/images/image-curse3.jpg",
-        "/assets/images/image-curse-tapa-cara.png",
-        "/assets/images/image-curse4.jpg",
-        "/assets/images/image-curse-peteleco.png",
-        
+        "./assets/images/image-curse1.jpg",
+        "./assets/images/image-curse2.jpg",
+        "./assets/images/image-curse3.jpg",
+        "./assets/images/image-curse-tapa-cara.png",
+        "./assets/images/image-curse4.jpg",
+        "./assets/images/image-curse-peteleco.png",
+
     ],
     events: [
         {
             title: "Peteleco",
             local: "55Lab.Store",
-            image: "/assets/images/image-curse-peteleco.png",
+            image: "./assets/images/image-curse-peteleco.png",
             description: "Peteleco é o evento do Acelere.me que vai te dar aquele toque esperto pra você perceber que empreender é muito mais do que ter uma empresa ou um CNPJ.",
             descriptionOrganizer: "Acelere.me",
             descriptionSupporter: "55Lab.Store",
@@ -27,7 +27,7 @@ export default Ember.Component.extend({
         {
             title: "A Nova Lei do Investidor Anjo",
             local: "55Lab.Work",
-            image: "/assets/images/background-image.png",
+            image: "./assets/images/image-curse3.jpg",
             description: "Entenda como ficaram as regras para receber ou fazer investimento anjo no Brasil depois que a Lei complementar nº 155 entrou em vigor no país.",
             descriptionOrganizer: "Acelere.me",
             descriptionSupporter: "55Lab.Work",
@@ -38,7 +38,7 @@ export default Ember.Component.extend({
         {
             title: "Noções Jurídicas para usuários",
             local: "55Lab.Store",
-            image: "/assets/images/background-image.png",
+            image: "./assets/images/image-curse4.jpg",
             description: "Saiba + sobre a atual realidade jurídico/social da cannabis e do usuário no Brasil.",
             descriptionOrganizer: "4E20.CLUB",
             descriptionSupporter: "Acelere.me e 55Lab.Store",
@@ -49,7 +49,7 @@ export default Ember.Component.extend({
         {
             title: "Acelereção de negócios de lifestyle",
             local: "55Lab.Store",
-            image: "/assets/images/background-image.png",
+            image: "./assets/images/image-curse2.jpg",
             description: "Sabia que é possível montar um negócio relacionado a cannabis de forma legal no Brasil?",
             descriptionOrganizer: "Acelere.me",
             descriptionSupporter: "55Lab.Store",
@@ -60,7 +60,7 @@ export default Ember.Component.extend({
         {
             title: "Tapa na Cara",
             local: "55Lab.Work",
-            image: "/assets/images/image-curse-tapa-cara.png",
+            image: "./assets/images/image-curse-tapa-cara.png",
             description: "Um choque de realidade para você entender que empreender com planejamento é possível e muito menos arriscado!",
             descriptionOrganizer: "Acelere.me",
             descriptionSupporter: "55Lab.Work",
@@ -71,7 +71,7 @@ export default Ember.Component.extend({
         {
             title: "Experience",
             local: "MODIFICAR",
-            image: "/assets/images/background-image.png",
+            image: "./assets/images/image-curse1.jpg",
             description: "MODIFICAR é o evento de conteúdo e experiência do Acelere.me que estimula a percepção que empreender é muito mais do que ter uma empresa ou um CNPJ.",
             descriptionOrganizer: "MODIFICAR",
             descriptionSupporter: "MODIFICAR",
@@ -82,7 +82,7 @@ export default Ember.Component.extend({
         {
             title: "Maratona Ignition",
             local: "CTJ",
-            image: "/assets/images/background-image.png",
+            image: "./assets/images/image-curse4.jpg",
             description: "Evento do Acelere.me que busca pré-acelerar negócios e empresas por meio de intensas capacitações e mentorias com profissionais do mercado.",
             descriptionOrganizer: "Acelere.me",
             descriptionSupporter: "55Lab",

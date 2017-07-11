@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import ParseHelpers from '55-lab-web-front-end/helpers/parse-helpers';
+import ParseHelpers from 'a55-lab-institutional-web/helpers/parse-helpers';
 
 export default Ember.Component.extend({
 
@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         description: "Para Membros e Não-Membros",
 
         contentObjectWithoutTable: {
-            image: "/assets/images/meeting-icon.png",
+            image: "./assets/images/meeting-icon.png",
             title: "Salas de Reunião",
 
             firstSubsubtitle: "Sala de reunião para 2 pessoas",
@@ -34,7 +34,7 @@ export default Ember.Component.extend({
         },
 
         contentSecondObjectWithoutTable: {
-            image: "/assets/images/icon-conference.png",
+            image: "./assets/images/icon-conference.png",
             title: "Salas de Conferência",
 
             firstSubtitle: "Para até 6 pessoas",
@@ -57,7 +57,7 @@ export default Ember.Component.extend({
         description: "Para Membros e Não-Membros",
 
         contentObjectDoubleTable: {
-            image: "/assets/images/icon-address.png",
+            image: "./assets/images/icon-address.png",
             title: "Endereço Fiscal",
             description: "Sua empresa é prestadora de serviços e você não tem necessidade de alugar um ponto comercial para começar suas operações? Oferecemos o serviço de locação de endereço fiscal para que você possa ter um endereço válido para o registro de sua empresa.",
             titleTable: "Você pode escolher entre duas opções: com ou sem atendimento telefônico.",
@@ -74,7 +74,7 @@ export default Ember.Component.extend({
         },
 
         contentObjectSecondTable: {
-            image: "/assets/images/icon-topspace.png",
+            image: "./assets/images/icon-topspace.png",
             title: "Espaço de Eventos - Andar Superior",
             firstSubsubtitle: "Segunda a Sexta - 19h às 22h",
             firstTitlePriceSubsubtitle: "Membros:",
@@ -90,7 +90,7 @@ export default Ember.Component.extend({
         },
 
         contentObjectThirdTable: {
-            image: "/assets/images/icon-kitchen.png",
+            image: "./assets/images/icon-kitchen.png",
             title: "Espaço de Eventos - Andar Inferior (Co-Kitchen)",
             firstSubsubtitle: "Segunda a Sexta - 09h às 18h(diária)",
             firstTitlePriceSubsubtitle: "Membros:",
@@ -111,7 +111,7 @@ export default Ember.Component.extend({
         },
 
         contentSecondObjectOneTable: {
-            image: "/assets/images/showroom-icon.png",
+            image: "./assets/images/showroom-icon.png",
             title: "Showroom",
             description: "Nesse espaço seu produto fica exposto com a visibilidade que precisa, em um box do tamanho ideal para você. Não vamos ficar com qualquer percentual de venda e nem fazer estoque… a ideia aqui é que os clientes comprem direto com você usando o canal de sua preferência – loja online, whatsapp, facebook, etc. Ah, e nossa equipe estará preparada para fazer a ponte entre os visitantes e você!",
             descriptionActionButton: "Se quiser alugar uma de nossas acomodações",
@@ -129,7 +129,7 @@ export default Ember.Component.extend({
         description: "Para Membros e Não-Membros",
 
         contentObjectDoubleTable: {
-            image: "/assets/images/icon-address.png",
+            image: "./assets/images/icon-address.png",
             title: "Endereço Fiscal",
             description: "Sua empresa é prestadora de serviços e você não tem necessidade de alugar um ponto comercial para começar suas operações? Oferecemos o serviço de locação de endereço fiscal para que você possa ter um endereço válido para o registro de sua empresa.",
             titleTable: "Você pode escolher entre duas opções: com ou sem atendimento telefônico",
@@ -146,7 +146,7 @@ export default Ember.Component.extend({
         },
 
         contentObjectOneTable: {
-            image: "/assets/images/icon-space.png",
+            image: "./assets/images/icon-space.png",
             title: "Espaço de Eventos",
             firstSubsubtitle: "Segunda a sexta - 09h às 18h",
             firstTitlePriceSubsubtitle: "Membros:",
@@ -167,7 +167,7 @@ export default Ember.Component.extend({
         },
 
         contentObjectWithoutTable: {
-            image: "/assets/images/meeting-icon.png",
+            image: "./assets/images/meeting-icon.png",
             title: "Salas de Reunião",
             firstSubsubtitle: "Sala de reunião para 5 pessoas",
             firstPriceFirstSubsubtitle: " R$25/hora",
@@ -182,7 +182,7 @@ export default Ember.Component.extend({
         },
 
         contentSecondObjectWithoutTable: {
-            image: "/assets/images/icon-conference.png",
+            image: "./assets/images/icon-conference.png",
             title: "Salas de Conferência",
 
             firstSubtitle: "Sala de conferência para 10 pessoas",
