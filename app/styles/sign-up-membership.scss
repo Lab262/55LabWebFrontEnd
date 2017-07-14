@@ -236,7 +236,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
           height: 6vw;
           margin-left: 7.5vw;
           background:url(../assets/images/background_button_membership.png);
-          background-size:20.5vw;
+          background-size:21.5vw;
           background-repeat: no-repeat;
 
             h1 {
@@ -266,7 +266,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             h1 {
               height: 100%;
               font-family: 'BebasNeue-Bold';
-              font-size: 1.7vw;
+              font-size: 2.7vw;
               color: black;
               width: 50%;
             }
@@ -295,16 +295,16 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
           height: 100%;
 
           .description-title {
-            margin-left: 2vw;
+            margin-left:2vw;
             display: flex;
             flex-wrap: nowrap;
 
               h1 {
             height: 100%;
               font-family: 'BebasNeue-Bold';
-              font-size: 1.7vw;
+              font-size: 1.9vw;
               color: black;
-              width: 65%;
+              width: 70%;
             }
 
             .label-icon {
@@ -337,7 +337,6 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
           align-items: flex-start;
           margin-top: -2vw;
 
-
             md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid .md-input{
                 border-color: red;
                 border-bottom-width: 1px;
@@ -351,7 +350,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             height: 52.5px;
 
             input {
-              width: 285%;
+              width: 41.5vw;
                   border: 0px solid $background-color;
                 -webkit-text-fill-color: clear;;
                   -webkit-box-shadow: 0 0 0px 0px $background-color inset;
@@ -362,11 +361,11 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
 
           .form-field-medium {
             margin: 0.5vw;
+            margin-right: 2.08vw;
             width: 44%;
             height: 52.5px;
-
                     input {
-                      width: 125%;
+                      width: 20vw;
                         border: 0px solid $background-color;
                     -webkit-text-fill-color: clear;
                         -webkit-box-shadow: 0 0 0px 0px $background-color inset;
@@ -381,7 +380,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
               background: rgba(28,28,28,1);
               border-radius: 0.4vw;
               box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-              margin-left: 2.2vw;
+              margin-left: 27vw;
               margin-top: 3.3vw;
               outline: none;
 
@@ -397,12 +396,12 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
               }
 
               .subscribe-button-background-borders {
-              content: url('../assets/images/background-boarder-do-here.png');
-              left: -4vw;
-              bottom: 5vw;
-              width: 17vw;
-              height: 8vw;
-              position: relative;
+                content: url('../assets/images/background-boarder-do-here.png');
+                left: -4vw;
+                bottom: 5vw;
+                width: 17vw;
+                height: 8vw;
+                position: relative;
               }
 
 
@@ -410,6 +409,26 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
               transform:scale(1.1,1.1);
               transition: transform 0.1s, width 0.1s ease-in;
               outline: none;
+            }
+          }
+
+          .form-observations {
+            width: 15vw;
+            height: 4.5vw;
+            margin-left: 0.5vw;
+            margin-top: -8vw;
+            outline: none;
+
+            h4{
+                text-align: center;
+                // font-family: 'BebasNeue-Bold';
+                font-size: 0.9vw;
+                // color: white;
+                color: #1c1c1c;
+                width: 140%;
+                margin-top: 3%;
+                text-align: left;
+                line-height: 1.4vw;
             }
           }
 

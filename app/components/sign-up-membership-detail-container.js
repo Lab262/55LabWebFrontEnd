@@ -4,7 +4,7 @@ import ParseHelpers from 'a55-lab-institutional-web/helpers/parse-helpers';
 export default Ember.Component.extend({
 
     haveImage: Ember.computed(function () {
-      if (this.get('memberType') === "MEMBRO") {
+      if (this.get('memberType') === "MEMBERHSIP") {
         return false
       } else {
         return true
@@ -17,13 +17,13 @@ export default Ember.Component.extend({
         if (membershipType !== undefined && isAValidatedType) {
             return membershipType;
         } else {
-            return "MEMBRO";
+            return "MEMBERHSIP";
         }
     }),
 
-    contentDescription: "Faça seu cadastro para podermos entrar em contato com você:",
+    contentDescription: "Faça seu cadastro aqui",
      contentMemberDescription: "Faça seu cadastro inicial para fazer parte da nossa comunidade e aproveitar todos os benefícios e eventos exclusivos:",
-     contentSecondDescription: "+55Lab.co: conexão, compartilhamento e networking como em nenhum outro lugar!",
+     contentSecondDescription: "Não perca a oportunidade de expandir seu negócio",
      contentTitleButton:"Quero ser ",
      name: "",
      cpf: "",
