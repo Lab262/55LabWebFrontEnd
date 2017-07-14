@@ -15,79 +15,73 @@
                 {{else}}
                     <h1> {{contentDescription}} </h1>
                 {{/if}}
-                {{!-- <h1> {{contentDescription}} </h1> --}}
-
             </div>
-
-
-
     </div>
 
         <div class="page-detail">
             <div class="left-content">
 
               <div class="option-title">
-                  <button style="font-family: 'BebasNeue-Bold';">
+                  <button {{action 'showPersonalData'}} style="{{if isFormPersonalData "font-family: 'BebasNeue-Bold';"}}" >
                       Informações pessoais
                   </button>
                   <div class="option-icon" > </div>
-                  <button>
+                  <button  {{action 'showHostingSelection'}} style="{{if isFormHostSelection "font-family: 'BebasNeue-Bold';"}}" >
                       Local da sua +55lab.co
                   </button>
                   <div class="option-icon"> </div>
-                  <button>
+                  <button  {{action 'showPaymentMethod'}} style="{{if isFormPaymentMethod "font-family: 'BebasNeue-Bold';"}}" >
                       Método de pagamento
                   </button>
               </div>
 
               {{#if isFormPersonalData}}
                   <div class="form-field-big" style="margin-top:40px;">
-                      {{paper-input label="Nome*" value=name onChange=(action (mut name)) }}
+                      {{paper-input label="*Nome" value=name onChange=(action (mut name)) customValidations=clearFieldValidation}}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="CPF" value=cpf onChange=(action (mut cpf))}} {{!--{{input-mask mask="999.999.999-99" placeholder="CPF"}}--}}
+                      {{paper-input label="*CPF" value=cpf onChange=(action (mut cpf)) customValidations=cpfValidation}} {{!--{{input-mask mask="999.999.999-99" placeholder="CPF"}}--}}
                   </div>
 
                   <div class="form-field-medium">
-                   {{paper-input label="RG" value=rg onChange=(action (mut rg))}}
-
+                   {{paper-input label="*RG" value=rg onChange=(action (mut rg)) customValidations=rgValidation}}
                   </div>
 
                   <div class="form-field-big">
-                      {{paper-input label="Endereço" value=address onChange=(action (mut address))}}
+                      {{paper-input label="*Endereço" value=address onChange=(action (mut address)) customValidations=clearFieldValidation}}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="Número" value=number onChange=(action (mut number)) }}
+                      {{paper-input label="*Número" value=number onChange=(action (mut number)) customValidations=clearFieldValidation}}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="Complemento" value=complement onChange=(action (mut complement))}}
+                      {{paper-input label="*Complemento" value=complement onChange=(action (mut complement)) }}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="Bairro" value=neighbor onChange=(action (mut neighbor))}}
+                      {{paper-input label="*Bairro" value=neighbor onChange=(action (mut neighbor)) customValidations=clearFieldValidation}}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="Cidade" value=city onChange=(action (mut city))}}
+                      {{paper-input label="*Cidade" value=city onChange=(action (mut city)) customValidations=clearFieldValidation}}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="Estado" value=state onChange=(action (mut state))}}
+                      {{paper-input label="*Estado" value=state onChange=(action (mut state)) customValidations=clearFieldValidation}}
                   </div>
 
                   <div class="form-field-medium">
-                    {{paper-input label="País (único)" type="text" value="Brasil" disabled=true onChange=(action (mut foo))}}
+                    {{paper-input label="*País (único)" type="text" value=country disabled=true onChange=(action (mut country))}}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="Email*" value=email onChange=(action (mut email)) type="email" customValidations=emailValidation }}
+                      {{paper-input label="*Email" value=email onChange=(action (mut email)) type="email" customValidations=emailValidation }}
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="Telefone*" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
+                      {{paper-input label="*Telefone" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
                   </div>
 
                   <button class="subscribe-button" {{action 'showNextData'}}>
@@ -95,35 +89,47 @@
                       <div class="subscribe-button-background-borders">
                       </div>
                   </button>
-
-              {{else}}
-
-                  <div class="form-field-big" style="margin-top:40px;">
-                    {{paper-input label="Número do Cartão de Crédito" type="text" value=creditCardNumber  onChange=(action (mut creditCardNumber))}}
-                  </div>
-
-                  <div class="form-field-medium">
-                      {{paper-input label="mm/aa" value=creditCardExpirationDate onChange=(action (mut creditCardExpirationDate)) type="email"  }}
-                  </div>
-
-                  <div class="form-field-medium">
-                      {{paper-input label="cvv" value=creditCardCVV onChange=(action (mut creditCardCVV)) }}
-                  </div>
-
-                  <div class="form-field-medium">
-                      {{paper-input label="Código captcha" value="AZF2F" onChange=(action (mut foo)) }}
-                  </div>
-
-                  <div class="form-field-medium">
-                      {{paper-input label="Aceito termos de serviço" value="yes" onChange=(action (mut foo))  }}
-                  </div>
-
-                  <button class="subscribe-button" {{action 'registerUser'}}>
-                      <h1> {{subscribeButtonTitle}} </h1>
-                      <div class="subscribe-button-background-borders">
-                      </div>
-                  </button>
               {{/if}}
+
+              {{#if isFormHostSelection}}
+
+                    <div class="form-field-big" style="margin-top:40px;">
+                      {{paper-input label="*Sede 55lab" type="text" value=hostName disabled=true onChange=(action (mut hostName))}}
+                    </div>
+                    <button class="subscribe-button" {{action 'showNextData'}}>
+                        <h1> {{nextButtonTitle}} </h1>
+                        <div class="subscribe-button-background-borders">
+                        </div>
+                    </button>
+              {{/if}}
+
+              {{#if isFormPaymentMethod}}
+                          <div class="form-field-big" style="margin-top:40px;">
+                            {{paper-input label="Número do Cartão de Crédito" type="text" value=creditCardNumber  onChange=(action (mut creditCardNumber))}}
+                          </div>
+
+                          <div class="form-field-medium">
+                              {{paper-input label="mm/aa" value=creditCardExpirationDate onChange=(action (mut creditCardExpirationDate)) type="email"  }}
+                          </div>
+
+                          <div class="form-field-medium">
+                              {{paper-input label="cvv" value=creditCardCVV onChange=(action (mut creditCardCVV)) }}
+                          </div>
+
+                          <div class="form-field-medium">
+                              {{paper-input label="Código captcha" value="AZF2F" onChange=(action (mut foo)) }}
+                          </div>
+
+                          <div class="form-field-medium">
+                              {{paper-input label="Aceito termos de serviço" value="yes" onChange=(action (mut foo))  }}
+                          </div>
+
+                          <button class="subscribe-button" {{action 'registerUser'}}>
+                              <h1> {{subscribeButtonTitle}} </h1>
+                              <div class="subscribe-button-background-borders">
+                              </div>
+                          </button>
+                {{/if}}
 
               <div class="form-observations">
                   <h4>
