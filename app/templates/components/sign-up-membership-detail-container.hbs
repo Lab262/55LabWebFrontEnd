@@ -15,12 +15,31 @@
                 {{else}}
                     <h1> {{contentDescription}} </h1>
                 {{/if}}
+                {{!-- <h1> {{contentDescription}} </h1> --}}
+
             </div>
-            <div class="header-divider"> </div>
-        </div>
+
+
+
+    </div>
 
         <div class="page-detail">
             <div class="left-content">
+
+              <div class="option-title">
+                  <button style="font-family: 'BebasNeue-Bold';">
+                      Informações pessoais
+                  </button>
+                  <div class="option-icon" > </div>
+                  <button>
+                      Local da sua +55lab.co
+                  </button>
+                  <div class="option-icon"> </div>
+                  <button>
+                      Método de pagamento
+                  </button>
+              </div>
+
               {{#if isFormPersonalData}}
                   <div class="form-field-big" style="margin-top:40px;">
                       {{paper-input label="Nome*" value=name onChange=(action (mut name)) }}
@@ -120,6 +139,9 @@
             </div>
 
             <div class="right-content">
+
+              <div class="header-divider"> </div>
+
                 <div class="description-title">
                     <h1>
                         {{contentSecondDescription}}

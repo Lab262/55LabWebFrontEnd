@@ -261,7 +261,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
 
           .header-description {
             padding-left: 7.5vw;
-            padding-top: 0.5%;
+            margin-top: 2vw;
 
             h1 {
               height: 100%;
@@ -270,15 +270,6 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
               color: black;
               width: 50%;
             }
-          }
-
-          .header-divider{
-              position:relative;
-              background: #D8AD09;
-              height: 5px;
-              width: 10vw;
-              margin-top: -1%;
-              left: 52vw;
           }
       }
 
@@ -293,6 +284,16 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
     .right-content {
           width: 48%;
           height: 100%;
+          margin-top: -3vw;
+
+          .header-divider{
+              position:relative;
+              background: #D8AD09;
+              height: 5px;
+              width: 7.5vw;
+              margin-bottom: 2vw;
+              left: 2vw;
+          }
 
           .description-title {
             margin-left:2vw;
@@ -337,12 +338,48 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
           align-items: flex-start;
           margin-top: -2vw;
 
-            md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid .md-input{
-                border-color: red;
-                border-bottom-width: 1px;
-                margin-bottom: -3px;
-                }
+          .option-title {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-top: 3vw;
+            margin-bottom: -1vw;
+            height: 1vw;
 
+            button {
+                height: 100%;
+                font-family: 'BebasNeue-Book';
+                font-size: 1.3vw;
+                padding: 10px;
+                color: black;
+                // width: 70%;
+                // width: 20%;
+                height: 2.2vw;
+                background: transparent;
+                // height: 1vw;
+                // margin-right: 1vw;
+                &:hover {
+                  opacity: 0.5;
+                }
+            }
+
+            .option-icon {
+              margin-left: .25vw;
+              background: blue;
+              background: url(../assets/images/form-option-divider.png);
+              height: 1.3vw;
+              width: 1.3vw;
+              margin-top: .7vw;
+              background-size: contain;
+              background-repeat: no-repeat;
+
+            }
+          }
+
+          md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid .md-input{
+            border-color: red;
+            border-bottom-width: 1px;
+            margin-bottom: -3px;
+          }
 
           .form-field-big {
             margin: 0.5vw;
