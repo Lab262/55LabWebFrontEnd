@@ -1,24 +1,24 @@
 $background-color: rgba(247,247,247,1);
 
 .sign-up-membership {
-   /*background: $background-color;
-   width: 100%;
-     width: 100%;
-   display: inline-block;
-   height: auto;
+  /*background: $background-color;
+  width: 100%;
+  width: 100%;
+  display: inline-block;
+  height: auto;
   position: absolute;*/
 
 
   .sign-up-membership-container {
-   /*margin-top: 8vw;
-   padding-bottom: 25vw;*/
+    /*margin-top: 8vw;
+    padding-bottom: 25vw;*/
 
     .page-header {
-        /*width: 100%;
-        height: 12vw;
-        display: block;*/
+      /*width: 100%;
+      height: 12vw;
+      display: block;*/
 
-     .header-name {
+      .header-name {
         /*margin-top:2%;
         width: 40%;
         height: 6vw;
@@ -27,46 +27,46 @@ $background-color: rgba(247,247,247,1);
         background-size:20.5vw;
         background-repeat: no-repeat;*/
 
-          h1 {
-           /*height: 100%;
-            font-family: 'BebasNeue-Bold';
-            font-size: 3vw;
-            color: white;
-            padding-top: 3%;
-            padding-bottom: 3%;
-            padding-left: 7.5%;
-            padding-right: 7.55%;*/
-           }
-
-           img{
-             /*width:7.76vw;
-             height:4vw;
-             margin-left: 12%;
-             margin-top: 2%;*/
-           }
-
-         }
-
-         .header-description {
-                   /*padding-left: 7.5vw;
-                   padding-top: 1.5%;*/
-          h1 {
-           /*height: 100%;
-            font-family: 'BebasNeue-Bold';
-            font-size: 1.7vw;
-            color: black;
-            width: 50%;*/
-           }
-         }
-
-        .header-divider{
-            /*position:relative;
-            background: #D8AD09;
-            height: 5px;
-            width: 10vw;
-            margin-top: -1%;
-            left: 52vw;*/
+        h1 {
+          /*height: 100%;
+          font-family: 'BebasNeue-Bold';
+          font-size: 3vw;
+          color: white;
+          padding-top: 3%;
+          padding-bottom: 3%;
+          padding-left: 7.5%;
+          padding-right: 7.55%;*/
         }
+
+        img{
+          /*width:7.76vw;
+          height:4vw;
+          margin-left: 12%;
+          margin-top: 2%;*/
+        }
+
+      }
+
+      .header-description {
+        /*padding-left: 7.5vw;
+        padding-top: 1.5%;*/
+        h1 {
+          /*height: 100%;
+          font-family: 'BebasNeue-Bold';
+          font-size: 1.7vw;
+          color: black;
+          width: 50%;*/
+        }
+      }
+
+      .header-divider{
+        /*position:relative;
+        background: #D8AD09;
+        height: 5px;
+        width: 10vw;
+        margin-top: -1%;
+        left: 52vw;*/
+      }
     }
 
     .page-detail {
@@ -76,7 +76,7 @@ $background-color: rgba(247,247,247,1);
       display: flex;
       flex-wrap: nowrap;*/
 
-  .right-content {
+      .right-content {
         /*width: 50%;
         height: 100%;*/
 
@@ -85,22 +85,22 @@ $background-color: rgba(247,247,247,1);
           display: flex;
           flex-wrap: nowrap;*/
 
-            h1 {
-           /*height: 100%;
+          h1 {
+            /*height: 100%;
             font-family: 'BebasNeue-Bold';
             font-size: 1.7vw;
             color: black;
             width: 65%;*/
-           }
+          }
 
-           .label-icon {
-             /*margin-left: 1vw;
-             background: url(../assets/images/sign_up_membership_page_detail_picture.png);
-             height: 2vw;
-             width: 3vw;
-             background-size: 100%;*/
+          .label-icon {
+            /*margin-left: 1vw;
+            background: url(../assets/images/sign_up_membership_page_detail_picture.png);
+            height: 2vw;
+            width: 3vw;
+            background-size: 100%;*/
 
-           }
+          }
         }
 
         .description-picture {
@@ -116,82 +116,82 @@ $background-color: rgba(247,247,247,1);
         /*width: 43vw;
         height: 80%;
         margin-left: 7vw;
-         display: flex;
-         flex-wrap: wrap;
-         align-items: flex-start;
-         margin-top: -2vw;*/
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-top: -2vw;*/
 
 
-           md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid .md-input{
-               /*border-color: red;
-               border-bottom-width: 1px;
-               margin-bottom: -3px;*/
-               }
+        md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid .md-input{
+          /*border-color: red;
+          border-bottom-width: 1px;
+          margin-bottom: -3px;*/
+        }
 
 
-         .form-field-big {
-           /*margin: 0.5vw;
-           width: 90%;
-           height: 52.5px;*/
+        .form-field-big {
+          /*margin: 0.5vw;
+          width: 90%;
+          height: 52.5px;*/
 
-           input {
-             /*width: 285%;
-                border: 0px solid $background-color;
-              -webkit-text-fill-color: clear;;
-                -webkit-box-shadow: 0 0 0px 0px $background-color inset;
-              transition: background-color 5000s ease-in-out 0s;
+          input {
+            /*width: 285%;
+            border: 0px solid $background-color;
+            -webkit-text-fill-color: clear;;
+            -webkit-box-shadow: 0 0 0px 0px $background-color inset;
+            transition: background-color 5000s ease-in-out 0s;
             border-bottom: 0.5px solid #979797;*/
-           }
-         }
+          }
+        }
 
-         .form-field-medium {
-           /*margin: 0.5vw;
-           width: 44%;
-           height: 52.5px;*/
+        .form-field-medium {
+          /*margin: 0.5vw;
+          width: 44%;
+          height: 52.5px;*/
 
-                  input {
-                    /*width: 125%;
-                      border: 0px solid $background-color;
-                  -webkit-text-fill-color: clear;
-                      -webkit-box-shadow: 0 0 0px 0px $background-color inset;
-                    transition: background-color 5000s ease-in-out 0s;
-                  border-bottom: 0.5px solid #979797;*/
-           }
-         }
+          input {
+            /*width: 125%;
+            border: 0px solid $background-color;
+            -webkit-text-fill-color: clear;
+            -webkit-box-shadow: 0 0 0px 0px $background-color inset;
+            transition: background-color 5000s ease-in-out 0s;
+            border-bottom: 0.5px solid #979797;*/
+          }
+        }
 
-          .subscribe-button {
-            /*width: 14vw;
-            height: 4.5vw;
-            background: rgba(28,28,28,1);
-            border-radius: 0.4vw;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-            margin-left: 2.2vw;
-            margin-top: 3.3vw;  */
+        .subscribe-button {
+          /*width: 14vw;
+          height: 4.5vw;
+          background: rgba(28,28,28,1);
+          border-radius: 0.4vw;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+          margin-left: 2.2vw;
+          margin-top: 3.3vw;  */
 
-            h1{
-                /*text-align: center;
-                font-family: 'BebasNeue-Bold';
-                font-size: 1.8vw;
-                color: white;
-                width: 100%;
-                margin-top: -6%;
-                line-height: 1.8vw;  */
-            }
+          h1{
+            /*text-align: center;
+            font-family: 'BebasNeue-Bold';
+            font-size: 1.8vw;
+            color: white;
+            width: 100%;
+            margin-top: -6%;
+            line-height: 1.8vw;  */
+          }
 
-            .subscribe-button-background-borders {
+          .subscribe-button-background-borders {
             /*content: url('../assets/images/background-boarder-do-here.png');
             left: -4vw;
             bottom: 6vw;
             width: 17vw;
             height: 8vw;
             position: relative;*/
-            }
+          }
 
 
           &:hover {
             /*transform:scale(1.1,1.1);
-             transition: transform 0.1s, width 0.1s ease-in;*/
-           }
+            transition: transform 0.1s, width 0.1s ease-in;*/
+          }
         }
 
       }
@@ -202,7 +202,7 @@ $background-color: rgba(247,247,247,1);
 
 /* Chrome 29+ */
 @media screen and (-webkit-min-device-pixel-ratio:0)
-  and (min-resolution:.001dpcm) {
+and (min-resolution:.001dpcm) {
 
 }
 
@@ -213,7 +213,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
 
 @media screen and (min-width:600px){
 
-    .sign-up-membership {
+  .sign-up-membership {
     background: $background-color;
     width: 100%;
     width: 100%;
@@ -223,15 +223,15 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
 
 
     .sign-up-membership-container {
-    margin-top: 8vw;
-    padding-bottom: 25vw;
+      margin-top: 8vw;
+      padding-bottom: 25vw;
 
       .page-header {
-          width: 100%;
-          height: 12vw;
-          display: block;
+        width: 100%;
+        height: 12vw;
+        display: block;
 
-      .header-name {
+        .header-name {
           width: 40%;
           height: 6vw;
           margin-left: 7.5vw;
@@ -239,38 +239,38 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
           background-size:21.5vw;
           background-repeat: no-repeat;
 
-            h1 {
+          h1 {
             height: 100%;
-              font-family: 'BebasNeue-Bold';
-              font-size: 3vw;
-              color: white;
-              padding-top: 3%;
-              padding-bottom: 3%;
-              padding-left: 7.5%;
-              padding-right: 7.55%;
-            }
-
-            img{
-              width:7.76vw;
-              height:4vw;
-              margin-left: 12%;
-              margin-top: 2%;
-            }
-
+            font-family: 'BebasNeue-Bold';
+            font-size: 3vw;
+            color: white;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            padding-left: 7.5%;
+            padding-right: 7.55%;
           }
 
-          .header-description {
-            padding-left: 7.5vw;
-            margin-top: 2vw;
-
-            h1 {
-              height: 100%;
-              font-family: 'BebasNeue-Bold';
-              font-size: 2.7vw;
-              color: black;
-              width: 50%;
-            }
+          img{
+            width:7.76vw;
+            height:4vw;
+            margin-left: 12%;
+            margin-top: 2%;
           }
+
+        }
+
+        .header-description {
+          padding-left: 7.5vw;
+          margin-top: 2vw;
+
+          h1 {
+            height: 100%;
+            font-family: 'BebasNeue-Bold';
+            font-size: 2.7vw;
+            color: black;
+            width: 50%;
+          }
+        }
       }
 
       .page-detail {
@@ -281,18 +281,18 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
         flex-wrap: nowrap;
         margin-bottom: 5%;
 
-    .right-content {
+        .right-content {
           width: 48%;
           height: 100%;
           margin-top: -3vw;
 
           .header-divider{
-              position:relative;
-              background: #D8AD09;
-              height: 5px;
-              width: 7.5vw;
-              margin-bottom: 2vw;
-              left: 2vw;
+            position:relative;
+            background: #D8AD09;
+            height: 5px;
+            width: 7.5vw;
+            margin-bottom: 2vw;
+            left: 2vw;
           }
 
           .description-title {
@@ -300,8 +300,8 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             display: flex;
             flex-wrap: nowrap;
 
-              h1 {
-            height: 100%;
+            h1 {
+              height: 100%;
               font-family: 'BebasNeue-Bold';
               font-size: 1.9vw;
               color: black;
@@ -346,20 +346,20 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             height: 1vw;
 
             button {
-                height: 100%;
-                font-family: 'BebasNeue-Book';
-                font-size: 1.3vw;
-                padding: 10px;
-                color: black;
-                // width: 70%;
-                // width: 20%;
-                height: 2.2vw;
-                background: transparent;
-                // height: 1vw;
-                // margin-right: 1vw;
-                &:hover {
-                  opacity: 0.5;
-                }
+              height: 100%;
+              font-family: 'BebasNeue-Book';
+              font-size: 1.3vw;
+              padding: 10px;
+              color: black;
+              // width: 70%;
+              // width: 20%;
+              height: 2.2vw;
+              background: transparent;
+              // height: 1vw;
+              // margin-right: 1vw;
+              &:hover {
+                opacity: 0.5;
+              }
             }
 
             .option-icon {
@@ -388,10 +388,10 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
 
             input {
               width: 41.5vw;
-                  border: 0px solid $background-color;
-                -webkit-text-fill-color: clear;;
-                  -webkit-box-shadow: 0 0 0px 0px $background-color inset;
-                transition: background-color 5000s ease-in-out 0s;
+              border: 0px solid $background-color;
+              -webkit-text-fill-color: clear;
+              -webkit-box-shadow: 0 0 0px 0px $background-color inset;
+              transition: background-color 5000s ease-in-out 0s;
               border-bottom: 0.5px solid #979797;
             }
           }
@@ -401,45 +401,45 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             margin-right: 2.08vw;
             width: 44%;
             height: 52.5px;
-                    input {
-                      width: 20vw;
-                        border: 0px solid $background-color;
-                    -webkit-text-fill-color: clear;
-                        -webkit-box-shadow: 0 0 0px 0px $background-color inset;
-                      transition: background-color 5000s ease-in-out 0s;
-                    border-bottom: 0.5px solid #979797;
+            input {
+              width: 20vw;
+              border: 0px solid $background-color;
+              -webkit-text-fill-color: clear;
+              -webkit-box-shadow: 0 0 0px 0px $background-color inset;
+              transition: background-color 5000s ease-in-out 0s;
+              border-bottom: 0.5px solid #979797;
             }
           }
 
-            .subscribe-button {
-              width: 14vw;
-              height: 4.5vw;
-              background: rgba(28,28,28,1);
-              border-radius: 0.4vw;
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-              margin-left: 27vw;
-              margin-top: 3.3vw;
-              outline: none;
+          .subscribe-button {
+            width: 14vw;
+            height: 4.5vw;
+            background: rgba(28,28,28,1);
+            border-radius: 0.4vw;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            margin-left: 27vw;
+            margin-top: 3.3vw;
+            outline: none;
 
-              h1{
-                  text-align: center;
-                  font-family: 'BebasNeue-Bold';
-                  font-size: 1.6vw;
-                  color: white;
-                  width: 140%;
-                  margin-top: 3%;
-                  margin-left: -18%;
-                  line-height: 1.8vw;
-              }
+            h1{
+              text-align: center;
+              font-family: 'BebasNeue-Bold';
+              font-size: 1.6vw;
+              color: white;
+              width: 140%;
+              margin-top: 3%;
+              margin-left: -18%;
+              line-height: 1.8vw;
+            }
 
-              .subscribe-button-background-borders {
-                content: url('../assets/images/background-boarder-do-here.png');
-                left: -4vw;
-                bottom: 5vw;
-                width: 17vw;
-                height: 8vw;
-                position: relative;
-              }
+            .subscribe-button-background-borders {
+              content: url('../assets/images/background-boarder-do-here.png');
+              left: -4vw;
+              bottom: 5vw;
+              width: 17vw;
+              height: 8vw;
+              position: relative;
+            }
 
 
             &:hover {
@@ -457,15 +457,15 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             outline: none;
 
             h4{
-                text-align: center;
-                // font-family: 'BebasNeue-Bold';
-                font-size: 0.9vw;
-                // color: white;
-                color: #1c1c1c;
-                width: 140%;
-                margin-top: 3%;
-                text-align: left;
-                line-height: 1.4vw;
+              text-align: center;
+              // font-family: 'BebasNeue-Bold';
+              font-size: 0.9vw;
+              // color: white;
+              color: #1c1c1c;
+              width: 140%;
+              margin-top: 3%;
+              text-align: left;
+              line-height: 1.4vw;
             }
           }
 
@@ -487,24 +487,24 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
 
 @media screen and (max-width:600px){
 
-    .sign-up-membership {
-      background: $background-color;
-      width: 100%;
-      display: inline-block;
-      height: auto;
-      position: relative;
+  .sign-up-membership {
+    background: $background-color;
+    width: 100%;
+    display: inline-block;
+    height: auto;
+    position: relative;
 
     .sign-up-membership-container {
       // margin-top: 8vw;
       padding-bottom: 25vw;
-          margin-top: 15vh;
+      margin-top: 15vh;
 
       .page-header {
-          width: 100%;
-          height: auto;
-          display: block;
+        width: 100%;
+        height: auto;
+        display: block;
 
-      .header-name {
+        .header-name {
           margin-top:2%;
           width: 75vw;
           height: 20.3vw;
@@ -513,40 +513,40 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
           background-size:100%;
           background-repeat: no-repeat;
 
-            h1 {
-              font-family: 'BebasNeue-Bold';
-              font-size: 10.5vw;
-              color: white;
-              padding-top: 4%;
-              padding-left: 15%;
-            }
-
-            img{
-              width:28vw;
-              height:14.4vw;
-              margin-left: 25%;
-              margin-top: 5%;
-            }
-
+          h1 {
+            font-family: 'BebasNeue-Bold';
+            font-size: 10.5vw;
+            color: white;
+            padding-top: 4%;
+            padding-left: 15%;
           }
 
-          .header-description {
-            padding-left: 5vw;
-            padding-top: 10vw;
-
-            h1 {
-              height: 100%;
-              font-family: 'BebasNeue-Bold';
-              font-size: 7vw;
-              color: black;
-              width: 95%;
-            }
+          img{
+            width:28vw;
+            height:14.4vw;
+            margin-left: 25%;
+            margin-top: 5%;
           }
 
-          .header-divider{
-              height: 0;
-              width: 0;
+        }
+
+        .header-description {
+          padding-left: 5vw;
+          padding-top: 10vw;
+
+          h1 {
+            height: 100%;
+            font-family: 'BebasNeue-Bold';
+            font-size: 7vw;
+            color: black;
+            width: 95%;
           }
+        }
+
+        .header-divider{
+          height: 0;
+          width: 0;
+        }
       }
 
       .page-detail {
@@ -556,7 +556,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
         display: flex;
         flex-wrap: wrap;
 
-    .right-content {
+        .right-content {
           width: 100%;
           height: auto;
 
@@ -565,7 +565,7 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             display: flex;
             flex-wrap: nowrap;
 
-              h1 {
+            h1 {
               height: 100%;
               font-family: 'BebasNeue-Bold';
               font-size: 7vw;
@@ -606,11 +606,11 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
           margin-top: -2vw;
 
 
-            md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid .md-input{
-                border-color: red;
-                border-bottom-width: 1px;
-                margin-bottom: -3px;
-                }
+          md-input-container.md-default-theme.md-input-invalid .md-input, md-input-container.md-input-invalid .md-input{
+            border-color: red;
+            border-bottom-width: 1px;
+            margin-bottom: -3px;
+          }
 
 
           .form-field-big {
@@ -643,37 +643,37 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             }
           }
 
-            .subscribe-button {
-              width: 54vw;
-              height: 18vw;
-              background: rgba(28,28,28,1);
-              border-radius: 0.4vw;
-              box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
-              margin-left: 18%;
-              margin-right: 20%;
-              margin-top: 15vw;
-              margin-bottom: 20vw;
-              outline: none;
+          .subscribe-button {
+            width: 54vw;
+            height: 18vw;
+            background: rgba(28,28,28,1);
+            border-radius: 0.4vw;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+            margin-left: 18%;
+            margin-right: 20%;
+            margin-top: 15vw;
+            margin-bottom: 20vw;
+            outline: none;
 
-              h1{
-                  text-align: center;
-                  font-family: 'BebasNeue-Bold';
-                  font-size: 6vw;
-                  color: white;
-                  width: 140%;
-                  margin-left: -20%;
-                  margin-top: 4%;
-                  line-height: 7vw;
-              }
+            h1{
+              text-align: center;
+              font-family: 'BebasNeue-Bold';
+              font-size: 6vw;
+              color: white;
+              width: 140%;
+              margin-left: -20%;
+              margin-top: 4%;
+              line-height: 7vw;
+            }
 
-              .subscribe-button-background-borders {
-                content: url('../assets/images/background-boarder-do-here.png');
-                left: -18vw;
-                bottom: 20vw;
-                width: 68vw;
-                height: 32vw;
-                position: relative;
-              }
+            .subscribe-button-background-borders {
+              content: url('../assets/images/background-boarder-do-here.png');
+              left: -18vw;
+              bottom: 20vw;
+              width: 68vw;
+              height: 32vw;
+              position: relative;
+            }
 
 
             &:hover {

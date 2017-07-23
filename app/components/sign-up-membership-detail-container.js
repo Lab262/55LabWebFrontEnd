@@ -22,6 +22,10 @@ export default Ember.Component.extend({
   nextButtonTitle:"Próximo",
   subscribeButtonTitle:"Me tornar membro",
   formStep: "PERSONAL_DATA",
+  creditCardName: "",
+  creditCardNumber: "",
+  creditCardExpirationDate: "",
+  creditCardCVV: "",
 
   memberType: Ember.computed(function () {
     let membershipType = ParseHelpers.urlParamWithName("memberType", window.location.href);
@@ -158,18 +162,62 @@ export default Ember.Component.extend({
     }
   },
 
+  showPaymentMethodFunction() {
+    // if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
+    this.set('formStep', "PAYMENT_METHOD");
+    Ember.run.later((function() {
+      //do something in here that will run in 2 seconds
+      var card = new Card({
+        // a selector or DOM element for the form where users will
+        // be entering their information
+        form: 'form', // *required*
+        // a selector or DOM element for the container
+        // where you want the card to appear
+        container: '.card-wrapper', // *required*
+        width: 300, // optional — default 350px
+        formatting: true, // optional - default true
+        // Strings for translation - optional
+        messages: {
+          validDate: 'Data\nValida', // optional - default 'valid\nthru'
+          monthYear: 'mm/aaaa', // optional - default 'month/year'
+        },
+        // Default placeholders for rendered fields - optional
+        placeholders: {
+          number: '•••• •••• •••• ••••',
+          name: 'NOME',
+          expiry: 'MM/AAAA',
+          cvc: '•••'
+        },
+
+        masks: {
+          cardNumber: '•' // optional - mask card number
+        },
+
+        // if true, will log helpful messages for setting up Card
+        debug: true // optional - default false
+      });
+    }), 10);
+    // } else {
+    //   this.set('formStep', "PAYMENT_METHOD");
+    // }
+  },
+
+  didInsertElement() {
+
+  },
+
   actions: {
 
     showNextData() {
       if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
         this.set('formStep', "HOST_SELECTION");
       } else if (this.get('isFormHostSelection')  && this.personalDataFormValidation() == true) {
-        this.set('formStep', "PAYMENT_METHOD");
+        this.showPaymentMethodFunction();
       }
     },
 
     showPersonalData() {
-        this.set('formStep', "PERSONAL_DATA");
+      this.set('formStep', "PERSONAL_DATA");
     },
 
     showHostingSelection() {
@@ -183,12 +231,10 @@ export default Ember.Component.extend({
     },
 
     showPaymentMethod() {
-      if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
-        this.set('formStep', "PAYMENT_METHOD");
-      } else {
-        this.set('formStep', "PAYMENT_METHOD");
-      }
+      this.showPaymentMethodFunction();
     },
+
+
 
     registerUser() {
       var formIsValid = this.personalDataFormValidation()

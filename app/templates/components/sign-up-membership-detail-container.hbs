@@ -104,26 +104,32 @@
               {{/if}}
 
               {{#if isFormPaymentMethod}}
-                          <div class="form-field-big" style="margin-top:40px;">
-                            {{paper-input label="Número do Cartão de Crédito" type="text" value=creditCardNumber  onChange=(action (mut creditCardNumber))}}
-                          </div>
+              <div class='card-wrapper' style="margin-left: 5vw; margin-top:40px;"> </div>
+              <form>
+              <div class="form-field-big" >
+                <input style="background: transparent;" placeholder="Número do cartão •••• •••• •••• ••••" type="text" name="number">
+              </div>
 
-                          <div class="form-field-medium">
-                              {{paper-input label="mm/aa" value=creditCardExpirationDate onChange=(action (mut creditCardExpirationDate)) type="email"  }}
-                          </div>
+              <div class="form-field-big">
+                <input style="background: transparent;" placeholder="Nome" type="text" name="name"/>
+              </div>
 
-                          <div class="form-field-medium">
-                              {{paper-input label="cvv" value=creditCardCVV onChange=(action (mut creditCardCVV)) }}
-                          </div>
+              <div class="form-field-medium">
+                <input style="background: transparent;" placeholder="Validade do cartão MM/AAAA" type="text" name="expiry"/>
+              </div>
 
-                          <div class="form-field-medium">
-                              {{paper-input label="Código captcha" value="AZF2F" onChange=(action (mut foo)) }}
-                          </div>
+              <div class="form-field-medium">
+                <input style="background: transparent;" placeholder="Código de segurança •••" type="text" name="cvc"/>
+              </div>
 
-                          <div class="form-field-medium">
-                              {{paper-input label="Aceito termos de serviço" value="yes" onChange=(action (mut foo))  }}
-                          </div>
+              <div class="form-field-medium">
+                  {{paper-input name="number" label="Código captcha" value="AZF2F" onChange=(action (mut foo)) }}
+              </div>
 
+              <div class="form-field-medium">
+                  {{paper-input name="number" label="Aceito termos de serviço" value="yes" onChange=(action (mut foo))  }}
+              </div>
+              </form>
                           <button class="subscribe-button" {{action 'registerUser'}}>
                               <h1> {{subscribeButtonTitle}} </h1>
                               <div class="subscribe-button-background-borders">

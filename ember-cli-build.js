@@ -15,6 +15,8 @@ module.exports = function(defaults) {
       enabled: false,
     }
   });
+  app.import('vendor/card.js');
+
   return mergeTrees([app.toTree()],{
     overwrite: true
 
