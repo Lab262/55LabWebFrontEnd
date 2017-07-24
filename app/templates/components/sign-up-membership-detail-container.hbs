@@ -122,9 +122,7 @@
                 <input style="background: transparent;" placeholder="Código de segurança •••" type="text" name="cvc"/>
               </div>
 
-              <div class="form-field-medium">
-                  {{paper-input name="number" label="Código captcha" value="AZF2F" onChange=(action (mut foo)) }}
-              </div>
+                {{g-recaptcha onSuccess=(action "onCaptchaResolved")}}
 
               <div class="form-field-medium">
                   {{paper-input name="number" label="Aceito termos de serviço" value="yes" onChange=(action (mut foo))  }}

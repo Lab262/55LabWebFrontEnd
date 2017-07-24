@@ -20,44 +20,46 @@ module.exports = function(environment) {
 
     pace: {
 
-    // addon-specific options to configure theme
-    theme: 'corner-indicator',
-    color: 'black',
+      // addon-specific options to configure theme
+      theme: 'corner-indicator',
+      color: 'black',
 
-    // pace-specific options
-    // learn more on http://github.hubspot.com/pace/#configuration
-    //           and https://github.com/HubSpot/pace/blob/master/pace.coffee#L1-L72
-    catchupTime: 50,
-    initialRate: .01,
-    minTime: 100,
-    ghostTime: 50,
-    maxProgressPerFrame: 20,
-    easeFactor: 1.25,
-    startOnPageLoad: true,
-    restartOnPushState: true,
-    restartOnRequestAfter: 500,
-    target: 'body',
-    elements: {
-      checkInterval: 100,
-      selectors: ['body', '.ember-view']
+      // pace-specific options
+      // learn more on http://github.hubspot.com/pace/#configuration
+      //           and https://github.com/HubSpot/pace/blob/master/pace.coffee#L1-L72
+      catchupTime: 50,
+      initialRate: .01,
+      minTime: 100,
+      ghostTime: 50,
+      maxProgressPerFrame: 20,
+      easeFactor: 1.25,
+      startOnPageLoad: true,
+      restartOnPushState: true,
+      restartOnRequestAfter: 500,
+      target: 'body',
+      elements: {
+        checkInterval: 100,
+        selectors: ['body', '.ember-view']
+      },
+      eventLag: {
+        minSamples: 10,
+        sampleCount: 3,
+        lagThreshold: 3
+      },
+      ajax: {
+        trackMethods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
+        trackWebSockets: true,
+        ignoreURLs: []
+      }
     },
-    eventLag: {
-      minSamples: 10,
-      sampleCount: 3,
-      lagThreshold: 3
-    },
-    ajax: {
-      trackMethods: ['GET', 'POST', 'DELETE', 'OPTIONS'],
-      trackWebSockets: true,
-      ignoreURLs: []
-    }
-  },
 
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
-
+    },
+    gReCaptcha: {
+          siteKey: '6Le7LyoUAAAAADKfunnPIWlhjOU2AvaA4DNX3enH'
+        }
 
   };
 
@@ -65,8 +67,8 @@ module.exports = function(environment) {
   //   appId: 'GTM-M584M2R',
   //   enabled: true
 
-    ENV['ember-cli-gtm'] = {
-      appId: 'GTM-P62ZBH4'
+  ENV['ember-cli-gtm'] = {
+    appId: 'GTM-P62ZBH4'
   };
 
   if (environment === 'development') {

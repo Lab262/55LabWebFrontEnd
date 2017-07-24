@@ -207,7 +207,13 @@ export default Ember.Component.extend({
   },
 
   actions: {
-
+    onCaptchaResolved(reCaptchaResponse) {
+      console.log(reCaptchaResponse);
+        //  this.get('model').set('reCaptchaResponse', reCaptchaResponse);
+        debugger;
+         // You should then save your model and the server would validate reCaptchaResponse
+         // ...
+       },
     showNextData() {
       if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
         this.set('formStep', "HOST_SELECTION");
