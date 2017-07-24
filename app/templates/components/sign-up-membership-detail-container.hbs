@@ -81,7 +81,7 @@
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="*Telefone" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
+                      {{paper-input label="*Telefone (DDD) XXXX-XXXX" value=telephone onChange=(action maskPhoneNumber) customValidations=phoneNumberValidation }}
                   </div>
 
                   <button class="subscribe-button" {{action 'showNextData'}}>
@@ -89,6 +89,16 @@
                       <div class="subscribe-button-background-borders">
                       </div>
                   </button>
+
+                  <div class="form-observations">
+                      <h4>
+                          *Campos Obrigatórios <br><br>
+
+                          Seu email e dados serão usados para ter acesso a nossa Rede Social +55lab.co. <a href="http://www.lab262.com" target="_blank"> Saiba Mais </a>
+                      </h4>
+
+                      <div class="label-icon"> </div>
+                  </div>
               {{/if}}
 
               {{#if isFormHostSelection}}
@@ -123,31 +133,43 @@
               </div>
 
                 {{g-recaptcha onSuccess=(action "onCaptchaResolved")}}
-                <div style="margin-top: 20px;">
+                <div style="margin-top: 20px; width: 100%;">
                   {{#paper-checkbox value=termsOfServiceAccepted onChange=(action (mut termsOfServiceAccepted))}}
-                        Aceito os <a href="http://www.lab262.com" target="_blank"> termos de serviço. </a>
+                  <h4> Eu aceito os <a href="http://www.lab262.com" target="_blank"> Termos e Condições </a>  do +55Lab.co, <a href="http://www.lab262.com" target="_blank"> Diretrizes da comunidade </a>  e <a href="http://www.lab262.com" target="_blank"> Política de Privacidade. </a> </h4>
                   {{/paper-checkbox}}
 
                 </div>
 
               </form>
-                          <button class="subscribe-button" {{action 'registerUser'}}>
-                              <h1> {{subscribeButtonTitle}} </h1>
-                              <div class="subscribe-button-background-borders">
-                              </div>
-                          </button>
-                {{/if}}
+              <div class="payment-review-description">
+                <h1> RESUMO </h1>
+              </div>
+              <div class="header-divider"> </div>
+              <div class="product-title">
+                <h1> MEMBERSHIP </h1> 
+                <h2> Será cobrado hoje </h2>
 
-              <div class="form-observations">
-                  <h4>
-                      *Campos Obrigatórios <br><br>
-
-                      Seu email e senha serão usados para ter acesso a nossa Rede Social +55lab.co. <a href="http://www.lab262.com" target="_blank"> Saiba Mais </a>
-                  </h4>
-
-                  <div class="label-icon"> </div>
+              </div>
+              <div class="product-price">
+                <h1> R$:45,00/mês </h1>
               </div>
 
+              <div class="header-divider"> </div>
+
+                <button class="subscribe-button" {{action 'registerUser'}}>
+                    <h1> {{subscribeButtonTitle}} </h1>
+                    <div class="subscribe-button-background-borders">
+                    </div>
+                </button>
+
+                <div class="form-observations">
+                    <h4>
+                        Você será cobrado no primeiro dia de cada mês até cancelar sua assinatura. As cobranças anteriores não serão reembolsadas.
+                    </h4>
+
+                    <div class="label-icon"> </div>
+                </div>
+                {{/if}}
 
             </div>
 
