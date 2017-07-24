@@ -158,6 +158,12 @@ $background-color: rgba(247,247,247,1);
             border-bottom: 0.5px solid #979797;*/
           }
         }
+        .md-checked {
+          margin-top: 100px;
+          .md-icon {
+              background: #D8AD0A;
+          }
+        }
 
         .subscribe-button {
           /*width: 14vw;

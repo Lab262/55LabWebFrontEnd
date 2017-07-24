@@ -107,26 +107,29 @@
               <div class='card-wrapper' style="margin-left: 5vw; margin-top:40px;"> </div>
               <form>
               <div class="form-field-big" >
-                <input style="background: transparent;" placeholder="Número do cartão •••• •••• •••• ••••" type="text" name="number">
+                <input style="background: transparent;" placeholder="*Número do cartão •••• •••• •••• ••••" type="text" name="number">
               </div>
 
               <div class="form-field-big">
-                <input style="background: transparent;" placeholder="Nome" type="text" name="name"/>
+                <input style="background: transparent;" placeholder="*Nome" type="text" name="name"/>
               </div>
 
               <div class="form-field-medium">
-                <input style="background: transparent;" placeholder="Validade do cartão MM/AAAA" type="text" name="expiry"/>
+                <input style="background: transparent;" placeholder="*Validade do cartão MM/AAAA" type="text" name="expiry"/>
               </div>
 
               <div class="form-field-medium">
-                <input style="background: transparent;" placeholder="Código de segurança •••" type="text" name="cvc"/>
+                <input style="background: transparent;" placeholder="*Código de segurança •••" type="text" name="cvc"/>
               </div>
 
                 {{g-recaptcha onSuccess=(action "onCaptchaResolved")}}
+                <div style="margin-top: 20px;">
+                  {{#paper-checkbox value=termsOfServiceAccepted onChange=(action (mut termsOfServiceAccepted))}}
+                        Aceito os <a href="http://www.lab262.com" target="_blank"> termos de serviço. </a>
+                  {{/paper-checkbox}}
 
-              <div class="form-field-medium">
-                  {{paper-input name="number" label="Aceito termos de serviço" value="yes" onChange=(action (mut foo))  }}
-              </div>
+                </div>
+
               </form>
                           <button class="subscribe-button" {{action 'registerUser'}}>
                               <h1> {{subscribeButtonTitle}} </h1>
@@ -139,7 +142,7 @@
                   <h4>
                       *Campos Obrigatórios <br><br>
 
-                      Seu email e senha serão usados para ter acesso a nossa Rede Social +55lab.co. <a href="https://www.w3schools.com/html/" target="_blank"> Saiba Mais </a>
+                      Seu email e senha serão usados para ter acesso a nossa Rede Social +55lab.co. <a href="http://www.lab262.com" target="_blank"> Saiba Mais </a>
                   </h4>
 
                   <div class="label-icon"> </div>

@@ -26,6 +26,8 @@ export default Ember.Component.extend({
   creditCardNumber: "",
   creditCardExpirationDate: "",
   creditCardCVV: "",
+  captchaValidated: false,
+  termsOfServiceAccepted: false,
 
   memberType: Ember.computed(function () {
     let membershipType = ParseHelpers.urlParamWithName("memberType", window.location.href);
@@ -208,12 +210,10 @@ export default Ember.Component.extend({
 
   actions: {
     onCaptchaResolved(reCaptchaResponse) {
-      console.log(reCaptchaResponse);
-        //  this.get('model').set('reCaptchaResponse', reCaptchaResponse);
-        debugger;
-         // You should then save your model and the server would validate reCaptchaResponse
-         // ...
-       },
+        this.set('captchaValidated', true);
+    },
+
+
     showNextData() {
       if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
         this.set('formStep', "HOST_SELECTION");
