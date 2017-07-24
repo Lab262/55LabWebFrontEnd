@@ -107,19 +107,19 @@
               <div class='card-wrapper' style="margin-left: 5vw; margin-top:40px;"> </div>
               <form>
               <div class="form-field-big" >
-                <input style="background: transparent;" placeholder="*Número do cartão •••• •••• •••• ••••" type="text" name="number">
+                {{input class="input-transparent" style="background: transparent;" placeholder="*Número do cartão •••• •••• •••• ••••" type="text" name="number" value=creditCardNumber onChange=(action (mut creditCardNumber))}}
               </div>
 
               <div class="form-field-big">
-                <input style="background: transparent;" placeholder="*Nome" type="text" name="name"/>
+                {{input class="input-transparent" style="background: transparent;" placeholder="*Nome" type="text" name="name" name="name" value=creditCardName  onChange=(action (mut creditCardName))}}
               </div>
 
               <div class="form-field-medium">
-                <input style="background: transparent;" placeholder="*Validade do cartão MM/AAAA" type="text" name="expiry"/>
+                {{input class="input-transparent" style="background: transparent;" placeholder="*Validade do cartão MM/AAAA" type="text" name="expiry" value=creditCardExpirationDate onChange=(action (mut creditCardExpirationDate))}}
               </div>
 
               <div class="form-field-medium">
-                <input style="background: transparent;" placeholder="*Código de segurança •••" type="text" name="cvc"/>
+                {{input class="input-transparent" style="background: transparent;" placeholder="*Código de segurança •••" type="text" name="cvc" value=creditCardCVV onChange=(action (mut creditCardCVV))}}
               </div>
 
                 {{g-recaptcha onSuccess=(action "onCaptchaResolved")}}

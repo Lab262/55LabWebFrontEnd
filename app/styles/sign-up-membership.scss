@@ -159,7 +159,6 @@ $background-color: rgba(247,247,247,1);
           }
         }
         .md-checked {
-          margin-top: 100px;
           .md-icon {
               background: #D8AD0A;
           }
@@ -387,11 +386,14 @@ _:-webkit-full-screen:not(:root:root), .advantage-do-it-buttom-background-border
             margin-bottom: -3px;
           }
 
+          .input-transparent {
+            background-color: transparent;
+          }
+
           .form-field-big {
             margin: 0.5vw;
             width: 90%;
             height: 52.5px;
-
             input {
               width: 41.5vw;
               border: 0px solid $background-color;

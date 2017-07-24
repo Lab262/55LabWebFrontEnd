@@ -164,6 +164,35 @@ export default Ember.Component.extend({
     }
   },
 
+  paymentFormDataValidation() {
+
+    var formIsValid = (this.clearFieldValidation[0].validate(this.creditCardName)
+    && this.clearFieldValidation[0].validate(this.creditCardNumber)
+    && this.clearFieldValidation[0].validate(this.creditCardExpirationDate)
+    && this.clearFieldValidation[0].validate(this.creditCardCVV)
+    && this.captchaValidated && this.termsOfServiceAccepted)
+
+    if (formIsValid === true) {
+      return true
+    } else {
+      if (!this.clearFieldValidation[0].validate(this.creditCardName)) {
+        alert('Campo *Nome* do cartão de crédito obrigatório não preenchido');
+      } else if (!this.clearFieldValidation[0].validate(this.creditCardNumber)) {
+        alert('Campo *Número* do cartão de crédito obrigatório não preenchido');
+      } else if (!this.clearFieldValidation[0].validate(this.creditCardExpirationDate)) {
+        alert('Campo *Data de validade* do cartão de créditoobrigatório não preenchido');
+      } else if (!this.clearFieldValidation[0].validate(this.creditCardCVV)) {
+        alert('Campo *Código de segurança* do cartão de crédito obrigatório não preenchido');
+      } else if (!this.captchaValidated) {
+        alert('Verificação de segurança não realizada');
+      } else if (!this.termsOfServiceAccepted) {
+        alert('Termos de serviço não aceito. Para prosseguir com a assinatura, você deve estar de acordo com os termos de serviço.');
+      }
+
+      return false
+    }
+  },
+
   showPaymentMethodFunction() {
     // if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
     this.set('formStep', "PAYMENT_METHOD");
@@ -243,8 +272,8 @@ export default Ember.Component.extend({
 
 
     registerUser() {
-      var formIsValid = this.personalDataFormValidation()
-
+      var formIsValid = this.personalDataFormValidation() && this.paymentFormDataValidation()
+      console.log(this.creditCardNumber)
       if (formIsValid === true) {
 
         var data = {
