@@ -7,6 +7,8 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    parseAPIID: "myAppId",
+    parseAPIURL: "http://localhost:1337/parse",
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -72,6 +74,12 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.parseAPIID = "api-55lab-dev";
+    ENV.parseAPIURL = "http://api-55lab-dev.herokuapp.com/parse/";
+
+    // ENV.parseAPIID = "myAppId";
+    // ENV.parseAPIURL = "http://localhost:1337/parse/";
+
   }
 
   if (environment === 'test') {
@@ -80,11 +88,17 @@ module.exports = function(environment) {
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
     ENV.APP.rootElement = '#ember-testing';
+    ENV.parseAPIID = "api-55lab-test";
+    ENV.parseAPIURL = "http://api-55lab-test.herokuapp.com/parse/";
+
   }
 
   if (environment === 'production') {
     ENV.baseURL = null;
     ENV.locationType = 'hash';
+    ENV.parseAPIID = "api-55lab-prd";
+    ENV.parseAPIURL = "https://api-55lab-prd.herokuapp.com/parse/";
+
   }
 
   return ENV;

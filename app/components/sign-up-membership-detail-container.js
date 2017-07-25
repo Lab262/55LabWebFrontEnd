@@ -13,6 +13,7 @@ export default Ember.Component.extend({
   number: "",
   complement: "",
   neighbor: "",
+  zipCode: "",
   city: "",
   state: "",
   country: "Brasil",
@@ -28,6 +29,9 @@ export default Ember.Component.extend({
   creditCardCVV: "",
   captchaValidated: false,
   termsOfServiceAccepted: false,
+  cardComponent: null,
+  apiId: null,
+  apiURL: null,
 
   memberType: Ember.computed(function () {
     let membershipType = ParseHelpers.urlParamWithName("memberType", window.location.href);
@@ -130,6 +134,7 @@ export default Ember.Component.extend({
     && this.clearFieldValidation[0].validate(this.number)
     && this.clearFieldValidation[0].validate(this.neighbor)
     && this.clearFieldValidation[0].validate(this.country)
+    && this.clearFieldValidation[0].validate(this.zipCode)
     && this.clearFieldValidation[0].validate(this.city)
     && this.emailValidation[0].validate(this.email)
     && this.cpfValidation[0].validate(this.cpf)
@@ -151,6 +156,8 @@ export default Ember.Component.extend({
         alert('Campo *País* obrigatório não preenchido');
       } else if (!this.clearFieldValidation[0].validate(this.city)) {
         alert('Campo *Cidade* obrigatório não preenchido');
+      } else if (!this.clearFieldValidation[0].validate(this.zipCode)) {
+        alert('Campo *Código Postal* obrigatório não preenchido');
       } else if (!this.emailValidation[0].validate(this.email)) {
         alert('Campo *Email* não contém um email válido');
       } else if (!this.cpfValidation[0].validate(this.cpf)) {
@@ -196,6 +203,7 @@ export default Ember.Component.extend({
   showPaymentMethodFunction() {
     // if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
     this.set('formStep', "PAYMENT_METHOD");
+    var _this = this;
     Ember.run.later((function() {
       //do something in here that will run in 2 seconds
       var card = new Card({
@@ -210,13 +218,13 @@ export default Ember.Component.extend({
         // Strings for translation - optional
         messages: {
           validDate: 'Data\nValida', // optional - default 'valid\nthru'
-          monthYear: 'mm/aaaa', // optional - default 'month/year'
+          monthYear: 'mm/aa', // optional - default 'month/year'
         },
         // Default placeholders for rendered fields - optional
         placeholders: {
           number: '•••• •••• •••• ••••',
           name: 'NOME',
-          expiry: 'MM/AAAA',
+          expiry: 'MM/AA',
           cvc: '•••'
         },
 
@@ -227,6 +235,9 @@ export default Ember.Component.extend({
         // if true, will log helpful messages for setting up Card
         debug: true // optional - default false
       });
+
+      _this.set('cardComponent',card);
+
     }), 10);
     // } else {
     //   this.set('formStep', "PAYMENT_METHOD");
@@ -234,12 +245,13 @@ export default Ember.Component.extend({
   },
 
   didInsertElement() {
-
+    this.set('apiId',this.container.lookupFactory('config:environment').parseAPIID);
+    this.set('apiURL', this.container.lookupFactory('config:environment').parseAPIURL);
   },
 
   actions: {
     onCaptchaResolved(reCaptchaResponse) {
-        this.set('captchaValidated', true);
+      this.set('captchaValidated', true);
     },
 
 
@@ -272,50 +284,84 @@ export default Ember.Component.extend({
 
 
     registerUser() {
+
       var formIsValid = this.personalDataFormValidation() && this.paymentFormDataValidation()
-      console.log(this.creditCardNumber)
+      var formIsValid = true
       if (formIsValid === true) {
 
-        var data = {
-          name: this.name,
-          cpf: this.cpf,
-          rg: this.rg,
-          adress_label: this.address,
-          adress_number: this.number,
-          adress_complement: this.complement,
-          adress_neighbor: this.neighbor,
-          adress_state: this.state,
-          adress_country: this.country,
+        var data = JSON.stringify({
           email: this.email,
-          telephone: this.telephone,
-          memberType: this.get('memberType'),
-        };
-
+          person: {
+            name: this.name,
+            rg: this.rg,
+            cpf: this.cpf,
+            phone: {
+              number: "55"+this.telephone,
+              isMain: true
+            },
+            address: {
+              street: this.address,
+              isMain: true,
+              number: this.number,
+              neighborhood: this.neighbor,
+              zip: this.zipCode,
+              city: this.city,
+              state: this.state
+            }
+          },
+          cardInfo: {
+            number: this.creditCardNumber,
+            cvv: this.creditCardCVV,
+            payment_company_code: this.cardComponent.cardType,
+            expiration: this.creditCardExpirationDate
+          }
+        });
+        var url = this.apiURL + "functions/membershipRegistration";
+        var apiId = this.apiId
         var self = this;
         $.ajax({
           type: "POST",
-          url: "https://s55labinstitutionalwebback-prd.herokuapp.com/api/v0/users",
+          url: url,
           data: data,
-          beforeSend: function (xhr) { xhr.setRequestHeader('main-token', 'ZRCNAamAQ$yTv6&2VQ4eR*f?437w[FkF/gktDTg6#GunNQuE8@#]MC9B3NBTxifH'); },
+          dataType: 'json',
+          contentType: 'application/json',
+          beforeSend: function (xhr) {
+            if (xhr && xhr.overrideMimeType) {
+              xhr.overrideMimeType("application/j-son;charset=UTF-8");
+            }
+            xhr.setRequestHeader('X-Parse-Application-Id', apiId);
+          },
           success: function () {
 
             alert('Registro enviado com sucesso!');
-            history.go(-1);
-
-            self.set('name', '');
-            self.set('cpf', '');
-            self.set('rg', '');
-            self.set('address', '');
-            self.set('number', '');
-            self.set('complement', '');
-            self.set('neighbor', '');
-            self.set('state', '');
-            self.set('country', '');
-            self.set('email', '');
-            self.set('telephone', '');
-            self.set('typePlan', '');
+            // history.go(-1);
+            //
+            // self.set('name', '');
+            // self.set('cpf', '');
+            // self.set('rg', '');
+            // self.set('address', '');
+            // self.set('number', '');
+            // self.set('zipCode', '');
+            // self.set('neighbor', '');
+            // self.set('state', '');
+            // self.set('country', '');
+            // self.set('email', '');
+            // self.set('telephone', '');
+            // self.set('creditCardNumber', '');
+            // self.set('creditCardCVV', '');
+            // self.set('creditCardExpirationDate', '');
           },
-          error: function (jqXHR, exception) { alert("Erro:" + jqXHR.responseText); console.log(jqXHR); console.log(exception); }
+          error: function (jqXHR, exception) {
+            debugger;
+            if (JSON.parse(jqXHR.responseText).error.msg) {
+              alert("Erro: " + JSON.parse(jqXHR.responseText).error.msg);
+            } else if (JSON.parse(jqXHR.responseText).errors[0].msg) {
+                alert("Erro: " + JSON.parse(jqXHR.responseText).errors[0].msg);
+              } else {
+              alert("Erro: " + jqXHR.responseText);
+            }
+
+          }
         });
 
 
