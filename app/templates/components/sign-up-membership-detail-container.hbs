@@ -48,12 +48,20 @@
                    {{paper-input label="*RG" value=rg onChange=(action (mut rg)) customValidations=rgValidation}}
                   </div>
 
-                  <div class="form-field-big">
-                      {{paper-input label="*Endereço" value=address onChange=(action (mut address)) customValidations=clearFieldValidation}}
+                  <div class="form-field-medium">
+                    {{paper-input label="*País (único)" type="text" value=country disabled=true onChange=(action (mut country))}}
                   </div>
 
                   <div class="form-field-medium">
                       {{paper-input label="*CEP" value=zipCode onChange=(action (mut zipCode)) focusOut=(action autoCompleteAddressAction)}}
+                  </div>
+                                  
+                  <div class="form-field-medium">
+                      {{paper-input label="*Estado" value=state onChange=(action (mut state)) customValidations=clearFieldValidation}}
+                  </div>
+
+                  <div class="form-field-medium">
+                      {{paper-input label="*Cidade" value=city onChange=(action (mut city)) customValidations=clearFieldValidation}}
                   </div>
 
                   <div class="form-field-medium">
@@ -64,16 +72,8 @@
                       {{paper-input label="*Bairro" value=neighbor onChange=(action (mut neighbor)) customValidations=clearFieldValidation}}
                   </div>
 
-                  <div class="form-field-medium">
-                      {{paper-input label="*Cidade" value=city onChange=(action (mut city)) customValidations=clearFieldValidation}}
-                  </div>
-
-                  <div class="form-field-medium">
-                      {{paper-input label="*Estado" value=state onChange=(action (mut state)) customValidations=clearFieldValidation}}
-                  </div>
-
-                  <div class="form-field-medium">
-                    {{paper-input label="*País (único)" type="text" value=country disabled=true onChange=(action (mut country))}}
+                  <div class="form-field-big">
+                      {{paper-input label="*Endereço" value=address onChange=(action (mut address)) customValidations=clearFieldValidation}}
                   </div>
 
                   <div class="form-field-medium">

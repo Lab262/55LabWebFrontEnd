@@ -142,7 +142,6 @@ export default Ember.Component.extend({
         _this.set('state',response.uf);
         _this.set('city',response.localidade);
         _this.set('complement',response.complemento);
-
       },
       error: function (jqXHR, exception) {
         if (jqXHR.status === 404) {
