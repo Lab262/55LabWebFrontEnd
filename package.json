@@ -43,6 +43,7 @@
     "loader.js": "^4.2.3"
   },
   "dependencies": {
+    "brmasker": "^1.0.15",
     "broccoli-static-compiler": "^0.2.2",
     "ember-browserify": "^1.1.13",
     "ember-cli": "~2.14.0",

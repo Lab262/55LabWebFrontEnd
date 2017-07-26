@@ -41,7 +41,7 @@
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="*CPF" value=cpf onChange=(action (mut cpf)) customValidations=cpfValidation}} {{!--{{input-mask mask="999.999.999-99" placeholder="CPF"}}--}}
+                      {{paper-input label="*CPF" value=cpf onChange=(action maskCPF) customValidations=cpfValidation}} {{!--{{input-mask mask="999.999.999-99" placeholder="CPF"}}--}}
                   </div>
 
                   <div class="form-field-medium">
@@ -53,9 +53,9 @@
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="*CEP" value=zipCode onChange=(action (mut zipCode)) focusOut=(action autoCompleteAddressAction)}}
+                      {{paper-input label="*CEP" value=zipCode onChange=(action maskCep) focusOut=(action autoCompleteAddressAction)  customValidations=cepValidation}}
                   </div>
-                                  
+
                   <div class="form-field-medium">
                       {{paper-input label="*Estado" value=state onChange=(action (mut state)) customValidations=clearFieldValidation}}
                   </div>

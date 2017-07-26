@@ -95,10 +95,34 @@ export default Ember.Component.extend({
   }],
 
   cpfValidation: [{
-    message: 'Entre com um telfone válido',
+
+    message: 'Entre com um CPF válido',
     validate: (inputValue) => {
-      let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
-      return emailPattern.test(inputValue);
+
+      function validarCPF(cpf) {
+        var inputCPF =  cpf.replace( /\D/g , ""); //Remove tudo o que não é dígito
+
+        var soma = 0;
+        var resto;
+
+        if(inputCPF == '00000000000') return false;
+        for(var i=1; i<=9; i++) soma = soma + parseInt(inputCPF.substring(i-1, i)) * (11 - i);
+        resto = (soma * 10) % 11;
+
+        if((resto == 10) || (resto == 11)) resto = 0;
+        if(resto != parseInt(inputCPF.substring(9, 10))) return false;
+
+        soma = 0;
+        for(var i = 1; i <= 10; i++) soma = soma + parseInt(inputCPF.substring(i-1, i))*(12-i);
+        resto = (soma * 10) % 11;
+
+        if((resto == 10) || (resto == 11)) resto = 0;
+        if(resto != parseInt(inputCPF.substring(10, 11))) return false;
+        return true;
+      }
+
+      let emailPattern = /([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})/;
+      return emailPattern.test(inputValue) &&  validarCPF(inputValue);
       return true;
     }
   }],
@@ -106,9 +130,18 @@ export default Ember.Component.extend({
   rgValidation: [{
     message: 'Entre com um telfone válido',
     validate: (inputValue) => {
-      let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
-      return emailPattern.test(inputValue);
+      // let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
+      // return emailPattern.test(inputValue);
       return true;
+    }
+  }],
+
+  cepValidation: [{
+    message: 'Entre com um CEP válido',
+    validate: (inputValue) => {
+      let emailPattern = /\d{5}\-\d{3}/;
+      return emailPattern.test(inputValue)
+      // return true;
     }
   }],
 
@@ -129,6 +162,39 @@ export default Ember.Component.extend({
     this.set('telephone', v);
   },
 
+  maskCep(cep) {
+    var v = cep;
+    v = v.replace(/\D/g, "");             //Remove tudo o que não é dígito
+    v = v.replace(/(\d)(\d{3})$/, "$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    this.set('zipCode', v);
+  },
+
+  maskCNPJ(v) {
+    var v = v.replace( /\D/g , ""); //Remove tudo o que não é dígito
+    v = v.replace( /^(\d{2})(\d)/ , "$1.$2"); //Coloca ponto entre o segundo e o terceiro dígitos
+    v = v.replace( /^(\d{2})\.(\d{3})(\d)/ , "$1.$2.$3"); //Coloca ponto entre o quinto e o sexto dígitos
+    v = v.replace( /\.(\d{3})(\d)/ , ".$1/$2"); //Coloca uma barra entre o oitavo e o nono dígitos
+    v = v.replace( /(\d{4})(\d)/ , "$1-$2"); //Coloca um hífen depois do bloco de quatro dígitos
+    return v;
+  },
+
+  maskRG(rg) {
+    var v = number;
+    v = v.replace(/\D/g, "");             //Remove tudo o que não é dígito
+    v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
+    v = v.replace(/(\d)(\d{4})$/, "$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
+    this.set('telephone', v);
+  },
+
+  maskCPF(v) {
+    var v = v.replace( /\D/g , ""); //Remove tudo o que não é dígito
+    v = v.replace( /(\d{3})(\d)/ , "$1.$2"); //Coloca um ponto entre o terceiro e o quarto dígitos
+    v = v.replace( /(\d{3})(\d)/ , "$1.$2"); //Coloca um ponto entre o terceiro e o quarto dígitos
+    //de novo (para o segundo bloco de números)
+    v = v.replace( /(\d{3})(\d{1,2})$/ , "$1-$2"); //Coloca um hífen entre o terceiro e o quarto dígitos
+    this.set('cpf', v);
+  },
+
   autoCompleteAddressAction() {
     var url = "https://viacep.com.br/ws/" + this.zipCode + "/json/"
     var _this = this;
@@ -145,7 +211,7 @@ export default Ember.Component.extend({
       },
       error: function (jqXHR, exception) {
         if (jqXHR.status === 404) {
-          alert("CEP INVALIDO");
+          _this.clearFieldValidation
         }
       }
     });
@@ -157,11 +223,11 @@ export default Ember.Component.extend({
     && this.clearFieldValidation[0].validate(this.number)
     && this.clearFieldValidation[0].validate(this.neighbor)
     && this.clearFieldValidation[0].validate(this.country)
-    && this.clearFieldValidation[0].validate(this.zipCode)
     && this.clearFieldValidation[0].validate(this.city)
     && this.emailValidation[0].validate(this.email)
     && this.cpfValidation[0].validate(this.cpf)
     && this.rgValidation[0].validate(this.rg)
+    && this.cepValidation[0].validate(this.zipCode)
     && this.phoneNumberValidation[0].validate(this.telephone));
 
     if (formIsValid === true) {
@@ -179,7 +245,7 @@ export default Ember.Component.extend({
         alert('Campo *País* obrigatório não preenchido');
       } else if (!this.clearFieldValidation[0].validate(this.city)) {
         alert('Campo *Cidade* obrigatório não preenchido');
-      } else if (!this.clearFieldValidation[0].validate(this.zipCode)) {
+      } else if (!this.cepValidation[0].validate(this.zipCode)) {
         alert('Campo *CEP* obrigatório não preenchido');
       } else if (!this.emailValidation[0].validate(this.email)) {
         alert('Campo *Email* não contém um email válido');
@@ -224,7 +290,7 @@ export default Ember.Component.extend({
   },
 
   showPaymentMethodFunction() {
-    if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
+    if (this.personalDataFormValidation() == true) {
       this.set('formStep', "PAYMENT_METHOD");
       var _this = this;
       Ember.run.later((function() {
@@ -263,6 +329,7 @@ export default Ember.Component.extend({
 
       }), 10);
     }
+
   },
 
   didInsertElement() {
