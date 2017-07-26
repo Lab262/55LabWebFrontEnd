@@ -32,6 +32,7 @@ export default Ember.Component.extend({
   cardComponent: null,
   apiId: null,
   apiURL: null,
+  router: Ember.inject.service('-routing'),
 
   memberType: Ember.computed(function () {
     let membershipType = ParseHelpers.urlParamWithName("memberType", window.location.href);
@@ -78,8 +79,8 @@ export default Ember.Component.extend({
   emailValidation: [{
     message: 'Entre com um email válido',
     validate: (inputValue) => {
-      //  let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      //  return emailPattern.test(inputValue);
+       let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+       return emailPattern.test(inputValue);
       return true;
     }
   }],
@@ -87,8 +88,8 @@ export default Ember.Component.extend({
   phoneNumberValidation: [{
     message: 'Entre com um telfone válido',
     validate: (inputValue) => {
-      //  let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
-      //  return emailPattern.test(inputValue);
+       let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
+       return emailPattern.test(inputValue);
       return true;
     }
   }],
@@ -96,8 +97,8 @@ export default Ember.Component.extend({
   cpfValidation: [{
     message: 'Entre com um telfone válido',
     validate: (inputValue) => {
-      //  let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
-      //  return emailPattern.test(inputValue);
+       let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
+       return emailPattern.test(inputValue);
       return true;
     }
   }],
@@ -105,8 +106,8 @@ export default Ember.Component.extend({
   rgValidation: [{
     message: 'Entre com um telfone válido',
     validate: (inputValue) => {
-      //  let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
-      //  return emailPattern.test(inputValue);
+       let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
+       return emailPattern.test(inputValue);
       return true;
     }
   }],
@@ -114,8 +115,8 @@ export default Ember.Component.extend({
   clearFieldValidation: [{
     message: 'Campo obrigatório',
     validate: (inputValue) => {
-      //  let validFieldPattern = /^(?!\s*$)/g;
-      //  return validFieldPattern.test(inputValue);
+       let validFieldPattern = /^(?!\s*$)/g;
+       return validFieldPattern.test(inputValue);
       return true
     }
   }],
@@ -201,7 +202,7 @@ export default Ember.Component.extend({
   },
 
   showPaymentMethodFunction() {
-    // if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
+    if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
     this.set('formStep', "PAYMENT_METHOD");
     var _this = this;
     Ember.run.later((function() {
@@ -239,9 +240,7 @@ export default Ember.Component.extend({
       _this.set('cardComponent',card);
 
     }), 10);
-    // } else {
-    //   this.set('formStep', "PAYMENT_METHOD");
-    // }
+    }
   },
 
   didInsertElement() {
@@ -256,6 +255,7 @@ export default Ember.Component.extend({
 
 
     showNextData() {
+
       if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
         this.set('formStep', "HOST_SELECTION");
       } else if (this.get('isFormHostSelection')  && this.personalDataFormValidation() == true) {
@@ -286,7 +286,6 @@ export default Ember.Component.extend({
     registerUser() {
 
       var formIsValid = this.personalDataFormValidation() && this.paymentFormDataValidation()
-      var formIsValid = true
       if (formIsValid === true) {
 
         var data = JSON.stringify({
@@ -334,25 +333,24 @@ export default Ember.Component.extend({
           success: function () {
 
             alert('Registro enviado com sucesso!');
-            // history.go(-1);
-            //
-            // self.set('name', '');
-            // self.set('cpf', '');
-            // self.set('rg', '');
-            // self.set('address', '');
-            // self.set('number', '');
-            // self.set('zipCode', '');
-            // self.set('neighbor', '');
-            // self.set('state', '');
-            // self.set('country', '');
-            // self.set('email', '');
-            // self.set('telephone', '');
-            // self.set('creditCardNumber', '');
-            // self.set('creditCardCVV', '');
-            // self.set('creditCardExpirationDate', '');
+            this.get('router').transitionTo('registered-download-app');
+
+            self.set('name', '');
+            self.set('cpf', '');
+            self.set('rg', '');
+            self.set('address', '');
+            self.set('number', '');
+            self.set('zipCode', '');
+            self.set('neighbor', '');
+            self.set('state', '');
+            self.set('country', '');
+            self.set('email', '');
+            self.set('telephone', '');
+            self.set('creditCardNumber', '');
+            self.set('creditCardCVV', '');
+            self.set('creditCardExpirationDate', '');
           },
           error: function (jqXHR, exception) {
-            debugger;
             if (JSON.parse(jqXHR.responseText).error.msg) {
               alert("Erro: " + JSON.parse(jqXHR.responseText).error.msg);
             } else if (JSON.parse(jqXHR.responseText).errors[0].msg) {

@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('knowledge', { path: '/conhecimento' });
   this.route('sign-up-membership', { path: '/cadastro-membro' });
   this.route('visit-us', { path: '/nos-visite' });
+  this.route('registered-download-app', {path: '/download-app'});
 });
 
 export default Router;
