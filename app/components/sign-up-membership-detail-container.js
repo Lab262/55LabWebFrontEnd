@@ -130,8 +130,8 @@ export default Ember.Component.extend({
   rgValidation: [{
     message: 'Entre com um telfone válido',
     validate: (inputValue) => {
-      // let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
-      // return emailPattern.test(inputValue);
+      let validFieldPattern = /^(?!\s*$)/g;
+      return validFieldPattern.test(inputValue);
       return true;
     }
   }],
