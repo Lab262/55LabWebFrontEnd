@@ -79,8 +79,8 @@ export default Ember.Component.extend({
   emailValidation: [{
     message: 'Entre com um email válido',
     validate: (inputValue) => {
-       let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-       return emailPattern.test(inputValue);
+      let emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      return emailPattern.test(inputValue);
       return true;
     }
   }],
@@ -88,8 +88,8 @@ export default Ember.Component.extend({
   phoneNumberValidation: [{
     message: 'Entre com um telfone válido',
     validate: (inputValue) => {
-       let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
-       return emailPattern.test(inputValue);
+      let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
+      return emailPattern.test(inputValue);
       return true;
     }
   }],
@@ -97,8 +97,8 @@ export default Ember.Component.extend({
   cpfValidation: [{
     message: 'Entre com um telfone válido',
     validate: (inputValue) => {
-       let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
-       return emailPattern.test(inputValue);
+      let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
+      return emailPattern.test(inputValue);
       return true;
     }
   }],
@@ -106,8 +106,8 @@ export default Ember.Component.extend({
   rgValidation: [{
     message: 'Entre com um telfone válido',
     validate: (inputValue) => {
-       let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
-       return emailPattern.test(inputValue);
+      let emailPattern = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4,5})[-. ]?([0-9]{4})$/;
+      return emailPattern.test(inputValue);
       return true;
     }
   }],
@@ -115,8 +115,8 @@ export default Ember.Component.extend({
   clearFieldValidation: [{
     message: 'Campo obrigatório',
     validate: (inputValue) => {
-       let validFieldPattern = /^(?!\s*$)/g;
-       return validFieldPattern.test(inputValue);
+      let validFieldPattern = /^(?!\s*$)/g;
+      return validFieldPattern.test(inputValue);
       return true
     }
   }],
@@ -127,6 +127,29 @@ export default Ember.Component.extend({
     v = v.replace(/^(\d{2})(\d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
     v = v.replace(/(\d)(\d{4})$/, "$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
     this.set('telephone', v);
+  },
+
+  autoCompleteAddressAction() {
+    var url = "https://viacep.com.br/ws/" + this.zipCode + "/json/"
+    var _this = this;
+    $.ajax({
+      type: "GET",
+      url: url,
+      dataType: "jsonp",
+      success: function (response) {
+        _this.set('address',response.logradouro);
+        _this.set('neighbor',response.bairro);
+        _this.set('state',response.uf);
+        _this.set('city',response.localidade);
+        _this.set('complement',response.complemento);
+
+      },
+      error: function (jqXHR, exception) {
+        if (jqXHR.status === 404) {
+          alert("CEP INVALIDO");
+        }
+      }
+    });
   },
 
   personalDataFormValidation() {
@@ -158,7 +181,7 @@ export default Ember.Component.extend({
       } else if (!this.clearFieldValidation[0].validate(this.city)) {
         alert('Campo *Cidade* obrigatório não preenchido');
       } else if (!this.clearFieldValidation[0].validate(this.zipCode)) {
-        alert('Campo *Código Postal* obrigatório não preenchido');
+        alert('Campo *CEP* obrigatório não preenchido');
       } else if (!this.emailValidation[0].validate(this.email)) {
         alert('Campo *Email* não contém um email válido');
       } else if (!this.cpfValidation[0].validate(this.cpf)) {
@@ -203,43 +226,43 @@ export default Ember.Component.extend({
 
   showPaymentMethodFunction() {
     if (this.get('isFormPersonalData')  && this.personalDataFormValidation() == true) {
-    this.set('formStep', "PAYMENT_METHOD");
-    var _this = this;
-    Ember.run.later((function() {
-      //do something in here that will run in 2 seconds
-      var card = new Card({
-        // a selector or DOM element for the form where users will
-        // be entering their information
-        form: 'form', // *required*
-        // a selector or DOM element for the container
-        // where you want the card to appear
-        container: '.card-wrapper', // *required*
-        width: 300, // optional — default 350px
-        formatting: true, // optional - default true
-        // Strings for translation - optional
-        messages: {
-          validDate: 'Data\nValida', // optional - default 'valid\nthru'
-          monthYear: 'mm/aa', // optional - default 'month/year'
-        },
-        // Default placeholders for rendered fields - optional
-        placeholders: {
-          number: '•••• •••• •••• ••••',
-          name: 'NOME',
-          expiry: 'MM/AA',
-          cvc: '•••'
-        },
+      this.set('formStep', "PAYMENT_METHOD");
+      var _this = this;
+      Ember.run.later((function() {
+        //do something in here that will run in 2 seconds
+        var card = new Card({
+          // a selector or DOM element for the form where users will
+          // be entering their information
+          form: 'form', // *required*
+          // a selector or DOM element for the container
+          // where you want the card to appear
+          container: '.card-wrapper', // *required*
+          width: 300, // optional — default 350px
+          formatting: true, // optional - default true
+          // Strings for translation - optional
+          messages: {
+            validDate: 'Data\nValida', // optional - default 'valid\nthru'
+            monthYear: 'mm/aa', // optional - default 'month/year'
+          },
+          // Default placeholders for rendered fields - optional
+          placeholders: {
+            number: '•••• •••• •••• ••••',
+            name: 'NOME',
+            expiry: 'MM/AA',
+            cvc: '•••'
+          },
 
-        masks: {
-          cardNumber: '•' // optional - mask card number
-        },
+          masks: {
+            cardNumber: '•' // optional - mask card number
+          },
 
-        // if true, will log helpful messages for setting up Card
-        debug: true // optional - default false
-      });
+          // if true, will log helpful messages for setting up Card
+          debug: true // optional - default false
+        });
 
-      _this.set('cardComponent',card);
+        _this.set('cardComponent',card);
 
-    }), 10);
+      }), 10);
     }
   },
 
@@ -280,8 +303,6 @@ export default Ember.Component.extend({
     showPaymentMethod() {
       this.showPaymentMethodFunction();
     },
-
-
 
     registerUser() {
 
@@ -354,8 +375,8 @@ export default Ember.Component.extend({
             if (JSON.parse(jqXHR.responseText).error.msg) {
               alert("Erro: " + JSON.parse(jqXHR.responseText).error.msg);
             } else if (JSON.parse(jqXHR.responseText).errors[0].msg) {
-                alert("Erro: " + JSON.parse(jqXHR.responseText).errors[0].msg);
-              } else {
+              alert("Erro: " + JSON.parse(jqXHR.responseText).errors[0].msg);
+            } else {
               alert("Erro: " + jqXHR.responseText);
             }
 

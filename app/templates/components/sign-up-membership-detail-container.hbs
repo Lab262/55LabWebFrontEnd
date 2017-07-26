@@ -53,7 +53,7 @@
                   </div>
 
                   <div class="form-field-medium">
-                      {{paper-input label="*Código Postal*" value=zipCode onChange=(action (mut zipCode)) }}
+                      {{paper-input label="*CEP" value=zipCode onChange=(action (mut zipCode)) focusOut=(action autoCompleteAddressAction)}}
                   </div>
 
                   <div class="form-field-medium">
